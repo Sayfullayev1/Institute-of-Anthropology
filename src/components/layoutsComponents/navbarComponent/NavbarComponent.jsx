@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbarComponent.scss';
 import { LanguageContext } from '../../../context/LanguageContext';
@@ -6,16 +6,10 @@ import { LanguageContext } from '../../../context/LanguageContext';
 import menuData from '../../../pages/PagesData/siteMapeData/SiteMapeData.json'; // Предполагаемый путь к вашему JSON-файлу
 
 export default function NavbarComponent() {
-  // const navigate = useNavigate();
-  // const location = useLocation();
   const { language } = useContext(LanguageContext);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null); // Состояние для управления открытием подменю
 
-  // useEffect(() => {
-  //   if (location.pathname === '/') {
-  //     navigate('/uz'); // Default language can be set to 'en'
-  //   }
-  // }, [location, navigate]);
+ 
 
  
   let data = menuData

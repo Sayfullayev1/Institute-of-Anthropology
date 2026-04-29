@@ -1,7 +1,5 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React  from 'react';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
 
 export default function Section() {
   // const { language } = useContext(LanguageContext);

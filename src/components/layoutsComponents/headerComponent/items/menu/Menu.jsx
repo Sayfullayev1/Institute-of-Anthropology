@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
 import './menu.scss';
-import { Link, useNavigate } from 'react-router-dom'; // Добавил useNavigate для перехода к результатам
+import { Link } from 'react-router-dom'; // Добавил useNavigate для перехода к результатам
 import axios from 'axios';
 import { LanguageContext } from '../../../../../context/LanguageContext';
 import LanguageSwitcher from '../languageSwitcher/LanguageSwitcher';
@@ -16,7 +16,6 @@ function Menu({ Bedeutung }) {
     const [searchResults, setSearchResults] = useState([]); // Для хранения результатов
     const [isSearching, setIsSearching] = useState(false);
 
-    const navigate = useNavigate();
     const searchTimeout = useRef(null);
 
     useEffect(() => {
