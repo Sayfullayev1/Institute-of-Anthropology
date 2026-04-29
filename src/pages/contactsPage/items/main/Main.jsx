@@ -12,8 +12,7 @@ export default function Main() {
     {
       text: {
         uz: "Bosh sahifa",
-        ru: "Главная",
-        en: "Main",
+        en: "Home",
       },
       link: "/",
     },

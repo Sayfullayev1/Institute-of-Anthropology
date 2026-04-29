@@ -7,34 +7,51 @@ export const LanguageProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Проверяем: если путь начинается с /[a-z]{2}, то это язык, иначе узбекский
   const getLangFromPath = (path) => {
-    const match = path.match(/^\/([a-z]{2})/);
-    return match ? match[1] : 'uz';
+    return /^\/en(\/|$)/.test(path) ? 'en' : 'uz';
   };
 
-  const [language, setLanguage] = useState(getLangFromPath(location.pathname));
+  const [language, setLanguage] = useState(() => {
+    const langFromUrl = getLangFromPath(window.location.pathname);
+    const savedLang = localStorage.getItem('app_lang');
+    return langFromUrl || savedLang || 'uz';
+  });
 
   useEffect(() => {
     const currentLang = getLangFromPath(location.pathname);
+    const savedLang = localStorage.getItem('app_lang');
+
+    // ЛОГИКА РЕДИРЕКТА:
+    // Если пользователь зашел на главную (/) и у него сохранен 'en'
+    if (location.pathname === '/' && savedLang === 'en') {
+      navigate('/en' + location.search, { replace: true });
+      return;
+    }
+
+    // Если пользователь зашел на /en, но у него сохранен 'uz' (и он пришел не по ссылке смены языка)
+    // Мы доверяем URL, но обновляем состояние
     if (currentLang !== language) {
       setLanguage(currentLang);
+      localStorage.setItem('app_lang', currentLang);
     }
   }, [location.pathname]);
 
-  const changeLanguage = (lang) => {
-    if (lang === language) return;
+  const changeLanguage = (newLang) => {
+    if (newLang === language) return;
 
-    const basePath = location.pathname.replace(/^\/[a-z]{2}/, '') || '/';
+    localStorage.setItem('app_lang', newLang);
+
+    const currentPath = location.pathname;
     let newPath;
-    if (lang === 'uz') {
-      newPath = basePath;
+
+    if (newLang === 'en') {
+      newPath = currentPath.startsWith('/en') ? currentPath : `/en${currentPath}`;
     } else {
-      newPath = `/${lang}${basePath}`;
+      newPath = currentPath.replace(/^\/en(\/|$)/, '/');
     }
 
-    // Очистка от двойных слешей (//) и переход
-    navigate(newPath.replace(/\/+/g, '/'));
+    const cleanPath = newPath.replace(/\/+/g, '/').replace(/(.)\/$/, '$1') || '/';
+    navigate(cleanPath + location.search);
   };
 
   return (

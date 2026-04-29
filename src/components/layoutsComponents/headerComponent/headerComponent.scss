@@ -2,21 +2,17 @@
   width: 100%;
   font-family: "Roboto", sans-serif;
 
-  &_wrapper{
+  &_wrapper {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     background-color: #ffffff;
-    font-family: "Roboto", sans-serif;
   }
 
-
-  &__topbar_wrapper{
+  &__topbar_wrapper {
     display: none;
   }
-
 
   &__container {
     display: flex;
@@ -25,10 +21,7 @@
 
   &__logo {
     width: 50px;
-
-    &>a>img{
-      width: 100%;
-    }
+    & > a > img { width: 100%; }
   }
 
   &__title {
@@ -45,228 +38,92 @@
     display: block;
   }
 
-  &__info-wrapper{
-    display: none;
+  // Скрыто на мобилках, показываем только в медиа-запросе 900px
+  &__info-wrapper {
+    display: none; 
   }
-  
 }
 
 .menu-button {
-  height: 20.15px;
+  width: 30px;
+  height: 22px;
   background: none;
-  margin-left: auto;
   border: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  
+  justify-content: space-between;
+  padding: 0;
   position: relative;
-  z-index: 200;
-
-  -webkit-tap-highlight-color: transparent;
-
-  &_wrapper{
-    width: 30px;
-  } 
-
-  &__open{
-    animation: buttonOpen 1s ease-in-out forwards;
-  }
-
-  @keyframes buttonOpen {
-    0% {
-      opacity: 1;
-      z-index: 200;
-    }
-    50% {
-      opacity: 0;
-      z-index: 200;
-    }
-    100% {
-      opacity: 1;
-      z-index: 250;
-    }
-  
-  }
-  
-
+  z-index: 300; // ВСЕГДА выше выезжающего меню (у которого 280)
+  transition: transform 0.3s ease;
 
   &__line {
-    width: 25px;
-    min-height: 3px;
+    display: block;
+    width: 100%;
+    height: 3px;
     background-color: #333;
-    transition: transform 0.3s, opacity 0.3s;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    transform-origin: center;
+  }
 
-    &__animation-true{
-
-      &:nth-child(1) {
-        // Стили для первого элемента
-        animation: line1 1s ease-in-out forwards;
-      }
-
-      @keyframes line1 {
-        from {
-          transform: rotate(0deg);
-          transform-origin: left; // фиксируем левый край
-        }
-        to {
-          transform: rotate(45deg); // поворот вправо и вниз
-          transform-origin: left;
-        }
-      }
-      
-    
-      &:nth-child(2) {
-        animation: line2 1 ease-in-out forwards;
-      }
-
-      @keyframes line2 {
-        0% {
-          opacity: 1;
-        }
-        20% {
-          opacity: 10;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    
-      &:nth-child(3) {
-        animation: line3 1s ease-in-out forwards;
-      }
-
-      @keyframes line3 {
-        from {
-          transform: rotate(0deg);
-          transform-origin: left; // фиксируем левый край
-        }
-        to {
-          transform: rotate(-45deg); // поворот вправо и вниз
-          transform-origin: left;
-        }
-      }
+  &.is-open {
+    .menu-button__line {
+      background-color: #bf6205;
+      &:nth-child(1) { transform: translateY(9.5px) rotate(45deg); }
+      &:nth-child(2) { opacity: 0; transform: translateX(-10px); }
+      &:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); }
     }
-
   }
 
-  
-}
-
-
-
-@media (min-width: 340px) {
-
-
-  .header__title {
-    text-align: left;
-    margin: 10px 12px;
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto; // Толкает кнопку вправо
   }
 }
 
-
+// АДАПТИВ
 @media (min-width: 480px) {
-  .header{
-  
-    &__topbar_wrapper{
-      display: block;
-
+  .header {
+    &__topbar_wrapper { display: block; }
+    &__logo { width: 80px; }
+    &__title { 
+      max-width: 290px; 
+      font-size: 22px; 
+      margin: 10px 15px; 
+      text-align: left;
     }
-
-
-    &__container {
-      display: flex;
-    }
-  
-    &__logo{
-      width: 80px;
-    }
-  
-    &__title {
-      max-width: 290px;
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 15px;
-      // text-align: left;  
-    }
-  
-    &__subtitle {
-      font-size: 15px;
-      font-weight: normal;
-      display: block;
-    }
+    &__subtitle { font-size: 15px; }
   }
-  
-  
 }
-
 
 @media (min-width: 900px) {
-  .header{
-  
-    &_wrapper{
+  .header {
+    &_wrapper {
       padding: 8px 5%;
-      justify-content: flex-start;
-      gap: 5px; 
     }
-
-    &__info-wrapper{
-      display: inline;
-    }
-
-    &__menu-wrapper{
-      display: none;
+    &__info-wrapper {
+      display: flex !important; // Показываем поиск и язык на десктопе
+      align-items: center;
+      gap: 20px;
     }
   }
-
-  .menu-button_wrapper{
-    display: none;
+  .menu-button_wrapper {
+    display: none; // Прячем гамбургер
   }
 }
-
-
-@media (min-width: 1200px) {
-  .header{
-  
-    &_wrapper{
-      padding: 8px 5%;
-      justify-content: space-between;
-      // gap: 25px; 
-    }
-
-    &__info-wrapper{
-      display: inline;
-    }
-
-    &__menu-wrapper{
-      display: none;
-    }
-  }
-
-  .menu-button_wrapper{
-    display: none;
-  }
-}
-
-
 
 @media (min-width: 1300px) {
-  .header{
-
-    
-    
-
-    padding: 0;
-  
-    &_wrapper{
+  .header {
+    &_wrapper {
       max-width: 1300px;
       margin: 0 auto;
-      padding: 8px 4%;
+      padding: 10px 4%;
     }
-
   }
-
 }
-

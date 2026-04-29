@@ -16,11 +16,9 @@ export default function Topbar() {
 
     useEffect(() => {
         if (language === "uz") { 
-          setLocationText("100125, Toshkent shahar Do`rmon yo`li ko`chasi, 32-uy");
-        } else if (language === "ru") {
-            setLocationText("100125, Ташкент, ул. Дормон, 32");
+          setLocationText("100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81");
         } else if (language === "en") {
-          setLocationText("100125, Tashkent, Dormon street, 32");
+          setLocationText("100170, Tashkent city, Mirzo Ulug`bek street, 81");
         }
     }, [language])
 

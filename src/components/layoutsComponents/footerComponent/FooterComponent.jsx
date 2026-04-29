@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './footerComponent.scss';
+import { LanguageContext } from '../../../context/LanguageContext';
+
 
 export default function FooterComponent() {
 
+  const { language } = useContext(LanguageContext); 
 
+  
   
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__section">
-          <h4 className="footer__title">MA’LUMOT</h4>
-          <p>O‘zbekiston Respublikasi Fanlar akademiyasi Botanika instituti</p>
-          <p>O‘zbekiston Respublikasi Prezidentining 2017 yil 4 sentyabrdagi «O‘zbekiston Respublikasi Fanlar akademiyasi Botanika instituti va Zoologiya instituti faoliyatini takomillashtirish choralari bo‘yicha» №PQ-3256-sonli Qaroriga asosan tashkil etilgan.</p>
+          <h4 className="footer__title">{language === "uz" ? "MA’LUMOTLAR" : "INFORMATION"}</h4>
+          <p> 
+            {
+            language === "uz" ? "O‘zbekiston Respublikasi Fanlar akademiyasi Antropologiya instituti" 
+            : "Institute of Anthropology of the Academy of Sciences of the Republic of Uzbekistan"
+            } 
+          </p>
+          <p>
+            {
+            language === "uz" ? "O‘zbekiston Respublikasi Prezidentining “O‘zbekiston Respublikasi Fanlar akademiyasi faoliyatini takomillashtirish chora-tadbirlari to‘g‘risida”gi 390-sonli Qaroriga ko‘ra Fanlar akademiyasi huzuridagi Milliy arxeologiya markazi Antropologiya instituti deb qayta nomlangan." 
+            : "According to the Decree No. 390 of the President of the Republic of Uzbekistan “On measures to improve the activities of the Academy of Sciences of the Republic of Uzbekistan”, the National Archaeological Center under the Academy of Sciences was renamed as the Institute of Anthropology."
+            }
+          </p>
           <div className="footer__social">
           </div>
         </div>
@@ -35,10 +49,10 @@ export default function FooterComponent() {
 
         <div className="footer__section">
           <h4 className="footer__title">MANZIL</h4>
-          <p>100125, Toshkent, Do‘rmon yo‘li ko‘chasi 32</p>
-          <p>Telefonlar: (99871) 262-37-95, 262-37-89, 262-37-97, 262-38-23</p>
-          <p>Faks: (99871) 262-79-38</p>
-          <p>E-mail: botany@academy.uz, info-botany@academy.uz</p>
+          <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
+          <p>Telefonlar: +998 71 262-64-62, +998 71 233-95-31</p>
+          <p>Faks: +998 71 262-64-62</p>
+          <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
         </div>
       </div>
     </footer>

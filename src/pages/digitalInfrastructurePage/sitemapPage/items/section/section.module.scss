@@ -1,0 +1,76 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 4%;
+}
+
+.sitemapList {
+  display: grid;
+  // Создаем колонки, которые подстраиваются под размер экрана
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.sitemapItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLink {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff; // Синий акцент под заголовком
+  display: block;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #007bff;
+  }
+}
+
+.subList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subItem {
+  a {
+    font-size: 15px;
+    color: #555;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+      color: #007bff;
+      transform: translateX(5px); // Легкий сдвиг при наведении
+    }
+  }
+}
+
+// Адаптив для больших экранов
+@media (min-width: 1300px) {
+  .container {
+    padding: 52px 0;
+  }
+}
+
+// Мобильная версия (в одну колонку)
+@media (max-width: 600px) {
+  .sitemapList {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+

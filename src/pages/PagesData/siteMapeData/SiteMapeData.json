@@ -1,0 +1,289 @@
+[
+  {
+    "Name": {
+      "uz": "Bosh sahifa",
+      "en": "Home"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Missiya",
+          "en": "Mission"
+        },
+        "link": "/mission"
+      },
+      {
+        "Name": {
+          "uz": "Tuzilma",
+          "en": "Structure"
+        },
+        "link": ""
+      },
+      {
+        "Name": {
+          "uz": "Rahbariyat",
+          "en": "Rahbariyat"
+        },
+        "link": "/management"
+      },
+      {
+        "Name": {
+          "uz": "Jurnal",
+          "en": "Jurnal"
+        },
+        "link": "/charter-of-the-center"
+      },
+      {
+        "Name": {
+          "uz": "E’lonlar/Yangiliklar",
+          "en": "E’lonlar/Yangiliklar"
+        },
+        "link": "/academics-of-the-center"
+      },
+      {
+        "Name": {
+          "uz": "Bog‘lanish",
+          "en": "Bog‘lanish"
+        },
+        "link": "/contacts"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Research \n Output",
+      "en": "Research \n Output"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Publication",
+          "en": "Publication"
+        },
+        "link": "/publication"
+      },
+      {
+        "Name": {
+          "uz": "Sitation Metriks",
+          "en": "Sitation Metriks"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Conferance Talks",
+          "en": "Conferance Talks"
+        },
+        "link": "/conferance-talks"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Innovation & \n commercialization",
+      "en": "Innovation & \n commercialization"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Foydali model",
+          "en": "Foydali model"
+        },
+        "link": "/publication"
+      },
+      {
+        "Name": {
+          "uz": "Ilmiy hizmat",
+          "en": "Ilmiy hizmat"
+        },
+        "link": "/sitation-metriks"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Human \n capital",
+      "en": "Human \n capital"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Himoyalar",
+          "en": "Himoyalar"
+        },
+        "link": "/publication"
+      },
+      {
+        "Name": {
+          "uz": "Yosh izlanuvchilar",
+          "en": "Yosh izlanuvchilar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Ilmiy rahbarlar",
+          "en": "Ilmiy rahbarlar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Mukofotlar",
+          "en": "Mukofotlar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "A’zoliklar",
+          "en": "A’zoliklar"
+        },
+        "link": "/sitation-metriks"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "International \n Collaboration",
+      "en": "International \n Collaboration"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Xalqaro loyiha/grantlar",
+          "en": "Xalqaro loyiha/grantlar"
+        },
+        "link": "/publication"
+      },
+      {
+        "Name": {
+          "uz": "Xalqaro hammualliflik",
+          "en": "Xalqaro hammualliflik"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Xalqaro dasturlar",
+          "en": "Xalqaro dasturlar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Xalqaro tadbirlar",
+          "en": "Xalqaro tadbirlar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Xalqaro xodimlar",
+          "en": "Xalqaro xodimlar"
+        },
+        "link": "/sitation-metriks"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Impact & \n Engagement",
+      "en": "Impact & \n Engagement"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "OAV chiqishlari",
+          "en": "OAV chiqishlari"
+        },
+        "link": "/publication"
+      },
+      {
+        "Name": {
+          "uz": "Ilmiy tashkilotchilik",
+          "en": "Ilmiy tashkilotchilik"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Ijtimoiy tarmoqlar",
+          "en": "Ijtimoiy tarmoqlar"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Ekspert kengashlari",
+          "en": "Ekspert kengashlari"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Ichki tadbirlar",
+          "en": "Ichki tadbirlar"
+        },
+        "link": "/sitation-metriks"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Digital \n Infrastructure",
+      "en": "Digital \n Infrastructure"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Sayt xaritasi",
+          "en": "Sayt xaritasi"
+        },
+        "link": "/sitemap"
+      },
+      {
+        "Name": {
+          "uz": "Hodim profillar",
+          "en": "Directory"
+        },
+        "link": "/directory"
+      },
+      {
+        "Name": {
+          "uz": "Raqamli boshqaruv",
+          "en": "Raqamli boshqaruv"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Shaxsiy KPI",
+          "en": "Shaxsiy KPI"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Kiberxavfsizlik",
+          "en": "Kiberxavfsizlik"
+        },
+        "link": "/sitation-metriks"
+      },
+      {
+        "Name": {
+          "uz": "Galereya",
+          "en": "Galereya"
+        },
+        "link": "/sitation-metriks"
+      }
+    ]
+  }
+]

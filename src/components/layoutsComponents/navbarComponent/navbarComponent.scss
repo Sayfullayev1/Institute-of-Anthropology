@@ -1,6 +1,7 @@
 .navbar {
   font-family: "Roboto", sans-serif;
-
+  background-color: #bf6205;
+  
   &__container{
     display: none;
   }
@@ -123,12 +124,13 @@
     width: 100%;
     // background-color: #086f36;
     // background-color: #a26701;
-    background-color: #bf6205;
+    // background-color: #bf6205;
 
 
     &__container{
+      display: flex;
       max-width: 1300px;
-      padding: 0 4%;
+      padding: 0 2%;
       margin: 0 auto;
     }
   }

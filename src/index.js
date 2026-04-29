@@ -75,6 +75,21 @@ import ContactsPage from './pages/contactsPage/ContactsPage';
 
 
 
+/* Home Page*/
+import MissionPage from './pages/HomePages/missionPage/MissionPage';
+
+
+
+/* Digital Infrastructure */ 
+import SitemapPage from './pages/digitalInfrastructurePage/sitemapPage/SitemapPage';
+import DirectoryPage from './pages/digitalInfrastructurePage/directoryPage/DirectoryPage';
+
+
+
+
+
+
+
 
 
 
@@ -171,6 +186,21 @@ root.render(
               <Route path="/:lang?/photo-gallery" element={<PhotoGalleryPage />} />
               <Route path="/:lang?/photo-gallery/:id" element={<PhotoGalleryDetailPage />} />
 
+
+
+
+
+              {/* Home Page*/}
+
+              <Route path="/:lang?/mission" element={<MissionPage />} />
+
+
+
+              {/* Digital Infrastructure */}
+
+              <Route path="/:lang?/sitemap" element={<SitemapPage />} />
+
+              <Route path="/:lang?/directory" element={<DirectoryPage />} />
 
 
           </Route>

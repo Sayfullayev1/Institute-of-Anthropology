@@ -5,9 +5,13 @@ import { LanguageContext } from '../../../context/LanguageContext';
 import { Link } from 'react-router-dom';
 
 import logoImage from '../../../public/images/logoImage/BLACK-SQUARE-uncircled-squared.jpg';
+
 import Menu from './items/menu/Menu';
-import Topbar from './items/topbar/Topbar';
-import Info from './items/info/Info';
+
+import LanguageSwitcher from './items/languageSwitcher/LanguageSwitcher';
+import SearchComponent from './items/searchComponent/SearchComponent';
+// import Topbar from './items/topbar/Topbar';
+// import Info from './items/info/Info';
 
 
 export default function HeaderComponent() {
@@ -50,9 +54,9 @@ export default function HeaderComponent() {
   return (
     <header className='header'>
 
-      <div className='header__topbar_wrapper'>
+      {/* <div className='header__topbar_wrapper'>
         <Topbar/>
-      </div>
+      </div> */}
 
       <div className='header_wrapper'>
 
@@ -71,24 +75,33 @@ export default function HeaderComponent() {
         
 
         <div className='menu-button_wrapper'>
-          <button
-            className={`menu-button ${menuOpen ? 'menu-button__open' : ''}`}
-            disabled={isDisabled}
+          <button 
+            className={`menu-button ${menuOpen ? 'is-open' : ''}`} 
             onClick={toggleMenu}
+            aria-label="Menu"
           >
-            <span className={`menu-button__line ${menuOpen ? "menu-button__line__animation-true" : "menu-button__line__animation-false"}`}></span>
-            <span className={`menu-button__line ${menuOpen ? "menu-button__line__animation-true" : "menu-button__line__animation-false"}`}></span>
-            <span className={`menu-button__line ${menuOpen ? "menu-button__line__animation-true" : "menu-button__line__animation-false"}`}></span>
+            <span className="menu-button__line"></span>
+            <span className="menu-button__line"></span>
+            <span className="menu-button__line"></span>
           </button>
         </div>
 
+
+
         <div className='header__info-wrapper'>
-          <Info/>
-        </div>
+          {/* <div> */}
+            <SearchComponent/>
+          {/* </div>
+          <div> */}
+            <LanguageSwitcher/>
+          {/* </div> */}
+        </div> 
 
         {/* <div className='header__menu-wrapper'> */}
           {<Menu Bedeutung={ menuOpen } />}
         {/* </div> */}
+
+        
 
       </div>
       
