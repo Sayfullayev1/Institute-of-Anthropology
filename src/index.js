@@ -4,7 +4,10 @@ import './index.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DashboardLayout from './layouts/dashboardLayout/DashboardLayout';
+
+import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
+
 
 
 
@@ -79,6 +82,11 @@ import ContactsPage from './pages/contactsPage/ContactsPage';
 import MissionPage from './pages/HomePages/missionPage/MissionPage';
 
 
+/* Research Output*/
+import PublicationPage from './pages/researchOutputPages/publicationPage/PublicationPage';
+import SitationMetriksPage from './pages/researchOutputPages/sitationMetriksPage/SitationMetriksPage';
+import ConferanceTalksPage from './pages/researchOutputPages/conferanceTalksPage/ConferanceTalksPage';
+
 
 /* Digital Infrastructure */ 
 import SitemapPage from './pages/digitalInfrastructurePage/sitemapPage/SitemapPage';
@@ -94,10 +102,13 @@ import DirectoryPage from './pages/digitalInfrastructurePage/directoryPage/Direc
 
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode>
     <BrowserRouter>
+
+     <HelmetProvider>
 
       <LanguageProvider>
 
@@ -196,6 +207,16 @@ root.render(
 
 
 
+              {/* Research Output*/}
+
+              <Route path="/:lang?/publication" element={<PublicationPage />} />  
+
+              <Route path="/:lang?/sitation-metriks" element={<SitationMetriksPage />} />
+
+              <Route path="/:lang?/conferance-talks" element={<ConferanceTalksPage />} />
+
+
+
               {/* Digital Infrastructure */}
 
               <Route path="/:lang?/sitemap" element={<SitemapPage />} />
@@ -212,6 +233,8 @@ root.render(
         </Routes>
 
       </LanguageProvider>
+
+     </HelmetProvider>
 
     </BrowserRouter>
   //</React.StrictMode>

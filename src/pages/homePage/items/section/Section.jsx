@@ -61,46 +61,43 @@ export default function Section() {
         },
     ];
 
+
     const resources = [
+        
         {
-            icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473337031usefull1.png" alt="Icon 1" />,
-            title: "O‘zbekiston Respublikasi Prezidentining Matbuot xizmati",
-            link: "www.press-service.uz",
+            icon: <img src="https://www.academy.uz/dist/img/logo.png" alt="Icon 1" />,
+            title: "O‘zbekiston Respublikasi Fanlar akademiyasi",
+            link: "academy.uz",
         },
         {
-            icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473339456usefull2.png" alt="Icon 2" />,
+            icon: <img src="https://www.scimagojr.com/multisitebar/sjr-sitebar-128.png" alt="Icon 2" />,
+            title: "SCImago Journal & Country Rank",
+            link: "scimagojr.com/",
+        },
+        {
+            icon: <img src="https://my.academy.uz/img/logo.png" alt="Icon 2" />,
+            title: "Ўзбекистон Республикаси Фанлар академияси",
+            link: "my.academy.uz/",
+        },
+        {
+            icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473339456usefull2.png" alt="Icon 3" />,
             title: "Interaktiv davlat xizmatlarining Yagona portali",
             link: "my.gov.uz",
         },
         {
-            icon: <img src="https://www.academy.uz/dist/img/logo.png" alt="Icon 3" />,
-            title: "O‘zbekiston Respublikasi Fanlar akademiyasi",
-            link: "www.academy.uz",
-        },
-        // {
-        //     icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1490955535logo_uz.png" alt="Icon 4" />,
-        //     title: "O‘zbekiston Respublikasining Hukumat portali",
-        //     link: "www.gov.uz",
-        // },
-        // {
-        //     icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473337031usefull1-1.png" alt="Icon 5" />,
-        //     title: "2017-2021 yillarda O‘zbekiston Respublikasi rivojlanishining beshta ustuvor yo‘nalishidagi harakat strategiyasi",
-        //     link: "strategy.gov.uz",
-        // },
-        // {
-        //     icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473339784usefull6-1.png" alt="Icon 6" />,
-        //     title: "O‘zbekiston Respublikasining ochiq axborot portali",
-        //     link: "data.gov.uz",
-        // },
-        {
-            icon: <img src="https://www.arxeologiya.uz/wp-content/uploads/2024/04/newlogo.jpg" alt="Icon 6" />,
-            title: "",
-            link: "arxeologiya.uz",
+            icon: <img src="" alt="Icon 3" />,
+            title: "O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi",
+            link: "oak.uz/",
         },
         {
-            icon: <img src="https://my.madaniymeros.uz/img/main.png" alt="Icon 6" />,
-            title: "Samarqand Arxeologiya Instituti",
-            link: "my.madaniymeros.uz"
+            icon: <img src="" alt="Icon 3" />,
+            title: "Oliy taʼlimdan keyingi taʼlimni muvofiqlashtirishning yagona elektron tizimi",
+            link: "daraja.ilmiy.uz/",
+        },
+        {
+            icon: <img src="" alt="Icon 3" />,
+            title: "Davlat ilmiy dasturlarining yagona intellektual elektron platformasi",
+            link: "academy.uz/ilmiy_axborot_markazi",
         }
     ];
 
