@@ -22,15 +22,8 @@ import HomePage from './pages/homePage/HomePage';
 import HistoryOfTheCenterPage from './pages/aboutPages/historyOfTheCenterPage/HistoryOfTheCenterPage';
 
 
-    /* Departments and Laboratories Pages*/
-    import BioarchaeologyLaboratoryPage from './pages/aboutPages/departmentsAndLaboratoriesPages/bioarchaeology-laboratoryPage/BioarchaeologyLaboratoryPage';
-    import InterdisciplinaryResearchPage from './pages/aboutPages/departmentsAndLaboratoriesPages/interdisciplinary-researchPage/InterdisciplinaryResearchPage';
-    import SilkRoadArcheologyDepartmentPage from './pages/aboutPages/departmentsAndLaboratoriesPages/silk-road-archeology-departmentPage/SilkRoadArcheologyDepartmentPage';
-    import LandscapeArcheologyLaboratoryPage from './pages/aboutPages/departmentsAndLaboratoriesPages/landscape-archeology-laboratoryPage/LandscapeArcheologyLaboratoryPage';
-
-    
-import Management from './pages/aboutPages/management/Management';
-import CharterOfTheCenterPage from './pages/aboutPages/charterOfTheCenterPage/CharterOfTheCenterPage';
+// import Management from './pages/aboutPages/management/Management';
+// import CharterOfTheCenterPage from './pages/aboutPages/charterOfTheCenterPage/CharterOfTheCenterPage';
 import AcademicsOfTheCenterPage from './pages/aboutPages/academicsOfTheCenterPage/AcademicsOfTheCenterPage';
 
 
@@ -80,6 +73,12 @@ import ContactsPage from './pages/contactsPage/ContactsPage';
 
 /* Home Page*/
 import MissionPage from './pages/HomePages/missionPage/MissionPage';
+import StructurePage from './pages/HomePages/structurePage/StructurePage'
+import ManagementPage from './pages/HomePages/managementPage/ManagementPage'
+import CharterOfTheCenterPage from './pages/HomePages/charterOfTheCenterPage/CharterOfTheCenterPage';
+import AnnouncementsNewsPage from './pages/HomePages/announcementsNewsPage/AnnouncementsNewsPage';
+import JournalPage from './pages/HomePages/journalPage/JournalPage';
+import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/JournalIssueDetailPage';
 
 
 /* Research Output*/
@@ -89,8 +88,9 @@ import ConferanceTalksPage from './pages/researchOutputPages/conferanceTalksPage
 
 
 /* Digital Infrastructure */ 
-import SitemapPage from './pages/digitalInfrastructurePage/sitemapPage/SitemapPage';
-import DirectoryPage from './pages/digitalInfrastructurePage/directoryPage/DirectoryPage';
+import SitemapPage from './pages/digitalInfrastructurePages/sitemapPage/SitemapPage';
+import DirectoryPage from './pages/digitalInfrastructurePages/directoryPage/DirectoryPage';
+
 
 
 
@@ -129,25 +129,13 @@ root.render(
             <Route path="/:lang?/history-of-the-center" element={<HistoryOfTheCenterPage />} />
 
 
-              {/* Departments and Laboratories Pages*/}
-
-              <Route  path="/:lang?/bioarchaeology-laboratory" element={<BioarchaeologyLaboratoryPage />} />
-
-              <Route path='/:lang?/interdisciplinary-research' element={<InterdisciplinaryResearchPage />} />
-
-              <Route path='/:lang?/silk-road-archeology-department' element={<SilkRoadArcheologyDepartmentPage />} />
-              
-              <Route path='/:lang?/landscape-archeology-laboratory' element={<LandscapeArcheologyLaboratoryPage />} />
-
-
-
-            <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} />
+            {/* <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} /> */}
 
             <Route path='/:lang?/monographs' element={<MonographsPage />} />
 
             <Route path='/:lang?/academics-of-the-center' element={<AcademicsOfTheCenterPage />} />
 
-            <Route path='/:lang?/management' element={<Management />} />
+            {/* <Route path='/:lang?/management' element={<Management />} /> */}
 
 
 
@@ -201,13 +189,25 @@ root.render(
 
 
 
-              {/* Home Page*/}
+              {/* Home Page */}
 
               <Route path="/:lang?/mission" element={<MissionPage />} />
 
+              <Route path="/:lang?/structure" element={<StructurePage/>} />
+
+              <Route path="/:lang?/management" element={<ManagementPage/>} />
+
+              <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} />
+
+              <Route path='/:lang?/announcements-news' element={<AnnouncementsNewsPage />} />
+
+              <Route path='/:lang?/journal' element={<JournalPage />} />
+
+              <Route path='/:lang?/journal/:id' element={<JournalIssueDetailPage />} />
 
 
-              {/* Research Output*/}
+
+              {/* Research Output */}
 
               <Route path="/:lang?/publication" element={<PublicationPage />} />  
 
@@ -219,7 +219,7 @@ root.render(
 
               {/* Digital Infrastructure */}
 
-              <Route path="/:lang?/sitemap" element={<SitemapPage />} />
+              <Route path="/:lang?/site-map" element={<SitemapPage />} />
 
               <Route path="/:lang?/directory" element={<DirectoryPage />} />
 

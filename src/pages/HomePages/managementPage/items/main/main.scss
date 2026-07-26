@@ -1,0 +1,137 @@
+.management-page__main {
+  font-family: "Roboto", sans-serif;
+
+  &__section {
+    width: 100%;
+    padding: 20px 5%; /* Smaller padding for small screens */
+
+    &__item {
+      display: flex;
+      flex-direction: column; /* Stack items vertically for small screens */
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+      margin-bottom: 15px;
+
+      &:last-child {
+        border-bottom: none; /* Remove border for the last item */
+      }
+    }
+
+    &__item__img {
+      width: 150px; /* Smaller width for the container */
+      aspect-ratio: 1 / 1.1; /* Maintain a 1:1.1 aspect ratio */
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+      }
+    }
+
+    &__item__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center-align text for small screens */
+      gap: 10px;
+      text-align: center; /* Center-align text */
+    }
+
+    &__item__text h3 {
+      font-size: 1.4rem; /* Slightly smaller font size for small screens */
+      font-weight: 400;
+      color: #000000;
+      margin: 0;
+      position: relative;
+    }
+
+    &__item__text h3::after {
+      content: "";
+      display: block;
+      width: 40px; /* Smaller underline */
+      height: 1px;
+      background-color: #007bff;
+      margin-top: 5px;
+    }
+
+    &__item__text .job-title {
+      margin: 15px 0 5px 0;
+      font-size: 1rem; /* Smaller font size */
+      font-weight: 600;
+      color: #333;
+    }
+
+    &__item__text .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__item__text .contact-info p {
+      font-size: 0.9rem; /* Smaller font size */
+      color: #555;
+      margin: 3px 0;
+    }
+
+    &__item__text .contact-info p > a {
+      color: #009cff;
+      text-decoration: none;
+    }
+  }
+}
+
+// Full design for larger screens starting at 550px
+@media (min-width: 550px) {
+  .management-page__main {
+    &__section {
+      padding: 40px 3%;
+
+      &__item {
+        flex-direction: row; /* Align items horizontally */
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px 0;
+        margin-bottom: 20px;
+      }
+
+      &__item__img {
+        min-width: 200px; /* Larger width for the container */
+      }
+
+      &__item__text {
+        align-items: flex-start; /* Align text to the left */
+        text-align: left; /* Left-align text */
+      }
+
+      &__item__text h3 {
+        font-size: 1.6em; /* Larger font size */
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      &__item__text h3::after {
+        width: 50px; /* Larger underline */
+      }
+
+      &__item__text .job-title {
+        font-size: 1.2rem; /* Larger font size */
+      }
+
+      &__item__text .contact-info p {
+        font-size: 1rem; /* Standard font size */
+      }
+    }
+  }
+}
+
+// Full design for desktops starting at 1300px
+@media (min-width: 1300px) {
+  .management-page__main {
+    &__section {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px 4%;
+    }
+  }
+}

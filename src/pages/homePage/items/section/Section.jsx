@@ -77,7 +77,7 @@ export default function Section() {
         {
             icon: <img src="https://my.academy.uz/img/logo.png" alt="Icon 2" />,
             title: "Ўзбекистон Республикаси Фанлар академияси",
-            link: "my.academy.uz/",
+            link: "my.academy.uz",
         },
         {
             icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473339456usefull2.png" alt="Icon 3" />,
@@ -85,17 +85,17 @@ export default function Section() {
             link: "my.gov.uz",
         },
         {
-            icon: <img src="" alt="Icon 3" />,
+            icon: <img src="https://oak.uz/images/gerb.png"  alt="OAK Logo" />,
             title: "O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi",
-            link: "oak.uz/",
+            link: "oak.uz",
         },
         {
-            icon: <img src="" alt="Icon 3" />,
+            icon: <img src="https://academy.uz/favicon.ico"  alt="Icon 3" />,
             title: "Oliy taʼlimdan keyingi taʼlimni muvofiqlashtirishning yagona elektron tizimi",
-            link: "daraja.ilmiy.uz/",
+            link: "daraja.ilmiy.uz",
         },
         {
-            icon: <img src="" alt="Icon 3" />,
+            icon: <img src="https://academy.uz/favicon.ico"  alt="OAK Logo" />,
             title: "Davlat ilmiy dasturlarining yagona intellektual elektron platformasi",
             link: "academy.uz/ilmiy_axborot_markazi",
         }

@@ -1,86 +1,79 @@
 .home-page__carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: auto; /* Убираем фиксированную высоту */
-    padding-top: 35%; /* Соотношение сторон 16:9 */
-
-    &__slides {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; /* Высота адаптируется */
-    }
-
-    &__slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%; /* Устанавливаем высоту для каждого слайда */
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out;
-
-        &>img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Чтобы изображение масштабировалось без искажения */
-        }
-    }
-
-    &__dots {
-        text-align: center;
-        position: absolute;
-        // top: 75%;
-        bottom: 5px;
-        width: 100%;
-    }
-
-    &__dot {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        margin: 0 5px;
-        border-radius: 50%;
-        background: #fff;
-        opacity: 0.5;
-        cursor: pointer;
-        transition: 0.3s;
-
-        &-active {
-            opacity: 1;
-            background: #fff;
-        }
-    }
-}
-
-
-
-
-@media (min-width: 800px) {
-    .home-page__carousel {
-      padding-top: 25%;
-
-    }
-}
-
-
-
-@media (min-width: 1100px) {
-  .home-page__carousel {
-    padding-top: 23%;
-
-  }
-}
-
-
-
-@media (min-width: 1100px) {
-    .home-page__carousel {
-      padding-top: 350px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   
+  // На мобильных устройствах карусель будет пропорциональной (не сплющенной)
+  padding-top: 50%; 
+
+  &__slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+
+    // Этот класс активирует видимость слайда
+    &__active {
+      opacity: 1 !important;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Картинка заполняет область без искажений
+      object-position: center;
     }
   }
+
+  &__dots {
+    text-align: center;
+    position: absolute;
+    bottom: 15px; // Отступ снизу для точек
+    width: 100%;
+    z-index: 5;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    // Возвращаем строго ваш рабочий класс для активной точки
+    &-active {
+      opacity: 1 !important;
+      background: #fff !important;
+    }
+  }
+}
+
+/* Адаптив для планшетов */
+@media (min-width: 768px) {
+  .home-page__carousel {
+    padding-top: 35%; 
+  }
+}
+
+/* Адаптив для компьютеров: жестко ограничиваем высоту, чтобы картинка не была огромной */
+@media (min-width: 1024px) {
+  .home-page__carousel {
+    padding-top: 0; // Отменяем padding-пропорцию
+    height: 350px;  // Устанавливаем строгую, аккуратную высоту для десктопа
+  }
+}

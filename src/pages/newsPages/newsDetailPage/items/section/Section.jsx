@@ -3,18 +3,26 @@ import styles from './section.module.scss'; // Убедитесь, что фай
 import { LanguageContext } from '../../../../../context/LanguageContext';
 import { Link } from 'react-router-dom';
 
+// content хранится как строка (старые записи) либо как {uz, en} (новые записи из
+// обновлённого редактора) — поддерживаем оба варианта, чтобы не сломать уже опубликованное.
+function getLocalizedContent(content, language) {
+  if (!content) return '';
+  if (typeof content === 'object') return content[language] || content.uz || content.en || '';
+  return content;
+}
+
 export default function Section(news) {
   const { language } = useContext(LanguageContext);
 
-  
+  const contentHtml = getLocalizedContent(news.newsData?.content, language);
 
   return (
     <section className={styles.container}>
       <div className={styles.contentWrapper}>
-        {news.newsData?.content && (
+        {contentHtml && (
           <div
             className={styles.htmlContent}
-            dangerouslySetInnerHTML={{ __html: news.newsData.content }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         )}
       </div>

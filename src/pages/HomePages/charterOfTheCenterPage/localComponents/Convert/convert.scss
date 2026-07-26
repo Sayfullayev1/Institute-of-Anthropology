@@ -1,0 +1,67 @@
+
+
+.doc-wrapper {
+  width: 100%;
+}
+
+/* Поля документа — как в Word, без отдельной "карточки" */
+.doc {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+
+  font-family: "Times New Roman", serif;
+  font-size: 14pt;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .doc {
+    padding: 30px 40px;
+  }
+}
+
+/* Заголовки */
+.doc h1,
+.doc h2,
+.doc h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Абзацы */
+.doc p {
+  text-align: justify;
+  text-indent: 30px; /* красная строка */
+  margin: 10px 0;
+}
+
+/* Первый абзац после заголовка без отступа */
+.doc h3 + p {
+  text-indent: 0;
+}
+
+/* Параграфы, центрированные в самом Word-документе (w:jc="center") */
+.doc .docCenter {
+  text-align: center;
+  text-indent: 0;
+}
+
+/* Списки */
+.doc ul {
+  margin-left: 40px;
+}
+
+.doc li {
+  margin: 5px 0;
+}
+
+/* Подпись (напр. "Direktor ... F.Maksudov") — в Word разведена табуляцией по краям строки */
+.doc .docSignature {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-indent: 0;
+  margin-top: 60px;
+}

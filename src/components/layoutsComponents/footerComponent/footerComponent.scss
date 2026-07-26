@@ -9,17 +9,27 @@
 
 .footer__container {
   max-width: 1300px;
+  padding: 0 2%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  
+  /* Меняем Grid на Flexbox */
+  display: flex;
+  flex-wrap: wrap;       /* Разрешаем перенос элементов на новую строку */
+  justify-content: center; /* Центрируем элементы по горизонтали (включая перенесенные) */
+  gap: 40px;             /* Сохраняем отступы между колонками */
 }
 
 .footer__section {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
+  /* Задаем базовую ширину колонок и разрешаем им расти */
+  flex: 1 1 250px;       /* Заменяет minmax(250px, 1fr) из гридов */
+  max-width: 400px;      /* Ограничиваем максимальную ширину, чтобы третья колонка на новой строке не растянулась во всю ширину экрана */
 }
+
+
 
 .footer__title {
   font-size: 14px;
@@ -50,7 +60,8 @@
 }
 
 .footer__image {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   height: auto;
   object-fit: cover;
   border-radius: 4px;

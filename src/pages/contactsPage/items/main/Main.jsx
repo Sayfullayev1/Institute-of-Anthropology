@@ -18,8 +18,7 @@ export default function Main() {
     },
     {
       text: {
-        uz: "Aloqa",
-        ru: "Контакты",
+        uz: "Bog‘lanish",
         en: "Contacts",
       },
       link: "/",

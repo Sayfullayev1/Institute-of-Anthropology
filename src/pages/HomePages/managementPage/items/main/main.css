@@ -1,0 +1,112 @@
+.management-page__main {
+  font-family: "Roboto", sans-serif;
+}
+.management-page__main__section {
+  width: 100%;
+  padding: 20px 5%; /* Smaller padding for small screens */
+}
+.management-page__main__section__item {
+  display: flex;
+  flex-direction: column; /* Stack items vertically for small screens */
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+.management-page__main__section__item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+.management-page__main__section__item__img {
+  width: 150px; /* Smaller width for the container */
+  aspect-ratio: 1/1.1; /* Maintain a 1:1.1 aspect ratio */
+  overflow: hidden;
+}
+.management-page__main__section__item__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+}
+.management-page__main__section__item__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align text for small screens */
+  gap: 10px;
+  text-align: center; /* Center-align text */
+}
+.management-page__main__section__item__text h3 {
+  font-size: 1.4rem; /* Slightly smaller font size for small screens */
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  position: relative;
+}
+.management-page__main__section__item__text h3::after {
+  content: "";
+  display: block;
+  width: 40px; /* Smaller underline */
+  height: 1px;
+  background-color: #007bff;
+  margin-top: 5px;
+}
+.management-page__main__section__item__text .job-title {
+  margin: 15px 0 5px 0;
+  font-size: 1rem; /* Smaller font size */
+  font-weight: 600;
+  color: #333;
+}
+.management-page__main__section__item__text .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.management-page__main__section__item__text .contact-info p {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #555;
+  margin: 3px 0;
+}
+.management-page__main__section__item__text .contact-info p > a {
+  color: #009cff;
+  text-decoration: none;
+}
+
+@media (min-width: 550px) {
+  .management-page__main__section {
+    padding: 40px 3%;
+  }
+  .management-page__main__section__item {
+    flex-direction: row; /* Align items horizontally */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .management-page__main__section__item__img {
+    min-width: 200px; /* Larger width for the container */
+  }
+  .management-page__main__section__item__text {
+    align-items: flex-start; /* Align text to the left */
+    text-align: left; /* Left-align text */
+  }
+  .management-page__main__section__item__text h3 {
+    font-size: 1.6em; /* Larger font size */
+    font-weight: 600;
+    display: inline-block;
+  }
+  .management-page__main__section__item__text h3::after {
+    width: 50px; /* Larger underline */
+  }
+  .management-page__main__section__item__text .job-title {
+    font-size: 1.2rem; /* Larger font size */
+  }
+  .management-page__main__section__item__text .contact-info p {
+    font-size: 1rem; /* Standard font size */
+  }
+}
+@media (min-width: 1300px) {
+  .management-page__main__section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 4%;
+  }
+}/*# sourceMappingURL=main.css.map */

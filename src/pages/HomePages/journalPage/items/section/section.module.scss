@@ -1,0 +1,370 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.journalsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.divider {
+  display: none;
+}
+
+.journalCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.journalCard__titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.journalCard__titleLine {
+  flex: 1;
+  height: 1px;
+  background: #d9a441;
+  min-width: 16px;
+}
+
+.journalCard__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.journalCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.journalCard__side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.journalCard__image {
+  width: 100%;
+  max-width: 220px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    display: block;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.journalCard__imagePlaceholder {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 3 / 4;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+}
+
+.journalCard__tabs {
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+
+.journalCard__tab {
+  text-align: left;
+  padding: 12px 14px;
+  background: #f7f7f7;
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:last-child {
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  &:hover {
+    background: #f4ead0;
+  }
+}
+
+.journalCard__tabActive {
+  background: #fbecc4;
+  color: #8a6d1f;
+  font-weight: 600;
+  border-color: #edd9a0;
+
+  &:hover {
+    background: #fbecc4;
+  }
+}
+
+.journalCard__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.journalCard__subheading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #d9a441;
+  display: inline-block;
+}
+
+.journalCard__desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  margin: 0 0 16px;
+}
+
+.journalCard__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: #444;
+
+  li {
+    margin-bottom: 6px;
+
+    strong {
+      color: #222;
+      margin-right: 6px;
+    }
+  }
+}
+
+.journalCard__indexesLabel {
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 8px;
+
+  strong {
+    color: #222;
+  }
+}
+
+.journalCard__indexes {
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: #444;
+
+  li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      background: #d9a441;
+      border-radius: 50%;
+    }
+  }
+}
+
+.journalCard__link {
+  display: inline-block;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b8860b;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: #b8860b;
+  }
+}
+
+.journalCard__archiveList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e5e5e5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.journalCard__archiveYear {
+  font-weight: 700;
+  color: #222;
+  min-width: 44px;
+}
+
+.journalCard__archiveIssues {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.journalCard__archiveIssue {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: #b8860b;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.journalCard__archiveSep {
+  color: #bbb;
+  margin: 0 8px;
+}
+
+.journalCard__archiveEmpty {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.journalCard__apiArchiveList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.journalCard__apiArchiveItem {
+  border-bottom: 1px dashed #e5e5e5;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.journalCard__apiArchiveLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+
+  &:hover {
+    opacity: 0.75;
+
+    .journalCard__apiArchiveTitle {
+      color: #b8860b;
+    }
+  }
+}
+
+.journalCard__apiArchiveCover {
+  width: 56px;
+  height: 74px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+  }
+}
+
+.journalCard__apiArchiveCoverPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+}
+
+.journalCard__apiArchiveTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b2b2b;
+  transition: color 0.15s ease;
+}
+
+.journalCard__referenceLink {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: #444;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #b8860b;
+    text-decoration: underline;
+  }
+}
+
+// Планшет и выше — картинка+вкладки слева, контент справа
+@media (min-width: 700px) {
+  .journalCard__body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .journalCard__side {
+    width: 220px;
+    flex-shrink: 0;
+  }
+}
+
+// Десктоп — два журнала рядом, разделённые серой полосой посередине
+@media (min-width: 1000px) {
+  .container {
+    padding: 40px 0;
+  }
+
+  .journalsGrid {
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .divider {
+    display: block;
+    width: 1px;
+    background: #ddd;
+  }
+}

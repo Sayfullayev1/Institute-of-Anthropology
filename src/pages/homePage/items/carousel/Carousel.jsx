@@ -3,17 +3,11 @@ import './carousel.scss';
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);
-  // const images = [
-  //   'https://picsum.photos/id/1015/400/800',
-  //   'https://picsum.photos/id/1016/400/800',
-  //   'https://picsum.photos/id/1018/400/800',
-  // ];
 
   const images = [
     'https://avatars.mds.yandex.net/i?id=8212bb4fa705a7d9fca740435c0979b2_l-4298842-images-thumbs&ref=rim&n=13&w=1996&h=1121',
     'https://www.archaeolog.ru/media/2018/expedicii/baktriuskiu_otrayd/1.jpg',
     'https://avatars.mds.yandex.net/i?id=2cca8c0e97e09c2b053380812bc1b949_l-5449883-images-thumbs&n=13',
-    // 'https://botany.uz/wp-content/uploads/2021/08/Acantholimon_litvinovii.jpg',
   ];
 
   const goToSlide = (i) => {
@@ -35,10 +29,6 @@ export default function Carousel() {
           <div 
             className={`home-page__carousel__slide ${i === index ? 'home-page__carousel__slide__active' : ''}`} 
             key={i}
-            style={{ 
-              opacity: i === index ? 1 : 0,
-              transition: 'opacity 1s ease-in-out',
-            }}
           >
             <img src={src} alt={`Slide ${i}`} />
           </div>

@@ -122,7 +122,7 @@ export default function Main() {
         en: "Gulomov Farkhod",
       },
       job_title: {
-        uz: "Xujalik bulimi boshlig’i",
+        uz: "Xo'jalik bo'limi boshlig’i",
         ru: "Начальник отдела по хозяйству",
         en: "Head of the Household Department",
       },
@@ -147,7 +147,7 @@ export default function Main() {
         en: "Rakhimov Khodjiakbar",
       },
       job_title: {
-        uz: "Bosh Bug’alter",
+        uz: "Bosh Buxgalter",
         ru: "Главный бухгалтер",
         en: "Chief Accountant",
       },
@@ -171,7 +171,7 @@ export default function Main() {
         en: "Masaidova Marguba Muratovna",
       },
       job_title: {
-        uz: "Bosh yurist-konsulti",
+        uz: "Bosh yuriskonsult",
         ru: "Главный юрисконсульт",
         en: "General Counsel",
       },
@@ -219,7 +219,7 @@ export default function Main() {
         en: "Rakhmonov Murodillo",
       },
       job_title: {
-        uz: "Axborot komunikatsiya texnologiyalari mutaxassisi",
+        uz: "Axborot kommunikatsiya texnologiyalari mutaxassisi",
         ru: "Специалист в области информационных и коммуникационных технологий",
         en: "Information and Communication Technology Specialist",
       },

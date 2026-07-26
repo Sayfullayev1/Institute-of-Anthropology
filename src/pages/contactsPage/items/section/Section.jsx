@@ -12,8 +12,10 @@ export default function Section() {
         theme: "",
         message: ""
     });
+    // eslint-disable-next-line no-unused-vars
     const [errors, setErrors] = useState({});
 
+    // eslint-disable-next-line no-unused-vars
     function handleChange(e) {
         setFormData(prev => ({
             ...prev,
@@ -25,6 +27,7 @@ export default function Section() {
         }));
     }
 
+    // eslint-disable-next-line no-unused-vars
     function handleSubmit(e) {
         e.preventDefault();
         // Проверка на пустые поля
@@ -69,7 +72,7 @@ export default function Section() {
 
     return (
         <section className="contacts-page__section">
-            <div className="contacts-page__section__formWrapper">
+            {/* <div className="contacts-page__section__formWrapper">
                 <h2 className="contacts-page__section__formWrapper__title">
                     {language === "uz" ? "Xabar yuborish" : language === "ru" ? "Отправить сообщение" : "Send a message"}
                 </h2>
@@ -147,7 +150,7 @@ export default function Section() {
                         </button>
                     </div>
                 </form>
-            </div>
+            </div> */}
 
             <div className="contacts-page__section____info">
                 <h2 className="contacts-page__section____info__title">
@@ -162,10 +165,8 @@ export default function Section() {
                 <p className="contacts-page__section____info__address">
                     {
                         language === "uz"
-                            ? "O'zbekiston, 100060, Toshkent shahar, Mirzo Ulug'bek tumani, Mirzo Ulug'bek ko'chasi, 81"
-                            : language === "ru"
-                            ? "Ташкент, Мирзо Улугбекский район, ул.М.Улугбека 81, Узбекистан, 100060 "
-                            : "100060, Uzbekistan, Tashkent, Mirzo Ulugbek district, M. Ulugbek street, 81."
+                            ? "O'zbekiston, 100170, Toshkent shahar, Mirzo Ulug'bek tumani, Mirzo Ulug'bek ko'chasi, 81"
+                            : "100170, Uzbekistan, Tashkent, Mirzo Ulugbek district, M. Ulugbek street, 81."
                     }
                 </p>
                 <p className="contacts-page__section____info__contact__phone">
@@ -192,9 +193,10 @@ export default function Section() {
                     +998 71 262-64-62
                 </p>
                 <p className="contacts-page__section____info__contact__email">
-                    E-mail: uzarchae@academy.uz
-                    {/* <br /> */}
-                    {/* info-botany@academy.uz */}
+                    E-mail: anthropology@academy.uz  
+                </p>
+                <p className="contacts-page__section____info__contact__email">
+                    E-xat: antropologiya-instituti@exat.uz 
                 </p>
             </div>
 

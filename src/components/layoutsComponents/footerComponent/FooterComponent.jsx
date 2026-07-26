@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import './footerComponent.scss';
 import { LanguageContext } from '../../../context/LanguageContext';
 
+import imge from '../../../public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
+
 
 export default function FooterComponent() {
 
@@ -33,24 +35,22 @@ export default function FooterComponent() {
         <div className="footer__section">
           <h4 className="footer__title">HAVOLALAR</h4>
           <ul className="footer__links">
-            <li>› Dissertatsiya himoyalari va avtoreferatlar</li>
-            <li>› Geobotanika laboratoriyasi</li>
-            <li>› Molekulyar filogeniya va biogeografiya laboratoriyasi</li>
-            <li>› O‘zbekiston florasi laboratoriyasi</li>
-            <li>› Mikologiya va algologiya laboratoriyasi</li>
+            <li>{language === "uz" ? "> Ixtisoslashgan kengash" : "> Specialized Council"}</li>
+            <li>{language === "uz" ? "> Disertatsiya va avtoreferatlar" : "> Dissertations and Abstracts"}</li>
+            <li>{language === "uz" ? "> Laboratoriyalar" : "> Laboratories"}</li>
           </ul>
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__title">SAYTDAN IZLASH</h4>
-          <input type="text" className="footer__search" placeholder="Search..." />
-          <img src="https://botany.uz/wp-content/uploads/2024/05/Yoshlar-va-biznesni-qo%E2%80%98llab-quvvatlash-yili.jpg" alt="2024" className="footer__image" />
+          {/* <h4 className="footer__title">SAYTDAN IZLASH</h4>
+          <input type="text" className="footer__search" placeholder="Search..." /> */}
+          <img src={imge} alt="Bino" className="footer__image" />
         </div>
 
         <div className="footer__section">
           <h4 className="footer__title">MANZIL</h4>
           <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
-          <p>Telefonlar: +998 71 262-64-62, +998 71 233-95-31</p>
+          <p>Telefonlar: +998 71 262-64-62</p>
           <p>Faks: +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
         </div>

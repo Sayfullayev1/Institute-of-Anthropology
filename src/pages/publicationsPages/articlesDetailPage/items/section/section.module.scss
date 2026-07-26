@@ -14,3 +14,41 @@
     }
   }
 }
+
+// Зеркалим content_style из RichTextNewsEditor.jsx (project3), чтобы картинки/видео,
+// вставленные в редакторе, вели себя одинаково адаптивно и в самом редакторе, и здесь —
+// в том числе проценты ширины, которые редактор проставляет при перетаскивании ресайз-хэндла.
+.htmlContent {
+  overflow-wrap: break-word;
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  :global(.tox-media-container) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  :global(.tox-media-container[style*="%"]) {
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  :global(.tox-media-container) iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+}

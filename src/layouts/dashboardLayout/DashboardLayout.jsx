@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/layoutsComponents/headerComponent/
 import { Outlet } from 'react-router-dom'
 import NavbarComponent from '../../components/layoutsComponents/navbarComponent/NavbarComponent'
 import FooterComponent from '../../components/layoutsComponents/footerComponent/FooterComponent'
+import BackToTopButton from '../../components/backToTopButton/BackToTopButton'
 
 
 export default function DashboardLayout() {
@@ -16,7 +17,9 @@ export default function DashboardLayout() {
             {/* <div className='outlet-container'> */}
             <Outlet/>
             {/* </div> */}
-        <FooterComponent/> 
+        <FooterComponent/>
+
+        <BackToTopButton/>
     </div>
   )
 }
