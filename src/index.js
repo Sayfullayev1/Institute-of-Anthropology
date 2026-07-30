@@ -75,10 +75,18 @@ import ContactsPage from './pages/contactsPage/ContactsPage';
 import MissionPage from './pages/HomePages/missionPage/MissionPage';
 import StructurePage from './pages/HomePages/structurePage/StructurePage'
 import ManagementPage from './pages/HomePages/managementPage/ManagementPage'
+import ManagementDetailPage from './pages/HomePages/managementDetailPage/ManagementDetailPage';
 import CharterOfTheCenterPage from './pages/HomePages/charterOfTheCenterPage/CharterOfTheCenterPage';
 import AnnouncementsNewsPage from './pages/HomePages/announcementsNewsPage/AnnouncementsNewsPage';
 import JournalPage from './pages/HomePages/journalPage/JournalPage';
 import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/JournalIssueDetailPage';
+
+/* Departments Pages*/
+import ArchaeologicalAnthropologyDepartmentPage from './pages/HomePages/archaeologicalAnthropologyDepartmentPage/ArchaeologicalAnthropologyDepartmentPage';
+import GeoanthropologyDepartmentPage from './pages/HomePages/geoanthropologyDepartmentPage/GeoanthropologyDepartmentPage';
+import HistoricalAnthropologyDepartmentPage from './pages/HomePages/historicalAnthropologyDepartmentPage/HistoricalAnthropologyDepartmentPage';
+import SocioCulturalAnthropologyDepartmentPage from './pages/HomePages/socioCulturalAnthropologyDepartmentPage/SocioCulturalAnthropologyDepartmentPage';
+import ArchaeologicalGeophysicsDepartmentPage from './pages/HomePages/archaeologicalGeophysicsDepartmentPage/ArchaeologicalGeophysicsDepartmentPage';
 
 
 /* Research Output*/
@@ -197,6 +205,8 @@ root.render(
 
               <Route path="/:lang?/management" element={<ManagementPage/>} />
 
+              <Route path="/:lang?/management/:slug" element={<ManagementDetailPage/>} />
+
               <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} />
 
               <Route path='/:lang?/announcements-news' element={<AnnouncementsNewsPage />} />
@@ -204,6 +214,20 @@ root.render(
               <Route path='/:lang?/journal' element={<JournalPage />} />
 
               <Route path='/:lang?/journal/:id' element={<JournalIssueDetailPage />} />
+
+
+
+              {/* Departments Pages */}
+
+              <Route path='/:lang?/archaeological-anthropology-department' element={<ArchaeologicalAnthropologyDepartmentPage />} />
+
+              <Route path='/:lang?/geoanthropology-department' element={<GeoanthropologyDepartmentPage />} />
+
+              <Route path='/:lang?/historical-anthropology-department' element={<HistoricalAnthropologyDepartmentPage />} />
+
+              <Route path='/:lang?/socio-cultural-anthropology-department' element={<SocioCulturalAnthropologyDepartmentPage />} />
+
+              <Route path='/:lang?/archaeological-geophysics-department' element={<ArchaeologicalGeophysicsDepartmentPage />} />
 
 
 

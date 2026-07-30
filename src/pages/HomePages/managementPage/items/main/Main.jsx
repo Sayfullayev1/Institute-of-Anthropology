@@ -54,13 +54,25 @@ export default function Main() {
                 <h3>{item.jobTitle?.[language]}</h3>
                 <p className="job-title">{item.name?.[language]}</p>
                 <div className="contact-info">
-                  <p>{item.workTime?.[language]}</p>
-                  <p>{item.contact?.[language]}</p>
+                  {item.workTime?.[language] && (
+                    <p>{language === 'en' ? 'Work time: ' : 'Ish vaqti: '}{item.workTime[language]}</p>
+                  )}
+                  {item.contact?.[language] && (
+                    <p>{language === 'en' ? 'Phone: ' : 'Telefon: '}{item.contact[language]}</p>
+                  )}
                   <p>
                     {language === 'en' ? 'Email: ' : 'Email: '}
                     <Link to={`mailto:${item.email}`}>{item.email}</Link>
                   </p>
                 </div>
+                {item.slug && (item.bio?.uz?.trim() || item.bio?.en?.trim()) && (
+                  <Link
+                    to={language === 'uz' ? `/management/${item.slug}` : `/${language}/management/${item.slug}`}
+                    className="management-page__main__section__item__more"
+                  >
+                    {language === 'en' ? 'Learn more' : 'Batafsil'}
+                  </Link>
+                )}
               </div>
             </li>
           ))}

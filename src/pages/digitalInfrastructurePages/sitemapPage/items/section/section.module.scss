@@ -56,6 +56,20 @@
       // transform: translateX(5px); // Легкий сдвиг при наведении
     }
   }
+
+  .subList {
+    margin-top: 10px;
+    padding-left: 15px;
+
+    a {
+      font-size: 14px;
+      color: #777;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
 }
 
 // Адаптив для больших экранов

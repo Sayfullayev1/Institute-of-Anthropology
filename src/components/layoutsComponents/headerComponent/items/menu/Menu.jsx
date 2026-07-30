@@ -12,6 +12,7 @@ function Menu({ Bedeutung }) {
   const isFirstRender = useRef(true);
   const { language } = useContext(LanguageContext);
   const [openIndex, setOpenIndex] = useState(null);
+  const [openSubIndex, setOpenSubIndex] = useState(null);
   const [localSearch, setLocalSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -56,6 +57,10 @@ function Menu({ Bedeutung }) {
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const toggleSubAccordion = (key) => {
+    setOpenSubIndex((prev) => (prev === key ? null : key));
   };
 
   return (
@@ -112,13 +117,43 @@ function Menu({ Bedeutung }) {
               </div>
               <div className={`menu-item__sublist-wrapper ${openIndex === idx ? 'show' : ''}`}>
                 <ul className="menu-item__sublist">
-                  {section.items.map((item, sIdx) => (
-                    <li key={sIdx}>
-                      <Link to={item.link} className="menu-item__link">
-                        {item.Name[language]}
-                      </Link>
-                    </li>
-                  ))}
+                  {section.items.map((item, sIdx) => {
+                    const hasChildren = item.items && item.items.length > 0;
+                    const subKey = `${idx}-${sIdx}`;
+
+                    if (hasChildren) {
+                      return (
+                        <li key={sIdx} className="menu-item__subsection">
+                          <div
+                            className={`menu-item__subtitle ${openSubIndex === subKey ? 'is-open' : ''}`}
+                            onClick={() => toggleSubAccordion(subKey)}
+                          >
+                            <span>{item.Name[language]}</span>
+                            <i className="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div className={`menu-item__subsublist-wrapper ${openSubIndex === subKey ? 'show' : ''}`}>
+                            <ul className="menu-item__subsublist">
+                              {item.items.map((child, cIdx) => (
+                                <li key={cIdx}>
+                                  <Link to={child.link} className="menu-item__link">
+                                    {child.Name[language]}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </li>
+                      );
+                    }
+
+                    return (
+                      <li key={sIdx}>
+                        <Link to={item.link} className="menu-item__link">
+                          {item.Name[language]}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </li>

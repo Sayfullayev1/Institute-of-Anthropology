@@ -19,8 +19,8 @@
     }
 
     &__item__img {
-      width: 150px; /* Smaller width for the container */
-      aspect-ratio: 1 / 1.1; /* Maintain a 1:1.1 aspect ratio */
+      width: 175px; /* +~17% vs original 150px */
+      aspect-ratio: 1 / 1.2; /* Taller portrait frame */
       overflow: hidden;
 
       img {
@@ -65,7 +65,7 @@
     &__item__text .contact-info {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 9px;
     }
 
     &__item__text .contact-info p {
@@ -77,6 +77,24 @@
     &__item__text .contact-info p > a {
       color: #009cff;
       text-decoration: none;
+    }
+
+    &__item__more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 34px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        background: #007bff;
+        color: #ffffff;
+      }
     }
   }
 }
@@ -96,7 +114,7 @@
       }
 
       &__item__img {
-        min-width: 200px; /* Larger width for the container */
+        min-width: 235px; /* +~17% vs original 200px */
       }
 
       &__item__text {

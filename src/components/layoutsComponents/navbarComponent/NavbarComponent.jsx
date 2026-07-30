@@ -59,6 +59,40 @@ export default function NavbarComponent() {
                       <ul className={`navbar__submenu ${openSubmenuIndex === index ? 'navbar__submenu--visible' : ''}`}>
                         {item?.items.map((subItem, subIndex) => {
 
+                          const hasChildren = subItem.items && subItem.items.length > 0;
+
+                          if (hasChildren) {
+                            return (
+                              <li className='navbar__submenu__item navbar__submenu__extended-item' key={subIndex}>
+                                <Link
+                                  className='navbar__submenu__link'
+                                  to={language === 'uz' ? subItem.link : `/${language}${subItem.link}`}
+                                  onClick={(e) => {
+                                    if (!subItem.link) e.preventDefault();
+                                  }}
+                                >
+                                  {subItem.Name[language]}
+                                </Link>
+                                <span className='navbar__submenu__extended-item__arrow'>
+                                  <i className="fa-solid fa-chevron-right"></i>
+                                </span>
+
+                                <ul className='navbar__extendedItem__list'>
+                                  {subItem.items.map((childItem, childIndex) => (
+                                    <li className='navbar__extendedItem__list__item' key={childIndex}>
+                                      <Link
+                                        className='navbar__submenu__link'
+                                        to={language === 'uz' ? childItem.link : `/${language}${childItem.link}`}
+                                      >
+                                        {childItem.Name[language]}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </li>
+                            )
+                          }
+
                           return(
                             <li className={`navbar__submenu__item`} key={subIndex}>
                               <Link
@@ -72,7 +106,7 @@ export default function NavbarComponent() {
                           )
 
                         })}
-                            
+
                       </ul>
                     )}
                   </li>

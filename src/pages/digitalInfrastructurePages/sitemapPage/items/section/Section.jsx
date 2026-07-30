@@ -32,9 +32,25 @@ export default function Section() {
               <ul className={styles.subList}>
                 {item.items.map((subItem, subIndex) => (
                   <li key={subIndex} className={styles.subItem}>
-                    <Link to={getLocalizedLink(subItem.link)}>
-                      {subItem.Name[language]}
-                    </Link>
+                    {subItem.link ? (
+                      <Link to={getLocalizedLink(subItem.link)}>
+                        {subItem.Name[language]}
+                      </Link>
+                    ) : (
+                      <span>{subItem.Name[language]}</span>
+                    )}
+
+                    {subItem.items && subItem.items.length > 0 && (
+                      <ul className={styles.subList}>
+                        {subItem.items.map((childItem, childIndex) => (
+                          <li key={childIndex} className={styles.subItem}>
+                            <Link to={getLocalizedLink(childItem.link)}>
+                              {childItem.Name[language]}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>

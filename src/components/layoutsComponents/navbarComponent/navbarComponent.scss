@@ -88,14 +88,16 @@
           position: relative;
           display: flex;
           align-items: center;
+          justify-content: space-between;
           gap: 50px;
 
           &:hover .navbar__extendedItem__list{
             display: block; // Показываем подменю при наведении
           }
-        
+
           &__arrow>i{
             font-size: 10px;
+            color: #333333;
           }
         }
 
@@ -107,6 +109,26 @@
           white-space: nowrap; // Предотвращаем перенос текста
           overflow: hidden; // Обрезаем текст, если он слишком длинный
           text-overflow: ellipsis; // Добавляем многоточие, если текст обрезан
+        }
+      }
+
+      &__extendedItem__list {
+        display: none; // Показывается только по наведению (см. &:hover выше)
+        position: absolute;
+        top: 0;
+        left: 100%; // Выезжает справа от родительского пункта
+        min-width: 280px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        z-index: 11;
+
+        &__item {
+          padding: 15px 20px;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
         }
       }
 

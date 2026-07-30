@@ -50,6 +50,50 @@
       },
       {
         "Name": {
+          "uz": "Bo‘limlar",
+          "en": "Departments"
+        },
+        "link": "",
+        "items": [
+          {
+            "Name": {
+              "uz": "Arxeologik antropologiya bo‘limi",
+              "en": "Archaeological Anthropology Department"
+            },
+            "link": "/archaeological-anthropology-department"
+          },
+          {
+            "Name": {
+              "uz": "Geoantropologiya bo‘limi",
+              "en": "Geoanthropology Department"
+            },
+            "link": "/geoanthropology-department"
+          },
+          {
+            "Name": {
+              "uz": "Tarixiy antropologiya bo‘limi",
+              "en": "Historical Anthropology Department"
+            },
+            "link": "/historical-anthropology-department"
+          },
+          {
+            "Name": {
+              "uz": "Ijtimoiy-madaniy antropologiya bo‘limi",
+              "en": "Socio-Cultural Anthropology Department"
+            },
+            "link": "/socio-cultural-anthropology-department"
+          },
+          {
+            "Name": {
+              "uz": "Arxeologik geofizika bo‘limi",
+              "en": "Archaeological Geophysics Department"
+            },
+            "link": "/archaeological-geophysics-department"
+          }
+        ]
+      },
+      {
+        "Name": {
           "uz": "Bog‘lanish",
           "en": "Contacts"
         },
