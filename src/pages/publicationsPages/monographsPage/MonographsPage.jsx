@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import style from './monographspage.module.scss';
 
-import Category from '../../../components/category/Category';
-import { LanguageContext } from '../../../context/LanguageContext';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
 

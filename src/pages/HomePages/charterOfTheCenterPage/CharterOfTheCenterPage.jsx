@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import style from './charterOfTheCenterPage.module.scss'
 
-import Container from '../../../components/container/Container'
-import Category from '../../../components/category/Category'
+import Container from '@/components/container/Container'
+import Category from '@/components/category/Category'
 import Convert from './localComponents/Convert/Convert'
 
 
-import { LanguageContext } from '../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 export default function CharterOfTheCenterPage() {
 

@@ -1,74 +1,74 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import './section.scss';
-import { LanguageContext } from '../../../../context/LanguageContext';
-import getApiUrl from '../../../../api/api';
-import axios from 'axios';
+import { LanguageContext } from '@/context/LanguageContext';
+// import getApiUrl from '@/api/api';
+// import axios from 'axios';
 
 export default function Section() {
     const { language } = useContext(LanguageContext);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        theme: "",
-        message: ""
-    });
-    // eslint-disable-next-line no-unused-vars
-    const [errors, setErrors] = useState({});
+    // const [formData, setFormData] = useState({
+    //     name: "",
+    //     email: "",
+    //     theme: "",
+    //     message: ""
+    // });
+    // // eslint-disable-next-line no-unused-vars
+    // const [errors, setErrors] = useState({});
 
     // eslint-disable-next-line no-unused-vars
-    function handleChange(e) {
-        setFormData(prev => ({
-            ...prev,
-            [e.target.id]: e.target.value
-        }));
-        setErrors(prev => ({
-            ...prev,
-            [e.target.id]: false
-        }));
-    }
+    // function handleChange(e) {
+    //     setFormData(prev => ({
+    //         ...prev,
+    //         [e.target.id]: e.target.value
+    //     }));
+    //     setErrors(prev => ({
+    //         ...prev,
+    //         [e.target.id]: false
+    //     }));
+    // }
 
     // eslint-disable-next-line no-unused-vars
-    function handleSubmit(e) {
-        e.preventDefault();
-        // Проверка на пустые поля
-        const newErrors = {};
-        Object.keys(formData).forEach(key => {
-            if (!formData[key].trim()) {
-                newErrors[key] = true;
-            }
-        });
-        setErrors(newErrors);
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     // Проверка на пустые поля
+    //     const newErrors = {};
+    //     Object.keys(formData).forEach(key => {
+    //         if (!formData[key].trim()) {
+    //             newErrors[key] = true;
+    //         }
+    //     });
+    //     setErrors(newErrors);
 
-        if (Object.keys(newErrors).length > 0) {
-            return;
-        }
+    //     if (Object.keys(newErrors).length > 0) {
+    //         return;
+    //     }
 
-        const data = {
-            ...formData,
-            date: new Date().toISOString()
-        };
-        const api = getApiUrl();
+    //     const data = {
+    //         ...formData,
+    //         date: new Date().toISOString()
+    //     };
+    //     const api = getApiUrl();
 
-        setFormData({
-            name: "",
-            email: "",
-            theme: "",
-            message: ""
-        });
+    //     setFormData({
+    //         name: "",
+    //         email: "",
+    //         theme: "",
+    //         message: ""
+    //     });
 
-        axios.post(`${api}/api/contacts/push`, data)
-            .then(response => {
-                if (response.data.success) {
-                    alert(language === "uz" ? "Xabar yuborildi!" : language === "ru" ? "Сообщение отправлено!" : "Message sent!");
-                } else {
-                    alert(language === "uz" ? "Xabar yuborishda xatolik!" : language === "ru" ? "Ошибка при отправке сообщения!" : "Error sending message!");
-                }
-            })
-            .catch(error => {
-                // console.error("Error sending message:", error);
-                alert(language === "uz" ? "Xabar yuborishda xatolik!" : language === "ru" ? "Ошибка при отправке сообщения!" : "Error sending message!");
-            });
-    }
+    //     axios.post(`${api}/api/contacts/push`, data)
+    //         .then(response => {
+    //             if (response.data.success) {
+    //                 alert(language === "uz" ? "Xabar yuborildi!" : language === "ru" ? "Сообщение отправлено!" : "Message sent!");
+    //             } else {
+    //                 alert(language === "uz" ? "Xabar yuborishda xatolik!" : language === "ru" ? "Ошибка при отправке сообщения!" : "Error sending message!");
+    //             }
+    //         })
+    //         .catch(error => {
+    //             // console.error("Error sending message:", error);
+    //             alert(language === "uz" ? "Xabar yuborishda xatolik!" : language === "ru" ? "Ошибка при отправке сообщения!" : "Error sending message!");
+    //         });
+    // }
 
     return (
         <section className="contacts-page__section">

@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import axios from 'axios';
-import getApi  from '../../../../../api/api'; // Путь к вашей функции получения URL API
+import getApi  from '@/api/api'; // Путь к вашей функции получения URL API
 
 export default function Section() {
     const { language } = useContext(LanguageContext);

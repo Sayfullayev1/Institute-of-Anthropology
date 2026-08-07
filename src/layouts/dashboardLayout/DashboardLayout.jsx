@@ -1,11 +1,11 @@
 import React from 'react'
 import './dashboardLayout.scss'
 
-import HeaderComponent from '../../components/layoutsComponents/headerComponent/HeaderComponent'
+import HeaderComponent from '@/components/layoutsComponents/headerComponent/HeaderComponent'
 import { Outlet } from 'react-router-dom'
-import NavbarComponent from '../../components/layoutsComponents/navbarComponent/NavbarComponent'
-import FooterComponent from '../../components/layoutsComponents/footerComponent/FooterComponent'
-import BackToTopButton from '../../components/backToTopButton/BackToTopButton'
+import NavbarComponent from '@/components/layoutsComponents/navbarComponent/NavbarComponent'
+import FooterComponent from '@/components/layoutsComponents/footerComponent/FooterComponent'
+import BackToTopButton from '@/components/backToTopButton/BackToTopButton'
 
 
 export default function DashboardLayout() {

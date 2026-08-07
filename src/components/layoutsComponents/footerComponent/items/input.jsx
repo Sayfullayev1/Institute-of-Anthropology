@@ -1,5 +1,5 @@
 // import React from 'react'; // Убедитесь, что React импортируется только один раз
-// // import { cn } from "../../lib/utils"; // Предполагается, что это корректный импорт
+// // import { cn } from "@/components/layoutsComponents/lib/utils"; // Предполагается, что это корректный импорт
 
 // const Input = React.forwardRef((props, ref) => {
 // //   const { className, type, ...rest } = props;

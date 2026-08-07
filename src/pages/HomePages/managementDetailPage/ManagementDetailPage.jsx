@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import style from './managementDetailPage.module.scss';
-import Category from '../../../components/category/Category';
-import Container from '../../../components/container/Container';
-import { LanguageContext } from '../../../context/LanguageContext';
-import getApiUrl from '../../../api/api';
+import Category from '@/components/category/Category';
+import Container from '@/components/container/Container';
+import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
 
 export default function ManagementDetailPage() {
   const { slug } = useParams();

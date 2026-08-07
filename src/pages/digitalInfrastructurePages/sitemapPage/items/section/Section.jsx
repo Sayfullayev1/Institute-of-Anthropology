@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
-import menuData from '../../../../../pages/PagesData/siteMapeData/SiteMapeData.json';
+import { LanguageContext } from '@/context/LanguageContext';
+import menuData from '@/pages/PagesData/siteMapeData/SiteMapeData.json';
 
 export default function Section() {
   const { language } = useContext(LanguageContext);

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import style from './teachingAidsPage.module.scss';
 
-import Category from '../../../components/category/Category';
-import { LanguageContext } from '../../../context/LanguageContext';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
 
 import axios from 'axios';
 
-import getApiUrl from '../../../api/api';
+import getApiUrl from '@/api/api';
 
 
 

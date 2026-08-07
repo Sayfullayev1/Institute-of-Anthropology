@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './main.scss';
-import Category from '../../../../../components/category/Category';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
 export default function Main() {

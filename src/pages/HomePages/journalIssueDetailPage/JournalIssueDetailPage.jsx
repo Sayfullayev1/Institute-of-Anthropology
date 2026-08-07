@@ -3,10 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 
 import style from './journalIssueDetailPage.module.scss';
-import Category from '../../../components/category/Category';
-import Container from '../../../components/container/Container';
-import { LanguageContext } from '../../../context/LanguageContext';
-import getApiUrl from '../../../api/api';
+import Category from '@/components/category/Category';
+import Container from '@/components/container/Container';
+import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
 
 const JOURNAL_TITLE = { uz: 'O‘ZBEKISTON MODDIY MADANIYATI TARIXI', en: 'THE HISTORY OF MATERIAL CULTURE OF UZBEKISTAN' };
 

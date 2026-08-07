@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './pagePlaceholder.scss';
-import { LanguageContext } from '../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 export default function PagePlaceholder() {
   const { language } = useContext(LanguageContext);

@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import './main.scss';
-import Category from '../../../../../components/category/Category';
-import Section from '../section/Section';
-import Container from '../../../../../components/container/Container';
+import Category from '@/components/category/Category';
+import Section from '@/pages/newsPages/photoGalleryDetailPage/items/section/Section';
+import Container from '@/components/container/Container';
 import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
-import getApiUrl from '../../../../../api/api';
+import getApiUrl from '@/api/api';
 
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 export default function Main() {
   const { language } = useContext(LanguageContext);

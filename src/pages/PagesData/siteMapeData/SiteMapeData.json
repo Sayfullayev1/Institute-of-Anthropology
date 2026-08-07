@@ -89,6 +89,13 @@
               "en": "Archaeological Geophysics Department"
             },
             "link": "/archaeological-geophysics-department"
+          },
+          {
+            "Name": {
+              "uz": "Falsafa bo‘limi",
+              "en": "Department of Philosophy"
+            },
+            "link": "/philosophy-department"
           }
         ]
       },
@@ -103,91 +110,112 @@
   },
   {
     "Name": {
-      "uz": "Tadqiqot \n natijalari",
-      "en": "Research \n Output"
+      "uz": "Izlanish",
+      "en": "Research"
     },
     "link": "",
     "items": [
       {
         "Name": {
-          "uz": "Nashrlar",
-          "en": "Publication"
+          "uz": "Maqolalar",
+          "en": "Articles"
         },
-        "link": "/publication"
+        "link": "/articles"
       },
       {
         "Name": {
-          "uz": "Iqtiboslar ko‘rsatkichlari",
-          "en": "Sitation Metriks"
+          "uz": "Monografiyalar",
+          "en": "Monographs"
         },
-        "link": "/sitation-metriks"
+        "link": "/monographs"
       },
       {
         "Name": {
-          "uz": "Konferentsiyalardagi chiqishlar",
-          "en": "Conferance Talks"
+          "uz": "Konferensiyalar",
+          "en": "Conferences"
         },
-        "link": "/conferance-talks"
+        "link": "/conferences"
       }
     ]
   },
   {
     "Name": {
-      "uz": "Innovatsiya va \n tijoratlashtirish",
-      "en": "Innovation & \n commercialization"
+      "uz": "Tijoratlashtirish",
+      "en": "Commercialization"
     },
     "link": "",
     "items": [
       {
         "Name": {
-          "uz": "Foydali model",
-          "en": "Utility model"
+          "uz": "2023",
+          "en": "2023"
         },
-        "link": "/utility-model"
+        "link": "/year-2023"
       },
       {
         "Name": {
-          "uz": "Ilmiy xizmat ko‘rsatish",
-          "en": "Scientific service"
+          "uz": "2024",
+          "en": "2024"
         },
-        "link": "/scientific-service"
+        "link": "/year-2024"
+      },
+      {
+        "Name": {
+          "uz": "2025",
+          "en": "2025"
+        },
+        "link": "/year-2025"
+      },
+      {
+        "Name": {
+          "uz": "2026",
+          "en": "2026"
+        },
+        "link": "/year-2026"
       }
     ]
   },
   {
     "Name": {
-      "uz": "Inson \n kapitali",
-      "en": "Human \n capital"
+      "uz": "Xodimlar",
+      "en": "Staff"
     },
     "link": "",
     "items": [
       {
         "Name": {
-          "uz": "Dissertatsiya himoyalari",
-          "en": "Dissertation defenses"
+          "uz": "Xodimlar",
+          "en": "Researchers"
         },
-        "link": "/dissertation-defenses"
+        "link": "/researchers"
       },
       {
         "Name": {
-          "uz": "Yosh izlanuvchilar",
-          "en": "Young researchers"
+          "uz": "Yosh olimlar",
+          "en": "Early-Career Researchers"
         },
-        "link": "/young-researchers"
+        "link": "/early-career-researchers"
       },
       {
         "Name": {
           "uz": "Ilmiy rahbarlar",
-          "en": "Scientific supervisors"
+          "en": "Research Advisors"
         },
-        "link": "/scientific-supervisors"
+        "link": "/research-advisors"
       },
       {
         "Name": {
-          "uz": "Mukofotlar",
-          "en": "Awards"
+          "uz": "Yangi xodimlar",
+          "en": "New Staff"
         },
-        "link": "/awards"
+        "link": "/new-staff"
+      },
+      {
+        "Name": {
+          "uz": "Yutuqlar",
+          "en": "Achievements"
+        },
+        "link": "/achievements"
       },
       {
         "Name": {
@@ -201,51 +229,51 @@
   {
     "Name": {
       "uz": "Xalqaro \n hamkorlik",
-      "en": "International \n Collaboration"
+      "en": "International \n Cooperation"
     },
     "link": "",
     "items": [
       {
         "Name": {
-          "uz": "Xalqaro loyiha/grantlar",
-          "en": "International Projects/Grants"
+          "uz": "Xalqaro loyihalar",
+          "en": "International Projects"
         },
-        "link": "/international-projects-grants"
+        "link": "/international-projects"
       },
       {
         "Name": {
-          "uz": "Xalqaro hammualliflik",
-          "en": "International Co-authorship"
+          "uz": "Qo‘shma nashrlar",
+          "en": "Joint Publications"
         },
-        "link": "/international-co-authorship"
+        "link": "/joint-publications"
       },
       {
         "Name": {
-          "uz": "Xalqaro dasturlar",
-          "en": "International Programs"
+          "uz": "Xalqaro tashkilotlar",
+          "en": "International Organizations"
         },
-        "link": "/international-programs"
+        "link": "/international-organizations"
       },
       {
         "Name": {
-          "uz": "Xalqaro tadbirlar",
-          "en": "International Events"
+          "uz": "Xalqaro yig‘ilishlar",
+          "en": "International Meetings"
         },
-        "link": "/international-events"
+        "link": "/international-meetings"
       },
       {
         "Name": {
-          "uz": "Xalqaro xodimlar",
-          "en": "International Staff"
+          "uz": "Hamkorlar",
+          "en": "Partners"
         },
-        "link": "/international-staff"
+        "link": "/partners"
       }
     ]
   },
   {
     "Name": {
-      "uz": "Ta’sir va \n ishtirok",
-      "en": "Impact & \n Engagement"
+      "uz": "Kommunikatsiya",
+      "en": "Communication"
     },
     "link": "",
     "items": [
@@ -258,68 +286,61 @@
       },
       {
         "Name": {
-          "uz": "Ilmiy tashkilotchilik",
-          "en": "Scientific Organization"
+          "uz": "Mahalliy yig‘ilishlar",
+          "en": "National Events"
         },
-        "link": "/scientific-organization"
+        "link": "/national-events"
       },
       {
         "Name": {
-          "uz": "Ijtimoiy tarmoqlar",
+          "uz": "Ijtimoiy tarmoq",
           "en": "Social Media"
         },
         "link": "/social-media"
       },
       {
         "Name": {
-          "uz": "Ekspert kengashlari",
-          "en": "Expert Councils"
+          "uz": "Ekspertlik",
+          "en": "Expertise"
         },
-        "link": "/expert-councils"
+        "link": "/expertise"
       },
       {
         "Name": {
-          "uz": "Ichki tadbirlar",
-          "en": "Internal Events"
+          "uz": "Korporativ",
+          "en": "Institutional"
         },
-        "link": "/internal-events"
+        "link": "/institutional"
       }
     ]
   },
   {
     "Name": {
-      "uz": "Raqamli \n  infratuzilma",
-      "en": "Digital \n Infrastructure"
+      "uz": "Raqamlashtirish",
+      "en": "Digitalization"
     },
     "link": "",
     "items": [
       {
         "Name": {
-          "uz": "Sayt xaritasi",
-          "en": "Sitemap"
+          "uz": "ORCID",
+          "en": "ORCID"
         },
-        "link": "/site-map"
+        "link": "/orcid"
       },
       {
         "Name": {
-          "uz": "Hodim profillar",
-          "en": "Directory"
+          "uz": "WoS",
+          "en": "WoS"
         },
-        "link": "/directory"
+        "link": "/wos"
       },
       {
         "Name": {
-          "uz": "Raqamli boshqaruv",
-          "en": "Digital Management"
+          "uz": "Scopus",
+          "en": "Scopus"
         },
-        "link": "/digital-management"
-      },
-      {
-        "Name": {
-          "uz": "Shaxsiy KPI",
-          "en": "Personal KPI"
-        },
-        "link": "/personal-kpi"
+        "link": "/scopus"
       },
       {
         "Name": {
@@ -327,13 +348,6 @@
           "en": "Cybersecurity"
         },
         "link": "/cybersecurity"
-      },
-      {
-        "Name": {
-          "uz": "Galereya",
-          "en": "Photo Gallery"
-        },
-        "link": "/photo-gallery"
       }
     ]
   }

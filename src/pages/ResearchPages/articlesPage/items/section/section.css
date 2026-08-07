@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.contacts-page__section {
+  padding: 45px 5%;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.contacts-page__section__formWrapper__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative; /* Для псевдоэлемента */
+}
+.contacts-page__section__formWrapper__title::after {
+  content: ""; /* Пустое содержимое для линии */
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Отступ линии от текста */
+  width: 36px; /* Длина линии (в процентах от ширины текста) */
+  height: 1px; /* Толщ1на линии */
+  background-color: rgb(0, 156, 255); /* Цвет линии */
+}
+.contacts-page__section__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.contacts-page__section__form__input {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 300; /* Толщина текста: 100 (тонкий) до 900 (жирный) */
+  border: 1px solid #ccc;
+  color: #080808; /* Цвет текста */
+  border-radius: 4px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+.contacts-page__section__form__input:focus {
+  border-color: #009cff; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(0, 156, 255, 0.5); /* Лёгкая подсветка */
+  outline: none; /* Убираем стандартное выделение */
+}
+.contacts-page__section__form__textarea {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 300; /* Толщина текста: 100 (тонкий) до 900 (жирный) */
+  border: 1px solid #ccc;
+  color: #080808; /* Цвет текста */
+  border-radius: 2 px;
+  width: 100%;
+  height: 100px; /* Высота текстового поля */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход */
+  resize: vertical; /* Позволяем изменять размер только по вертикали */
+}
+.contacts-page__section__form__textarea:focus {
+  border-color: #009cff; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 5px rgba(0, 156, 255, 0.5); /* Лёгкая подсветка */
+  outline: none; /* Убираем стандартное выделение */
+}
+.contacts-page__section__form__button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+  display: inline-block; /* Кнопка занимает только свою ширину */
+  width: auto; /* Убираем растяжение на всю ширину */
+}
+.contacts-page__section__form__button:hover {
+  background-color: #e55b00; /* Цвет кнопки при наведении */
+  transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+.contacts-page__section____info__title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  position: relative; /* Для псевдоэлемента */
+}
+.contacts-page__section____info__title::after {
+  content: ""; /* Пустое содержимое для линии */
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Отступ линии от текста */
+  width: 36px; /* Длина линии (в процентах от ширины текста) */
+  height: 0.6px; /* Толщина линии */
+  background-color: rgb(0, 156, 255); /* Цвет линии */
+}
+.contacts-page__section____info__address {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b6b6b; /* Цвет текста */
+  margin-bottom: 6px;
+}
+.contacts-page__section____info__contact__address {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b6b6b; /* Цвет текста */
+  margin-bottom: 6px;
+}
+.contacts-page__section____info__contact__phone {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b6b6b; /* Цвет текста */
+  margin-bottom: 6px;
+}
+.contacts-page__section____info__contact__fax {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b6b6b; /* Цвет текста */
+  margin-bottom: 6px;
+}
+.contacts-page__section____info__contact__email {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b6b6b; /* Цвет текста */
+}
+
+@media (min-width: 1000px) {
+  .contacts-page__section {
+    grid-template-columns: 1fr 1fr; /* Две колонки на больших экранах */
+    gap: 40px;
+  }
+}
+@media (min-width: 1300px) {
+  .contacts-page__section {
+    max-width: 1300px;
+    margin: 0 auto; /* Центрируем секцию */
+    padding: 45px 4%;
+  }
+}/*# sourceMappingURL=section.css.map */

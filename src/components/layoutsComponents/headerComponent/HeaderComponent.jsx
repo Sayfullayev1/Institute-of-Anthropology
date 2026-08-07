@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import './headerComponent.scss';
-import { LanguageContext } from '../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
-import logoImage from '../../../public/images/logoImage/BLACK-SQUARE-uncircled-squared.jpg';
+import logoImage from '@/public/images/logoImage/BLACK-SQUARE-uncircled-squared.jpg';
 import Menu from './items/menu/Menu';
 import LanguageSwitcher from './items/languageSwitcher/LanguageSwitcher';
 import SearchComponent from './items/searchComponent/SearchComponent';

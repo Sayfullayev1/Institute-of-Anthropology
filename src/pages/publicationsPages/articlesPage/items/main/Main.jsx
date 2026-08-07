@@ -1,10 +1,10 @@
 import React from 'react';
 import './main.scss';
 
-import Category from '../../../../../components/category/Category';
-import Section from '../section/Section';
+import Category from '@/components/category/Category';
+import Section from '@/pages/publicationsPages/articlesPage/items/section/Section';
 
-import Container from '../../../../../components/container/Container';
+import Container from '@/components/container/Container';
 
 
 import { useLocation } from 'react-router-dom';
@@ -26,14 +26,6 @@ export default function Main() {
           en: "Articles",
         },
         link: "articles",
-      },
-      {
-        Name: {
-          uz: "E'lonlar",
-          ru: "Обьявления",
-          en: "Ads",
-        },
-        link: "ads",
       },
       {
         Name: {

@@ -2,10 +2,10 @@ import React, { useEffect, useState, useContext, useRef, useCallback } from 'rea
 import './menu.scss';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { LanguageContext } from '../../../../../context/LanguageContext';
-import LanguageSwitcher from '../languageSwitcher/LanguageSwitcher';
-import getApiUrl from '../../../../../api/api';
-import menuData from '../../../../../pages/PagesData/siteMapeData/SiteMapeData.json';
+import { LanguageContext } from '@/context/LanguageContext';
+import LanguageSwitcher from '@/components/layoutsComponents/headerComponent/items/languageSwitcher/LanguageSwitcher';
+import getApiUrl from '@/api/api';
+import menuData from '@/pages/PagesData/siteMapeData/SiteMapeData.json';
 
 function Menu({ Bedeutung }) {
   const [statusClass, setStatusClass] = useState("");

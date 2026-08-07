@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
-import getApiUrl from '../../../../../api/api';
-import Pagination from '../../../../../components/pagination/Pagination';
-import materialCultureCover from '../../../../../public/images/journal/material-culture-cover.jpg';
+import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
+import Pagination from '@/components/pagination/Pagination';
+import materialCultureCover from '@/public/images/journal/material-culture-cover.jpg';
 
 const ARCHIVE_PAGE_SIZE = 20;
 

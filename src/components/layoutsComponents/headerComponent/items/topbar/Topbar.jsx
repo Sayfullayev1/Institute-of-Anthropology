@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./topbar.scss"
 
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 

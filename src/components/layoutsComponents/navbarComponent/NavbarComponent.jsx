@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbarComponent.scss';
-import { LanguageContext } from '../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
-import menuData from '../../../pages/PagesData/siteMapeData/SiteMapeData.json'; // Предполагаемый путь к вашему JSON-файлу
+import menuData from '@/pages/PagesData/siteMapeData/SiteMapeData.json'; // Предполагаемый путь к вашему JSON-файлу
 
 export default function NavbarComponent() {
   const { language } = useContext(LanguageContext);

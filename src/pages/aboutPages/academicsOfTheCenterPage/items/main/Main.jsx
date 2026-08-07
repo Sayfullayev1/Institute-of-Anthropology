@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import './main.scss';
-import Category from '../../../../../components/category/Category';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
 
-import cardsDataImg1 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1.svg';
-import cardsDataImg2 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1 (1).svg';
-import cardsDataImg3 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1 (2).svg';
-import cardsDataImg4 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1 (3).svg';
-import cardsDataImg5 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1 (4).svg';
-import cardsDataImg6 from '../../../../../public/images/academicsOfTheCenterPageImages/image 1 (5).svg';
+import cardsDataImg1 from '@/public/images/academicsOfTheCenterPageImages/image 1.svg';
+import cardsDataImg2 from '@/public/images/academicsOfTheCenterPageImages/image 1 (1).svg';
+import cardsDataImg3 from '@/public/images/academicsOfTheCenterPageImages/image 1 (2).svg';
+import cardsDataImg4 from '@/public/images/academicsOfTheCenterPageImages/image 1 (3).svg';
+import cardsDataImg5 from '@/public/images/academicsOfTheCenterPageImages/image 1 (4).svg';
+import cardsDataImg6 from '@/public/images/academicsOfTheCenterPageImages/image 1 (5).svg';
 
 
 

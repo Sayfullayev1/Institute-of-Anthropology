@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './category.scss';   
 
-import { LanguageContext } from '../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
 export default function Category({ data }) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './pagination.module.scss';
-import { getPaginationRange } from '../../utils/paginationRange';
+import { getPaginationRange } from '@/utils/paginationRange';
 
 // Универсальный компонент пагинации: квадратные кнопки-номера страниц,
 // с многоточиями, когда страниц становится слишком много.

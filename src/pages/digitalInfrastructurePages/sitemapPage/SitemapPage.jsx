@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Main from './items/main/Main'
 import { Helmet } from 'react-helmet-async'
-import { LanguageContext } from '../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 export default function SitemapPage() {
 

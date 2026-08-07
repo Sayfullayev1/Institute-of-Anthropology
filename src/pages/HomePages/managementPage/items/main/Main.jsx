@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './main.scss';
 import axios from 'axios';
-import Category from '../../../../../components/category/Category';
-import { LanguageContext } from '../../../../../context/LanguageContext';
-import getApiUrl from '../../../../../api/api';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
 import { Link } from 'react-router-dom';
 
 export default function Main() {

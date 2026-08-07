@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './section.module.scss'; // Убедитесь, что файл section.module.scss существует
 
-import { LanguageContext } from '../../../../../context/LanguageContext';
-import getApiUrl from '../../../../../api/api';
+import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Section() {

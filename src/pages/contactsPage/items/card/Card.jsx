@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import './card.scss';
-import { LanguageContext } from '../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
 

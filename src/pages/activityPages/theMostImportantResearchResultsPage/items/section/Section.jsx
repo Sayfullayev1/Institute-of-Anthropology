@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
-import ImagesCard from '../imagesCard/ImagesCard';
+import ImagesCard from '@/pages/activityPages/theMostImportantResearchResultsPage/items/imagesCard/ImagesCard';
 
 
-import list1Image1 from '../../../../../public/images/TheMostImportantResearchResultsPageImages/image.png';  
-import list1Image2 from '../../../../../public/images/TheMostImportantResearchResultsPageImages/image copy.png';  
-import list4Image1 from '../../../../../public/images/TheMostImportantResearchResultsPageImages/image copy 2.png'; 
+import list1Image1 from '@/public/images/TheMostImportantResearchResultsPageImages/image.png';  
+import list1Image2 from '@/public/images/TheMostImportantResearchResultsPageImages/image copy.png';  
+import list4Image1 from '@/public/images/TheMostImportantResearchResultsPageImages/image copy 2.png'; 
 
 export default function Section() {
   const { language } = useContext(LanguageContext);

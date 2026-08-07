@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from './section.module.scss'; // Убедитесь, что файл section.module.scss существует
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
 import axios from 'axios';
-import getApiUrl from '../../../../../api/api';
+import getApiUrl from '@/api/api';
 
 
 

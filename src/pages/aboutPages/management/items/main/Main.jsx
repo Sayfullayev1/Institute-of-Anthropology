@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import './main.scss';
-import Category from '../../../../../components/category/Category';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import Category from '@/components/category/Category';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
 
-import peopleImg1 from '../../../../../public/images/managementImages/photo_2026-04-20_18-31-56.jpg';
-import peopleImg2 from '../../../../../public/images/managementImages/0003-КИТАЙ-3,3  .....jpg';
-import peopleImg3 from '../../../../../public/images/managementImages/image.png';
-import peopleImg4 from '../../../../../public/images/managementImages/image 1 (3).svg';
-import peopleImg5 from '../../../../../public/images/managementImages/image 1 (4).svg';
-import peopleImg6 from '../../../../../public/images/managementImages/image 1 (5).svg';
-import peopleImg7 from '../../../../../public/images/managementImages/photo_2026-04-20_18-13-34.jpg';
-import peopleImg8 from '../../../../../public/images/managementImages/image 1 (7).svg';
+import peopleImg1 from '@/public/images/managementImages/photo_2026-04-20_18-31-56.jpg';
+import peopleImg2 from '@/public/images/managementImages/0003-КИТАЙ-3,3  .....jpg';
+import peopleImg3 from '@/public/images/managementImages/image.png';
+import peopleImg4 from '@/public/images/managementImages/image 1 (3).svg';
+import peopleImg5 from '@/public/images/managementImages/image 1 (4).svg';
+import peopleImg6 from '@/public/images/managementImages/image 1 (5).svg';
+import peopleImg7 from '@/public/images/managementImages/photo_2026-04-20_18-13-34.jpg';
+import peopleImg8 from '@/public/images/managementImages/image 1 (7).svg';
 import { Link } from 'react-router-dom';
 
 

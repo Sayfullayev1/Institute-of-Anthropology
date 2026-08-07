@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styles from './section.module.scss';
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
 
 

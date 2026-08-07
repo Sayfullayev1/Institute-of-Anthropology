@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './footerComponent.scss';
-import { LanguageContext } from '../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 
-import imge from '../../../public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
+import imge from '@/public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
 
 
 export default function FooterComponent() {

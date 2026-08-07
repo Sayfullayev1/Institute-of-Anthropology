@@ -1,7 +1,7 @@
 import React  from 'react';
 import styles from './section.module.scss';
 
-import img from '../../../../../public/images/HomePagesImages/sectionImages/image.png';
+import img from '@/public/images/HomePagesImages/sectionImages/image.png';
 
 export default function Section() {
   // const { language } = useContext(LanguageContext);

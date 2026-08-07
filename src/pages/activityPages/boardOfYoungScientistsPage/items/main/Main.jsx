@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './main.module.scss';
-import Category from '../../../../../components/category/Category';
-import Section from '../section/Section';
+import Category from '@/components/category/Category';
+import Section from '@/pages/activityPages/boardOfYoungScientistsPage/items/section/Section';
 
 export default function Main() {
   

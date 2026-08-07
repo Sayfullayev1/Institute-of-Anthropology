@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styles from './section.module.scss'; // Убедитесь, что файл section.module.scss существует
-import { LanguageContext } from '../../../../../context/LanguageContext';
+import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
 // content хранится как строка (старые записи) либо как {uz, en} (новые записи из
