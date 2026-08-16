@@ -7,7 +7,6 @@ import Carousel from '@/pages/HomePages/homePage/items/carousel/Carousel';
 import { LanguageContext } from '@/context/LanguageContext';
 
 import News from '@/pages/HomePages/homePage/items/news/News';
-import VideoContents from '@/pages/HomePages/homePage/items/videoContents/VideoContents';
 
 
 
@@ -38,20 +37,6 @@ export default function Main() {
                 </h1>
 
                 <News/>
-            </div>
-
-            <div className='home-page__main__video__wrapper'>
-                <h1 className='home-page__main__content__title'>
-                    {
-                        language === "uz"
-                            ? "Video contentlar"
-                            : language === "ru"
-                            ? "Видеоконтенты"
-                            : "Video contents"
-                    }
-                </h1>
-
-                <VideoContents/>
             </div>
 
         </div>

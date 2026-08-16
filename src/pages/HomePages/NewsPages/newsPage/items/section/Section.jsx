@@ -47,7 +47,7 @@ export default function Section() {
     fetchGalleryItems();
   }, [newsListDataLength, numOfTheData, api]);
 
-  
+
   function formatDate(dateStr) {
     if (!dateStr) return '';
     const date = new Date(dateStr);
@@ -59,14 +59,14 @@ export default function Section() {
   }
 
   const totalPages = Math.ceil((newsListDataLength || 0) / 16);
-  
+
   const handlePageChange = (pageNum) => {
     setNumOfTheData(pageNum);
   };
 
   return (
     <section className={styles.container}>
-      
+
 
       <div className={styles.cardContainer}>
         {newsListData?.map((item, index) => {
@@ -81,7 +81,7 @@ export default function Section() {
                 <p className={styles.newsCard_data}>
                   <i className="fa-regular fa-calendar-days"></i>  {formatDate(item.date)}
                 </p>
-                
+
                 <Link className={styles.newsCard_link} to={item.link}>
                     <h1 className={styles.newsCard_title}>{item.title[language]}</h1>
                 </Link>
@@ -103,7 +103,7 @@ export default function Section() {
           ))}
         </div>
       )}
-         
+
 
     </section>
   );

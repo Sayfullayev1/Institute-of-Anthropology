@@ -20,10 +20,54 @@
 // в том числе проценты ширины, которые редактор проставляет при перетаскивании ресайз-хэндла.
 .htmlContent {
   overflow-wrap: break-word;
+  // Зеркалит .content в richTextNewsEditor.module.scss (project3) — иначе
+  // несколько пробелов подряд (например, отступ абзаца) схлопнутся в один
+  // при обычном white-space: normal, хотя в самом редакторе выглядели целыми.
+  white-space: pre-wrap;
+
+  // Пустой <p></p> (двойной Enter в редакторе) в живом браузере схлопывается
+  // до 0px — без единого дочернего узла строка вообще не строится. В самом
+  // редакторе не видно, т.к. ProseMirror подставляет невидимый <br> только
+  // в live-просмотре, он не попадает в сохранённый HTML. Добавляем сами.
+  p:empty::before {
+    content: '\00a0';
+  }
 
   img {
     max-width: 100% !important;
     height: auto !important;
+  }
+
+  // Сохранённый HTML прописывает ширину только на обёртке .rte-image-wrapper,
+  // не на самом <img> — в live-редакторе это не важно (NodeView рисует img
+  // со style="width:100%" напрямую через React), а здесь без этого правила
+  // маленькая по исходному размеру картинка не растягивается на всю ширину,
+  // выделенную ей обёрткой (особенно заметно в ряду фото — ImageRow).
+  :global(.rte-image-wrapper) img {
+    width: 100% !important;
+    display: block;
+  }
+
+  :global(.rte-image-wrapper) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  // Несколько фото в один ряд (ImageRow, project3) — зеркалит .rte-image-row
+  // в richTextNewsEditor.module.scss.
+  :global(.rte-image-row) {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+
+    :global(.rte-image-wrapper) {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
   }
 
   :global(.tox-media-container) {
@@ -47,8 +91,32 @@
   }
 
   table {
+    display: table; // не block — иначе таблица растянута на 100% и центрировать нечего
     max-width: 100%;
-    display: block;
     overflow-x: auto;
+    margin: 16px auto;
+    border-collapse: collapse;
+
+    td, th {
+      border: 1px solid #dfe3e8;
+      padding: 8px 10px;
+    }
+
+    th {
+      background: #f4f6fa;
+    }
+  }
+
+  // Таблица без сетки (переключатель "Chegaralarni olib tashlash" в редакторе) —
+  // используется как способ расположить фото рядом, а не как таблица с данными.
+  table[data-borderless="true"] {
+    td, th {
+      border: none;
+      padding: 0 4px;
+    }
+
+    th {
+      background: none;
+    }
   }
 }

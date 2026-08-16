@@ -27,12 +27,6 @@ const journals = [
     },
     link: '#',
     linkLabel: { uz: 'Jurnal sahifasiga oʻtish', en: 'Go to journal page' },
-    archive: [
-      { year: '2024', issues: ['1-son', '2-son', '3-son', '4-son'] },
-      { year: '2023', issues: ['1-son', '2-son', '3-son', '4-son'] },
-      { year: '2022', issues: ['1-son', '2-son', '3-son', '4-son'] },
-      { year: '2021', issues: ['1-son', '2-son', '3-son', '4-son'] },
-    ],
     reference: {
       uz: [
         'Mualliflar uchun qoidalar',
@@ -64,8 +58,6 @@ const journals = [
       uz: ['OAK ilmiy nashrlar roʻyxati', 'Milliy iqtibos indeksi', 'Eurasian Archaeology Index'],
       en: ['National list of peer-reviewed journals', 'National citation index', 'Eurasian Archaeology Index'],
     },
-    link: '#',
-    linkLabel: { uz: 'Jurnal sahifasiga oʻtish', en: 'Go to journal page' },
     // Реальные данные — выпуски журнала, загруженные админом и хранящиеся в R2.
     archiveApiPath: '/api/publications-pages/uzbekistan-history-of-material-culture/list',
     reference: {
@@ -169,6 +161,11 @@ function ApiArchiveList({ archiveApiPath, language }) {
 function JournalCard({ data, language }) {
   const [activeTab, setActiveTab] = useState('main');
 
+  // "Nashrlar arxivi" показываем только у журналов, у которых реально есть
+  // архив (API-данные или заполненный список) — не рисуем пустую/фейковую кнопку.
+  const hasArchive = Boolean(data.archiveApiPath || (data.archive && data.archive.length));
+  const tabs = TABS.filter((tab) => tab.key !== 'archive' || hasArchive);
+
   return (
     <article className={styles.journalCard}>
       <div className={styles.journalCard__titleWrap}>
@@ -188,7 +185,7 @@ function JournalCard({ data, language }) {
           </div>
 
           <div className={styles.journalCard__tabs}>
-            {TABS.map((tab) => (
+            {tabs.map((tab) => (
               <button
                 key={tab.key}
                 type="button"
@@ -225,14 +222,16 @@ function JournalCard({ data, language }) {
                 ))}
               </ul>
 
-              <a
-                href={data.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.journalCard__link}
-              >
-                {data.linkLabel[language]}
-              </a>
+              {data.link && (
+                <a
+                  href={data.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.journalCard__link}
+                >
+                  {data.linkLabel[language]}
+                </a>
+              )}
             </>
           )}
 

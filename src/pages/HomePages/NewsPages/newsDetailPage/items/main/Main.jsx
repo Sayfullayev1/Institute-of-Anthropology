@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './main.scss';
 
 import Category from '@/components/category/Category';
-import Section from '@/pages/newsPages/newsDetailPage/items/section/Section';
+import Section from '@/pages/HomePages/NewsPages/newsDetailPage/items/section/Section';
 
 import { LanguageContext } from '@/context/LanguageContext';
 import axios from 'axios';
@@ -19,27 +19,16 @@ export default function Main() {
   const currentPath = location.pathname;
   const [newsData, setNewsData] = useState(null);
   const [newsDataList, setNewsDataList] = useState(null);
-  
 
-  // Получить последнюю цифру после дефиса из строки id
-  function getLastNumberFromId(id) {
-    if (!id) return null;
-    const parts = id.split('-');
-    const last = parts[parts.length - 1];
-    return /^\d+$/.test(last) ? last : null;
-  }
 
   useEffect(() => {
-    let apiId = id;
-    const lastNum = getLastNumberFromId(id);
-    if (lastNum) {
-      apiId = lastNum;
-    }
-    if (!apiId) return;
+    if (!id) return;
 
     const api = getApiUrl();
 
-    axios.get(`${api}/api/news/get-item/${apiId}`)
+    // id из URL — это уже стабильный slug записи (не позиция в списке),
+    // так что просто передаём его как есть.
+    axios.get(`${api}/api/news/get-item/${id}`)
       .then(res => {
         if (res.data && res.data.success && res.data.data) {
           setNewsData(res.data.data);
@@ -51,19 +40,17 @@ export default function Main() {
         console.error("Error fetching gallery data:", err);
       });
 
-    // Передаем excludeIndex для исключения текущей новости из списка
-    axios.post(`${api}/api/news/get-item-list`, { excludeIndex: Number(apiId) })
+    // Передаём excludeSlug, чтобы исключить текущую новость из списка похожих
+    axios.post(`${api}/api/news/get-item-list`, { excludeSlug: id })
       .then(res => {
         setNewsDataList(res.data.data);
-        // console.log("News list data fetched successfully:", res.data.data);
-        
       })
       .catch(err => {
         console.error("Error fetching news list data:", err);
       });
-  }, [id, location], );
+  }, [id, location]);
 
-  
+
 
 
   const menuData = [
@@ -103,4 +90,3 @@ export default function Main() {
     </main>
   );
 }
-  

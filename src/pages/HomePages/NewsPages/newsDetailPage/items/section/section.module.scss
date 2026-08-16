@@ -1,0 +1,294 @@
+.container {
+  font-family: 'Roboto', sans-serif;
+  padding: 25px 0;
+}
+
+.contentWrapper {
+  margin-bottom: 40px;
+}
+
+// Зеркалит типографику редактора (RichTextNewsEditor.jsx, project3, теперь на TipTap) —
+// два разных React-приложения с раздельными бандлами, общий CSS-файл между ними
+// физически недоступен, поэтому правила продублированы вручную.
+//
+// .tox-media-container — класс от СТАРОГО редактора на TinyMCE, оставлен только
+// для уже опубликованных до перехода на TipTap статей (обратная совместимость).
+// .rte-video-wrapper — класс НОВОГО редактора на TipTap, для всех статей отныне.
+.htmlContent {
+  overflow-wrap: break-word;
+  // Зеркалит .content в richTextNewsEditor.module.scss (project3) — иначе
+  // несколько пробелов подряд (например, отступ абзаца) схлопнутся в один
+  // при обычном white-space: normal, хотя в самом редакторе выглядели целыми.
+  white-space: pre-wrap;
+
+  // Пустой <p></p> (двойной Enter в редакторе — например, отбить фото от
+  // текста пустой строкой) в живом браузере схлопывается до 0px: без единого
+  // дочернего узла строка вообще не строится. В самом редакторе этого не
+  // видно — ProseMirror в своём live-просмотре подставляет туда невидимый
+  // <br>, но он не попадает в сохранённый HTML. Добавляем то же самое сами —
+  // невидимый неразрывный пробел, чтобы строка реально появилась.
+  p:empty::before {
+    content: '\00a0';
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 6px;
+  }
+
+  // Сохранённый HTML прописывает ширину (60%, 100% и т.д.) только на
+  // обёртке .rte-image-wrapper, не на самом <img> — в live-редакторе это
+  // не важно, там NodeView всегда рисует img со style="width:100%" напрямую
+  // через React. А вот здесь, на сайте, без этого правила маленькая по
+  // исходному размеру картинка (например, в ряду фото — ImageRow) просто
+  // рисуется в свой натуральный крошечный размер, а не растягивается на
+  // всю ширину, которую ей выделила обёртка — из-за этого два фото в ряду
+  // могли выглядеть разного размера.
+  :global(.rte-image-wrapper) img {
+    width: 100% !important;
+    display: block;
+  }
+
+  :global(.tox-media-container) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  :global(.tox-media-container[style*="%"]) {
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  :global(.tox-media-container) iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  :global(.rte-video-wrapper),
+  :global(.rte-image-wrapper) {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  // Несколько фото в один ряд (ImageRow, project3) — зеркалит .rte-image-row
+  // в richTextNewsEditor.module.scss.
+  :global(.rte-image-row) {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+
+    :global(.rte-image-wrapper) {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  table {
+    // display: table (не block!) — таблица размером по контенту, а не
+    // растянута на всю ширину, иначе центрировать (margin: auto) нечего —
+    // именно так когда-то уже ловили баг "таблицу нельзя поставить по центру".
+    display: table;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 16px auto;
+    border-collapse: collapse;
+
+    td, th {
+      border: 1px solid #dfe3e8;
+      padding: 8px 10px;
+    }
+
+    th {
+      background: #f4f6fa;
+    }
+  }
+
+  // Таблица без сетки (переключатель "Chegaralarni olib tashlash" в редакторе) —
+  // используется как способ расположить фото рядом, а не как таблица с данными.
+  table[data-borderless="true"] {
+    td, th {
+      border: none;
+      padding: 0 4px;
+    }
+
+    th {
+      background: none;
+    }
+  }
+
+  blockquote {
+    margin: 12px 0;
+    padding: 6px 16px;
+    border-left: 3px solid #1976d2;
+    color: #555;
+    background: #f8f9fb;
+  }
+
+  pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #dfe3e8;
+    margin: 20px 0;
+  }
+
+  a {
+    color: #1976d2;
+  }
+}
+
+.imgWrapper {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+
+  & > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+.textWrapper {
+  flex: 1;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+  text-align: justify;
+  line-height: 1.3;
+}
+
+
+
+
+.cardListWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px;
+
+
+  &> hr{
+    display: none;
+  }
+}
+
+.card {
+  border-radius: 8px;
+
+
+    &> hr{
+      display: none;
+    }
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.cardContent {
+  padding: 0 0 15px 0;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.cardLink{
+  text-decoration: none;
+}
+
+.cardDate {
+  font-size: 0.9rem;
+  color: #000000;
+  margin: 7px 0;
+}
+
+
+
+@media (min-width: 800px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 40px 0;
+  }
+
+  .imgWrapper {
+    width: 100%;
+  }
+  .title {
+    font-size: 35px;
+  }
+
+
+  .contentWrapper {
+    width: 76%;
+
+    &>div{
+      max-width: 100%;
+
+      p {
+        overflow-wrap: break-word;
+      }
+
+    }
+  }
+
+  .cardListWrapper {
+    padding: 0;
+    width: 22%;
+    grid-template-columns: 1fr;
+
+  }
+
+  .card{
+
+    &> hr{
+      display: block;
+    }
+  }
+
+
+}
+
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1300px;
+    padding: 40px 0;
+    margin: 0 auto;
+  }
+}

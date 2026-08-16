@@ -18,31 +18,23 @@ export default function Main() {
   const location = useLocation();
   const currentPath = location.pathname;
   const [newsData, setNewsData] = useState(null);
-  
-  // Получить "articles" из пути /ru/articles/grgegrgr-1
+
+  // Название раздела ("articles"/"events"/"wednesday-readings") ищем по
+  // известному списку, а не по фиксированному индексу сегмента пути —
+  // индекс сдвигается в зависимости от того, есть ли языковой префикс
+  // (/en/events/foo — раздел на индексе 1, но /events/foo, без префикса
+  // для узбекского по умолчанию, — раздел уже на индексе 0).
   const pathSegments = location.pathname.split('/').filter(Boolean);
-  const sectionName = pathSegments[1]; // "articles" для /ru/articles/grgegrgr-1
-
-  // Получить последнюю цифру после дефиса из строки id
-  function getLastNumberFromId(id) {
-    if (!id) return null;
-    const parts = id.split('-');
-    const last = parts[parts.length - 1];
-    return /^\d+$/.test(last) ? last : null;
-  }
-
+  const KNOWN_SECTIONS = ['articles', 'events', 'wednesday-readings'];
+  const sectionName = pathSegments.find((seg) => KNOWN_SECTIONS.includes(seg)) || pathSegments[0];
 
   useEffect(() => {
-    let apiId = id;
-    const lastNum = getLastNumberFromId(id);
-    if (lastNum) {
-      apiId = lastNum;
-    }
-    if (!apiId) return;
+    if (!id) return;
 
     const api = getApiUrl();
 
-    axios.get(`${api}/api/${sectionName}/get-item/${apiId}`)
+    // id из URL — стабильный slug записи, передаём как есть.
+    axios.get(`${api}/api/${sectionName}/get-item/${id}`)
       .then(res => {
         if (res.data && res.data.success && res.data.data) {
           setNewsData(res.data.data);
@@ -54,11 +46,11 @@ export default function Main() {
         console.error("Error fetching gallery data:", err);
       });
 
-    // Передаем excludeIndex для исключения текущей новости из списка
-    axios.post(`${api}/api/${sectionName}/get-item-list`, { excludeIndex: Number(apiId) })
+    // Передаём excludeSlug, чтобы исключить текущую запись из списка похожих
+    axios.post(`${api}/api/${sectionName}/get-item-list`, { excludeSlug: id })
       .then(res => {
         // console.log("News list data fetched successfully:", res.data.data);
-        
+
       })
       .catch(err => {
         console.error("Error fetching news list data:", err);

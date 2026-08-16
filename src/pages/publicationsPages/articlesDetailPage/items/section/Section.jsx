@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styles from './section.module.scss'; // Убедитесь, что файл section.module.scss существует
 import { LanguageContext } from '@/context/LanguageContext';
+import sanitizeHtml from '@/utils/sanitizeHtml';
 
 // content хранится как строка (articles/events/wednesday-readings, старые записи ads)
 // либо как {uz, en} (новые записи ads из обновлённого редактора) — поддерживаем оба варианта.
@@ -21,7 +22,7 @@ export default function Section(news) {
         {contentHtml && (
           <div
             className={styles.htmlContent}
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(contentHtml) }}
           />
         )}
       </div>

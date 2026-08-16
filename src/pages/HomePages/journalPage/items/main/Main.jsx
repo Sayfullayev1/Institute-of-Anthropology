@@ -19,7 +19,7 @@ export default function Main() {
         uz: "Jurnal",
         en: "Journal",
       },
-      link: "/announcements-news",
+      link: "/journal",
     },
   ];
 

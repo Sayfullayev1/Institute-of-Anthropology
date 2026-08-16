@@ -36,20 +36,6 @@
       },
       {
         "Name": {
-          "uz": "E’lonlar/Yangiliklar",
-          "en": "Announcements/News"
-        },
-        "link": "/announcements-news"
-      },
-      {
-        "Name": {
-          "uz": "Jurnal",
-          "en": "Journal"
-        },
-        "link": "/journal"
-      },
-      {
-        "Name": {
           "uz": "Bo‘limlar",
           "en": "Departments"
         },
@@ -98,6 +84,20 @@
             "link": "/philosophy-department"
           }
         ]
+      },
+      {
+        "Name": {
+          "uz": "Jurnal",
+          "en": "Journal"
+        },
+        "link": "/journal"
+      },
+      {
+        "Name": {
+          "uz": "Yangiliklar",
+          "en": "News"
+        },
+        "link": "/news"
       },
       {
         "Name": {

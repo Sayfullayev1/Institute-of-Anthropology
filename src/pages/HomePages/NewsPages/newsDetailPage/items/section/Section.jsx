@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styles from './section.module.scss'; // Убедитесь, что файл section.module.scss существует
 import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
+import sanitizeHtml from '@/utils/sanitizeHtml';
 
 // content хранится как строка (старые записи) либо как {uz, en} (новые записи из
 // обновлённого редактора) — поддерживаем оба варианта, чтобы не сломать уже опубликованное.
@@ -22,7 +23,7 @@ export default function Section(news) {
         {contentHtml && (
           <div
             className={styles.htmlContent}
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(contentHtml) }}
           />
         )}
       </div>
@@ -37,8 +38,8 @@ export default function Section(news) {
                   <img src={news.image} alt={news.title?.[language] || ''} className={styles.cardImage} />
                 </div>
               </Link>
-              
-              
+
+
               <div className={styles.cardContent}>
                 <p className={styles.cardDate}>
                   <i className="fa-regular fa-calendar-days"></i> {new Date(news.date).toLocaleDateString()}

@@ -1,11 +1,11 @@
 import React from 'react';
 import './main.scss';
 import Category from '@/components/category/Category';
-import Section from '@/pages/newsPages/newsPage/items/section/Section';
+import Section from '@/pages/HomePages/NewsPages/newsPage/items/section/Section';
 import Container from '@/components/container/Container';
 
 export default function Main() {
-  
+
   const menuData = [
     {
       text: {

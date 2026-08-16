@@ -18,22 +18,10 @@ export default function Main() {
   const [galleryData, setGalleryData] = React.useState(null);
   const api = getApiUrl();
 
-  // Получить последнюю цифру после дефиса из строки id
-  function getLastNumberFromId(id) {
-    if (!id) return null;
-    const parts = id.split('-');
-    const last = parts[parts.length - 1];
-    return /^\d+$/.test(last) ? last : null;
-  }
-
   useEffect(() => {
-    let apiId = id;
-    const lastNum = getLastNumberFromId(id);
-    if (lastNum) {
-      apiId = lastNum;
-    }
-    if (!apiId) return;
-    axios.get(`${api}/api/photo-gallery/get-item/${apiId}`)
+    if (!id) return;
+    // id из URL — стабильный slug галереи, передаём как есть.
+    axios.get(`${api}/api/photo-gallery/get-item/${id}`)
       .then(res => {
         if (res.data && res.data.success && res.data.data) {
           // console.log("Gallery data fetched successfully:", res.data.data);

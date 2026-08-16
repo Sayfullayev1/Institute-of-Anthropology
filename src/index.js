@@ -43,10 +43,10 @@ import UzbekistanHistoryOfMaterialCulturePage from './pages/publicationsPages/uz
 /* News Page*/
 
 import ArticlesDetailPage from './pages/publicationsPages/articlesDetailPage/ArticlesDetailPage';
-import NewsPage from './pages/newsPages/newsPage/NewsPage';
-import NewsDetailPage from './pages/newsPages/newsDetailPage/NewsDetailPage';
-import PhotoGalleryPage from './pages/newsPages/photoGalleryPage/PhotoGalleryPage';
-import PhotoGalleryDetailPage from './pages/newsPages/photoGalleryDetailPage/PhotoGalleryDetailPage';
+// import NewsPage from './pages/HomePages/NewsPages/newsPage/NewsPage';
+// import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
+// import PhotoGalleryPage from './pages/newsPages/photoGalleryPage/PhotoGalleryPage';
+// import PhotoGalleryDetailPage from './pages/newsPages/photoGalleryDetailPage/PhotoGalleryDetailPage';
 
 
 
@@ -78,11 +78,13 @@ import StructurePage from './pages/HomePages/structurePage/StructurePage'
 import ManagementPage from './pages/HomePages/managementPage/ManagementPage'
 import ManagementDetailPage from './pages/HomePages/managementDetailPage/ManagementDetailPage';
 import CharterOfTheCenterPage from './pages/HomePages/charterOfTheCenterPage/CharterOfTheCenterPage';
-import AnnouncementsNewsPage from './pages/HomePages/announcementsNewsPage/AnnouncementsNewsPage';
 import JournalPage from './pages/HomePages/journalPage/JournalPage';
 import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/JournalIssueDetailPage';
 
 
+  /* News Pages*/
+  import NewsPage from './pages/HomePages/NewsPages/newsPage/NewsPage';
+  import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
 
   /* Departments Pages*/
   import ArchaeologicalAnthropologyDepartmentPage from './pages/HomePages/archaeologicalAnthropologyDepartmentPage/ArchaeologicalAnthropologyDepartmentPage';
@@ -217,21 +219,14 @@ root.render(
 
 
 
-              {/* News Page */}
-
-              <Route path="/:lang?/news" element={<NewsPage />} />
-              <Route path="/:lang?/news/:id" element={<NewsDetailPage />} />
-
-              <Route path="/:lang?/events" element={<ArticlesPage />} />
-              <Route path="/:lang?/events/:id" element={<ArticlesDetailPage />} />
-
-              <Route path="/:lang?/wednesday-readings" element={<ArticlesPage />} />
-              <Route path="/:lang?/wednesday-readings/:id" element={<ArticlesDetailPage/>} />
-
-              <Route path="/:lang?/photo-gallery" element={<PhotoGalleryPage />} />
-              <Route path="/:lang?/photo-gallery/:id" element={<PhotoGalleryDetailPage />} />
-
-
+             {/* News Page 
+             <Route path="/:lang?/events" element={<ArticlesPage />} />
+             <Route path="/:lang?/events/:id" element={<ArticlesDetailPage />} />
+             <Route path="/:lang?/wednesday-readings" element={<ArticlesPage />} />
+             <Route path="/:lang?/wednesday-readings/:id" element={<ArticlesDetailPage/>} />
+             <Route path="/:lang?/photo-gallery" element={<PhotoGalleryPage />} />
+             <Route path="/:lang?/photo-gallery/:id" element={<PhotoGalleryDetailPage />} />
+            */}
 
 
 
@@ -242,8 +237,12 @@ root.render(
               <Route path="/:lang?/management" element={<ManagementPage/>} />
               <Route path="/:lang?/management/:slug" element={<ManagementDetailPage/>} />
               <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} />
-              <Route path='/:lang?/announcements-news' element={<AnnouncementsNewsPage />} />
               <Route path='/:lang?/journal' element={<JournalPage />} />
+
+                {/* News Page */}
+                <Route path="/:lang?/news" element={<NewsPage />} />
+                <Route path="/:lang?/news/:id" element={<NewsDetailPage />} />
+
               <Route path='/:lang?/journal/:id' element={<JournalIssueDetailPage />} />
 
 
