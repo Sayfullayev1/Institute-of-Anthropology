@@ -1,0 +1,910 @@
+
+> project1@0.1.0 start
+> craco start
+
+(node:23920) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:23920) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view project1 in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.188:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/layouts/dashboardLayout/dashboardLayout.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/contactsPage/contactsPage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/aboutPages/academicsOfTheCenterPage/academicsOfTheCenterPage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/staffDetailPage/staffDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/scienceActionPlanPage/scienceActionPlanPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/aboutPages/historyOfTheCenterPage/historyOfTheCenterPage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/charterOfTheCenterPage/charterOfTheCenterPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/managementPage/managementPage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/theMostImportantResearchResultsPage/theMostImportantResearchResultsPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/departmentDetailPage/departmentDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/publicationsPages/uzbekistanHistoryOfMaterialCulturePage/uzbekistanHistoryOfMaterialCulturePage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/journalIssueDetailPage/journalIssueDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/managementDetailPage/managementDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/newsDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/publicationsPages/teachingAidsPage/teachingAidsPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/publicationsPages/articlesDetailPage/articlesDetailPage.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/NewsPages/newsPage/newsPage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/components/container/container.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/homePage/homePage.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/components/backToTopButton/backToTopButton.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/category/category.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/contactsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/layoutsComponents/footerComponent/footerComponent.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/layoutsComponents/navbarComponent/navbarComponent.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/layoutsComponents/headerComponent/headerComponent.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/aboutPages/academicsOfTheCenterPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/contactsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/pagePlaceholder/pagePlaceholder.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/boardOfYoungScientistsPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/missionPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/aboutPages/historyOfTheCenterPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/scienceActionPlanPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/structurePage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/activityPages/theMostImportantResearchResultsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/geoanthropologyDepartmentPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/socioCulturalAnthropologyDepartmentPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/journalPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/historicalAnthropologyDepartmentPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/publicationsPages/articlesDetailPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/NewsPages/newsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/archaeologicalAnthropologyDepartmentPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/articlesPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/charterOfTheCenterPage/localComponents/Convert/convert.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/managementPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/monographsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/archaeologicalGeophysicsDepartmentPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/monographsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/articlesPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/early-CareerResearchersPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/conferencesPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/researchersPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/researchersPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/ResearchPages/conferencesPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/early-CareerResearchersPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/researchAdvisorsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/socialMediaPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/newStaffPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/membershipsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/socialMediaPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/institutionalPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/membershipsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/institutionalPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/researchAdvisorsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/achievementsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/mediaCoveragePage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/mediaCoveragePage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalProjectsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/newStaffPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/StaffPages/achievementsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalMeetingsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/nationalEventsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalProjectsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/nationalEventsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/digitalInfrastructurePages/directoryPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalMeetingsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/expertisePage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/CommunicationPages/expertisePage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/contactsPage/items/card/card.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/partnersPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalOrganizationsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/jointPublicationsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/wosPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/internationalOrganizationsPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/jointPublicationsPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/InternationalCooperationPages/partnersPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/missionPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/structurePage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/wosPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/boardOfYoungScientistsPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/homePage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/OtherPages/notFoundPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/OtherPages/searchPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/digitalInfrastructurePages/sitemapPage/items/main/main.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/theMostImportantResearchResultsPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/homePage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/cybersecurityPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/cybersecurityPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/scienceActionPlanPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/orcidPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/scopusPage/items/section/section.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/scopusPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/DigitalizationPages/orcidPage/items/main/main.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/layoutsComponents/headerComponent/items/searchComponent/searchComponent.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/components/layoutsComponents/headerComponent/items/languageSwitcher/languageSwitcher.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/components/layoutsComponents/headerComponent/items/menu/menu.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/geoanthropologyDepartmentPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/socioCulturalAnthropologyDepartmentPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/archaeologicalAnthropologyDepartmentPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/historicalAnthropologyDepartmentPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/journalPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/archaeologicalGeophysicsDepartmentPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/publicationsPages/articlesDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/digitalInfrastructurePages/directoryPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/activityPages/theMostImportantResearchResultsPage/items/imagesCard/imagesCard.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/digitalInfrastructurePages/sitemapPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/homePage/items/news/news.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[7].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[7].use[4]!./src/pages/HomePages/homePage/items/carousel/carousel.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/components/pagination/pagination.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/publicationsPages/articlesDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+[1mLOG from ./node_modules/sass-loader/dist/cjs.js sass-loader ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[1].oneOf[8].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[8].use[4]!./src/pages/HomePages/NewsPages/newsDetailPage/items/section/section.module.scss[39m[22m
+<w> [1m[33mDeprecation The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mMore info: https://sass-lang.com/d/legacy-js-api[39m[22m
+<w> [1m[33m[39m[22m
+<w> [1m[33mnull[39m[22m
+
+webpack compiled [1m[32msuccessfully[39m[22m

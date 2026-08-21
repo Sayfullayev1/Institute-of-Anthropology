@@ -45,8 +45,6 @@ import UzbekistanHistoryOfMaterialCulturePage from './pages/publicationsPages/uz
 import ArticlesDetailPage from './pages/publicationsPages/articlesDetailPage/ArticlesDetailPage';
 // import NewsPage from './pages/HomePages/NewsPages/newsPage/NewsPage';
 // import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
-// import PhotoGalleryPage from './pages/newsPages/photoGalleryPage/PhotoGalleryPage';
-// import PhotoGalleryDetailPage from './pages/newsPages/photoGalleryDetailPage/PhotoGalleryDetailPage';
 
 
 
@@ -224,8 +222,6 @@ root.render(
              <Route path="/:lang?/events/:id" element={<ArticlesDetailPage />} />
              <Route path="/:lang?/wednesday-readings" element={<ArticlesPage />} />
              <Route path="/:lang?/wednesday-readings/:id" element={<ArticlesDetailPage/>} />
-             <Route path="/:lang?/photo-gallery" element={<PhotoGalleryPage />} />
-             <Route path="/:lang?/photo-gallery/:id" element={<PhotoGalleryDetailPage />} />
             */}
 
 

@@ -37,6 +37,24 @@
     border-radius: 6px;
   }
 
+  // Глобальный сброс "* { margin:0; padding:0 }" (index.css) заодно снимает
+  // и стандартный браузерный отступ у списков — маркеры/номера прижимались
+  // к самому краю. Зеркалит .content в richTextNewsEditor.module.scss.
+  ul,
+  ol {
+    padding-left: 24px;
+    margin: 8px 0;
+  }
+
+  li {
+    margin: 4px 0;
+
+    ul,
+    ol {
+      margin: 4px 0;
+    }
+  }
+
   // Сохранённый HTML прописывает ширину (60%, 100% и т.д.) только на
   // обёртке .rte-image-wrapper, не на самом <img> — в live-редакторе это
   // не важно, там NodeView всегда рисует img со style="width:100%" напрямую
@@ -67,9 +85,15 @@
   }
 
   :global(.rte-video-wrapper),
+  :global(.rte-videofile-wrapper),
   :global(.rte-image-wrapper) {
     max-width: 100%;
     box-sizing: border-box;
+  }
+
+  video {
+    max-width: 100%;
+    border-radius: 6px;
   }
 
   // Несколько фото в один ряд (ImageRow, project3) — зеркалит .rte-image-row

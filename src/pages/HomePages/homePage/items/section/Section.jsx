@@ -65,7 +65,11 @@ export default function Section() {
     const resources = [
         
         {
-            icon: <img src="https://www.academy.uz/dist/img/logo.png" alt="Icon 1" />,
+            // Старый academy.uz теперь редиректит на gov.uz (портал
+            // объединённых госсайтов) битой ссылкой (склеивает путь без
+            // слэша — .../academydist/img/logo.png), поэтому старый логотип
+            // не грузился. Берём актуальный логотип с новой версии сайта.
+            icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="O'zbekiston Respublikasi Fanlar akademiyasi" />,
             title: "O‘zbekiston Respublikasi Fanlar akademiyasi",
             link: "academy.uz",
         },
@@ -90,12 +94,14 @@ export default function Section() {
             link: "oak.uz",
         },
         {
-            icon: <img src="https://academy.uz/favicon.ico"  alt="Icon 3" />,
+            // Раньше тут стояла битая иконка с academy.uz (не имеет отношения
+            // к этому сайту вообще) — теперь настоящий favicon daraja.ilmiy.uz.
+            icon: <img src="https://daraja.ilmiy.uz/favicon.ico" alt="Daraja.ilmiy.uz" />,
             title: "Oliy taʼlimdan keyingi taʼlimni muvofiqlashtirishning yagona elektron tizimi",
             link: "daraja.ilmiy.uz",
         },
         {
-            icon: <img src="https://academy.uz/favicon.ico"  alt="OAK Logo" />,
+            icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="Fanlar akademiyasi — ilmiy axborot markazi" />,
             title: "Davlat ilmiy dasturlarining yagona intellektual elektron platformasi",
             link: "academy.uz/ilmiy_axborot_markazi",
         }
