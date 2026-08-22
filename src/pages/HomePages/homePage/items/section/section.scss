@@ -2,9 +2,7 @@
 
 
     &__stats-section{
-        // Фирменный цвет сайта — тот же, что у navbar сверху (#bf6205),
-        // а не случайный зелёный, который ни с чем на сайте не перекликался.
-        // background: #904a04;
+        // Тот же тёмно-синий, что у navbar сверху.
         background: rgb(24, 13, 143);
 
         &__wrapper {
@@ -43,7 +41,7 @@
     &__cta {
 
         &__wrapper {
-            background-color: #2a2a2a; /* Зеленый фон */
+            background-color: #2a2a2a; /* Тёмно-серый фон, тон footer'а */
             padding: 20px 4%;
             color: #fff;
         }
@@ -55,7 +53,7 @@
 
         &-button {
             margin-top: 40px;
-            background-color: #f15a24; /* Оранжевая кнопка */
+            background-color: #1e90ff; /* Голубая кнопка */
             color: #fff;
             border: none;
             border-radius: 2px;
@@ -66,7 +64,7 @@
             transition: background-color 0.3s;
 
             &:hover {
-                background-color: #d94a1f; /* Темнее при наведении */
+                background-color: #0f6dc4; /* Темнее при наведении */
             }
 
             &>a{
