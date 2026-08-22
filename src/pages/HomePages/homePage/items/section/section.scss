@@ -4,7 +4,8 @@
     &__stats-section{
         // Фирменный цвет сайта — тот же, что у navbar сверху (#bf6205),
         // а не случайный зелёный, который ни с чем на сайте не перекликался.
-        background: #bf6205;
+        // background: #904a04;
+        background: rgb(24, 13, 143);
 
         &__wrapper {
             display: flex;
@@ -42,9 +43,7 @@
     &__cta {
 
         &__wrapper {
-            // Тёмный тон footer'а (#2a2a2a) — та же логика: перекликается
-            // с низом сайта, вместо отдельного несвязанного тёмно-зелёного.
-            background-color: #2a2a2a;
+            background-color: #2a2a2a; /* Зеленый фон */
             padding: 20px 4%;
             color: #fff;
         }

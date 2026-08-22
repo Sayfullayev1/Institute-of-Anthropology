@@ -17,30 +17,44 @@
   &__container {
     display: flex;
     align-items: center;
+    // flex-item + flex-container одновременно: без min-width:0 браузер не
+    // даёт ему сжаться меньше содержимого (min-content) — на узких экранах
+    // это раньше могло толкать текст за пределы экрана вместо переноса строк.
+    min-width: 0;
+    flex: 1 1 auto;
   }
 
   &__logo {
     width: 50px;
+    flex-shrink: 0; // логотип никогда не сжимается, даже если текст не влезает
     & > a > img { width: 100%; }
   }
 
   &__title {
-    // max-width: 227px;
-    font-size: 12px;
+    min-width: 0; // тот же фикс сжатия, что и у __container — см. комментарий выше
+    // Плавный (fluid) размер шрифта вместо фиксированных скачков по
+    // брейкпоинтам — 13px на маленьком телефоне (~360px), ~24px на
+    // десктопе (~1300px+), без рывков между ними.
+    font-size: clamp(13px, 1.2vw + 9px, 24px);
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin: 10px 0;
+    line-height: 1.3;
+    overflow-wrap: break-word; // подстраховка: длинное слово переносится, а не вылезает за экран
+    margin: 8px 0;
   }
 
   &__subtitle {
-    // Тот же размер и трекинг, что у заголовка — раньше subtitle был
-    // мельче и без капса, теперь обе строки визуально на равных.
-    font-size: 12px;
+    // Та же логика, что у заголовка, но заметно мельче — сохраняем
+    // иерархию "подзаголовок меньше заголовка", просто теперь обе строки
+    // капсом и с одинаковым трекингом.
+    font-size: clamp(9px, 0.65vw + 7px, 15px);
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    line-height: 1.3;
+    overflow-wrap: break-word;
     display: block;
   }
 
@@ -99,14 +113,11 @@
     &__topbar_wrapper { display: block; }
     &__logo { width: 80px; }
     &__title {
-      // max-width: 290px;
-      font-size: 27px;
-      margin: 10px 15px;
+      margin: 8px 0 8px 15px;
       text-align: left;
       letter-spacing: 1px;
     }
     &__subtitle {
-      font-size: 14px;
       letter-spacing: 1px;
     }
   }

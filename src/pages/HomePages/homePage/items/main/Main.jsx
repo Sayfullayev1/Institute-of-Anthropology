@@ -29,7 +29,7 @@ export default function Main() {
                 <h1 className='home-page__main__content__title'>
                     {
                         language === "uz"
-                            ? "Yahdiliklar"
+                            ? "Yangiliklar"
                             : language === "ru"
                             ? "Новости"
                             : "News"
