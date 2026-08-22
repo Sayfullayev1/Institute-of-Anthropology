@@ -25,16 +25,22 @@
   }
 
   &__title {
-    max-width: 227px;
-    font-size: 15px;
+    // max-width: 227px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin: 10px 0;
   }
 
   &__subtitle {
+    // Тот же размер и трекинг, что у заголовка — раньше subtitle был
+    // мельче и без капса, теперь обе строки визуально на равных.
     font-size: 12px;
     font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     display: block;
   }
 
@@ -92,13 +98,17 @@
   .header {
     &__topbar_wrapper { display: block; }
     &__logo { width: 80px; }
-    &__title { 
-      max-width: 290px; 
-      font-size: 22px; 
-      margin: 10px 15px; 
+    &__title {
+      // max-width: 290px;
+      font-size: 27px;
+      margin: 10px 15px;
       text-align: left;
+      letter-spacing: 1px;
     }
-    &__subtitle { font-size: 15px; }
+    &__subtitle {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
   }
 }
 

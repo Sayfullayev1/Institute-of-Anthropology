@@ -42,8 +42,8 @@ export default function HeaderComponent() {
                         </Link>
                     </div>
                     <h1 className='header__title'>
-                        {LogoTitle[language].title}
                         <span className='header__subtitle'>{LogoTitle[language].subtitle}</span>
+                        {LogoTitle[language].title}
                     </h1>
                 </div>
 
