@@ -23,18 +23,18 @@ export default function Section() {
     }, []);
 
     const data = [
-        {
-            icon: <i className="fa-brands fa-envira"></i>,
-            number: 10000,
-            label: {
-                uz: "GERBARIY KOLLEKSIYASI",
-                ru: "ГЕРБАРИЙ КОЛЛЕКЦИЯСИ",
-                en: "HERBARIUM COLLECTION",
-            },
-        },
+        // {
+        //     icon: <i className="fa-brands fa-envira"></i>,
+        //     number: 10000,
+        //     label: {
+        //         uz: "GERBARIY KOLLEKSIYASI",
+        //         ru: "ГЕРБАРИЙ КОЛЛЕКЦИЯСИ",
+        //         en: "HERBARIUM COLLECTION",
+        //     },
+        // },
         {
             icon: <i className="fa fa-users"></i>,
-            number: 41,
+            number: 40,
             label: {
                 uz: "ILMIY XODIMLAR",
                 ru: "УЧЕНЫЕ",
@@ -43,7 +43,7 @@ export default function Section() {
         },
         {
             icon: <i className="fa-solid fa-signal"></i>,
-            number: 15,
+            number: 1,
             label: {
                 uz: "AKTIV LOYIHALAR",
                 ru: "АКТИВНЫЕ ПРОЕКТЫ",
@@ -104,6 +104,14 @@ export default function Section() {
             icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="Fanlar akademiyasi — ilmiy axborot markazi" />,
             title: "Davlat ilmiy dasturlarining yagona intellektual elektron platformasi",
             link: "academy.uz/ilmiy_axborot_markazi",
+        },
+        {
+            // uzarchaeology.uz — hali real favicon/logotipi yo'q (sayt hali
+            // ham standart Vite ikonkasini ishlatadi), shuning uchun mavzuga
+            // mos Font Awesome ikonkasi qo'yildi, soxta logotip o'rniga.
+            icon: <i className="fa-solid fa-map-location-dot" style={{ fontSize: '32px', color: '#fff' }}></i>,
+            title: "O'zbekiston arxeologik yodgorliklar xaritasi",
+            link: "uzarchaeology.uz",
         }
     ];
 
