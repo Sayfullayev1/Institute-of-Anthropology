@@ -54,9 +54,9 @@ export default function Section() {
             icon: <i className="fa-solid fa-pen-to-square"></i>,
             number: 700,
             label: {
-                uz: "ILMIY MAQOLALAR",
-                ru: "НАУЧНЫЕ СТАТЬИ",
-                en: "SCIENTIFIC ARTICLES",
+                uz: "WoS/Scopus ",
+                ru: "WoS/Scopus ",
+                en: "WoS/Scopus ",
             },
         },
     ];
@@ -106,10 +106,7 @@ export default function Section() {
             link: "academy.uz/ilmiy_axborot_markazi",
         },
         {
-            // uzarchaeology.uz — hali real favicon/logotipi yo'q (sayt hali
-            // ham standart Vite ikonkasini ishlatadi), shuning uchun mavzuga
-            // mos Font Awesome ikonkasi qo'yildi, soxta logotip o'rniga.
-            icon: <i className="fa-solid fa-map-location-dot" style={{ fontSize: '32px', color: '#fff' }}></i>,
+            icon: <img src="https://uzarchaeology.uz/assets/logo-CqxLmTt7.png" alt="O'zbekiston arxeologik yodgorliklar xaritasi" />,
             title: "O'zbekiston arxeologik yodgorliklar xaritasi",
             link: "uzarchaeology.uz",
         }
