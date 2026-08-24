@@ -158,7 +158,7 @@ export default function DepartmentDetailPage({ deptSlug }) {
           {staff.length > 0 && (
             <section className={style.department__section}>
               <h2 className={style.department__subheading}>
-                {language === 'en' ? 'Staff' : 'Bo‘lim xodimlari'}
+                {language === 'en' ? 'Staff' : 'Bo‘lim xodimlari'} ({staff.length})
               </h2>
               <ul className={style.staffGrid}>
                 {staff.map((member) => (

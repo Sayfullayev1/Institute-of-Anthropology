@@ -41,8 +41,12 @@ export default function HeaderComponent() {
                             <img src={logoImage} alt="Logo" />
                         </Link>
                     </div>
+                    {/* header__subtitle--{language}: у title размер один и тот же для
+                        обоих языков (он тут "якорь"), а вот subtitle на английском
+                        длиннее пропорционально, поэтому только у него свой
+                        точный font-size под каждый язык (см. headerComponent.scss). */}
                     <h1 className='header__title'>
-                        <span className='header__subtitle'>{LogoTitle[language].subtitle}</span>
+                        <span className={`header__subtitle header__subtitle--${language}`}>{LogoTitle[language].subtitle}</span>
                         {LogoTitle[language].title}
                     </h1>
                 </div>

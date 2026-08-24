@@ -28,6 +28,22 @@
 
         }
 
+        // Кликабельный stat-item (сейчас — WoS/Scopus → t.me/anthropubhub):
+        // <a> без сброса выглядел бы синим и подчёркнутым (глобального a{}
+        // ресета в index.css нет) — та же логика, что у &__resources-link
+        // ниже: белый, без подчёркивания, подчёркивание только на hover,
+        // чтобы было видно, что это ссылка, не меняя цвет как у остальных.
+        &__stat-item--link {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover .home-page__section__label {
+                text-decoration: underline;
+            }
+        }
+
         &__number{
           font-size: 37px;
           font-weight: bold;

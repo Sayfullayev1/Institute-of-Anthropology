@@ -32,10 +32,14 @@
 
   &__title {
     min-width: 0; // тот же фикс сжатия, что и у __container — см. комментарий выше
-    // Плавный (fluid) размер шрифта вместо фиксированных скачков по
-    // брейкпоинтам — 13px на маленьком телефоне (~360px), ~24px на
-    // десктопе (~1300px+), без рывков между ними.
-    font-size: clamp(13px, 1.2vw + 9px, 24px);
+    // Точные px — не clamp() и не word-spacing/justify, а именно font-size,
+    // подобранный замером реальной отрисованной ширины (склонировал элемент,
+    // подставлял разные font-size с шагом 0.05px, сравнивал
+    // getBoundingClientRect().width), чтобы заголовок и подзаголовок
+    // выходили одной длины — та же методика, что в version-2/frontend
+    // (HeaderLogoText.tsx). Второй проход: чуть крупнее + точнее (диапазон
+    // диффа сузился до <0.5px против 1-3px в первой прикидке).
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -46,16 +50,20 @@
   }
 
   &__subtitle {
-    // Та же логика, что у заголовка, но заметно мельче — сохраняем
-    // иерархию "подзаголовок меньше заголовка", просто теперь обе строки
-    // капсом и с одинаковым трекингом.
-    font-size: clamp(9px, 0.65vw + 7px, 15px);
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     line-height: 1.3;
     overflow-wrap: break-word;
     display: block;
+
+    // Точный font-size на каждый язык отдельно (не среднее — оно давало
+    // ~3px разброса вместо <0.5px). Замерено тем же способом, что и
+    // title (клон + перебор font-size), на реальной ширине окна <480px
+    // (важно: на letter-spacing тут влияет @media — мерить надо на
+    // соответствующей ширине, а не всегда на широком экране).
+    &--uz { font-size: 7.8px; }
+    &--en { font-size: 7.5px; }
   }
 
   // Скрыто на мобилках, показываем только в медиа-запросе 900px
@@ -116,12 +124,30 @@
       margin: 8px 0 8px 15px;
       text-align: left;
       letter-spacing: 1px;
+      font-size: 20px; // тоже замерено — см. комментарий у __title выше
     }
     &__subtitle {
       letter-spacing: 1px;
+      // Опять точно на каждый язык (под 25px title), не среднее.
+      &--uz { font-size: 10.2px; }
+      &--en { font-size: 9.9px; }
     }
   }
 }
+
+@media (min-width: 700px) {
+  .header {
+    &__title {
+      font-size: 25px; // тоже замерено — см. комментарий у __title выше
+    }
+    &__subtitle {
+      &--uz { font-size: 13px; }
+      &--en { font-size: 12.6px; }
+    }
+  }
+}
+
+
 
 @media (min-width: 900px) {
   .header {

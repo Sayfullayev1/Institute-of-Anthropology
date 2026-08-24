@@ -5,6 +5,31 @@ import { LanguageContext } from '@/context/LanguageContext';
 
 import menuData from '@/pages/PagesData/siteMapeData/SiteMapeData.json'; // Предполагаемый путь к вашему JSON-файлу
 
+const isExternalLink = (link) => /^https?:\/\//.test(link || '');
+
+// react-router <Link to="https://..."> не открывает внешние ссылки — он
+// трактует to как внутренний путь SPA (для не-uz языков вообще склеил бы
+// "/en" + "https://..." в мусор). Внешние ссылки (например, WoS/Scopus →
+// t.me/anthropubhub) должны рендериться обычным <a target="_blank">.
+function SmartLink({ to, language, className, onClick, children }) {
+  if (isExternalLink(to)) {
+    return (
+      <a href={to} className={className} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link
+      className={className}
+      to={language === 'uz' ? to : `/${language}${to}`}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function NavbarComponent() {
   const { language } = useContext(LanguageContext);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null); // Состояние для управления открытием подменю
@@ -37,9 +62,10 @@ export default function NavbarComponent() {
                     onMouseEnter={() => setOpenSubmenuIndex(index)} // Для hover
                     onMouseLeave={() => setOpenSubmenuIndex(null)} // Закрытие при уходе мыши
                   >
-                    <Link
+                    <SmartLink
                       className='navbar__item__link'
-                      to={language === 'uz' ? item.link : `/${language}${item.link}`}
+                      to={item.link}
+                      language={language}
                       onClick={(e) => {
                         if (item.items && item.items.length > 0) {
                           e.preventDefault(); // Предотвращаем переход только если есть подменю
@@ -53,7 +79,7 @@ export default function NavbarComponent() {
                           {i < item.Name[language].split('\n').length - 1 && <br />}
                         </span>
                       ))}
-                    </Link>
+                    </SmartLink>
                     
                     {item?.items && item.items.length > 0 && (
                       <ul className={`navbar__submenu ${openSubmenuIndex === index ? 'navbar__submenu--visible' : ''}`}>
@@ -64,15 +90,16 @@ export default function NavbarComponent() {
                           if (hasChildren) {
                             return (
                               <li className='navbar__submenu__item navbar__submenu__extended-item' key={subIndex}>
-                                <Link
+                                <SmartLink
                                   className='navbar__submenu__link'
-                                  to={language === 'uz' ? subItem.link : `/${language}${subItem.link}`}
+                                  to={subItem.link}
+                                  language={language}
                                   onClick={(e) => {
                                     if (!subItem.link) e.preventDefault();
                                   }}
                                 >
                                   {subItem.Name[language]}
-                                </Link>
+                                </SmartLink>
                                 <span className='navbar__submenu__extended-item__arrow'>
                                   <i className="fa-solid fa-chevron-right"></i>
                                 </span>
@@ -80,12 +107,13 @@ export default function NavbarComponent() {
                                 <ul className='navbar__extendedItem__list'>
                                   {subItem.items.map((childItem, childIndex) => (
                                     <li className='navbar__extendedItem__list__item' key={childIndex}>
-                                      <Link
+                                      <SmartLink
                                         className='navbar__submenu__link'
-                                        to={language === 'uz' ? childItem.link : `/${language}${childItem.link}`}
+                                        to={childItem.link}
+                                        language={language}
                                       >
                                         {childItem.Name[language]}
-                                      </Link>
+                                      </SmartLink>
                                     </li>
                                   ))}
                                 </ul>
@@ -95,12 +123,13 @@ export default function NavbarComponent() {
 
                           return(
                             <li className={`navbar__submenu__item`} key={subIndex}>
-                              <Link
+                              <SmartLink
                                 className='navbar__submenu__link'
-                                to={language === 'uz' ? subItem.link : `/${language}${subItem.link}`}
+                                to={subItem.link}
+                                language={language}
                               >
                                 {subItem.Name[language]}
-                              </Link>
+                              </SmartLink>
                             </li>
 
                           )

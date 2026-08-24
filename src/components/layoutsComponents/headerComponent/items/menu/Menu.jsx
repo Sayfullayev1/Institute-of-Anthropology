@@ -7,6 +7,26 @@ import LanguageSwitcher from '@/components/layoutsComponents/headerComponent/ite
 import getApiUrl from '@/api/api';
 import menuData from '@/pages/PagesData/siteMapeData/SiteMapeData.json';
 
+const isExternalLink = (link) => /^https?:\/\//.test(link || '');
+
+// react-router <Link to="https://..."> не открывает внешние ссылки как
+// внешние — трактует to как внутренний путь SPA. Для внешних (например,
+// WoS/Scopus → t.me/anthropubhub) рендерим обычный <a target="_blank">.
+function SmartLink({ to, className, onClick, children }) {
+  if (isExternalLink(to)) {
+    return (
+      <a href={to} className={className} target="_blank" rel="noopener noreferrer" onClick={onClick}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link to={to} className={className} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
+
 function Menu({ Bedeutung }) {
   const [statusClass, setStatusClass] = useState("");
   const isFirstRender = useRef(true);
@@ -135,9 +155,9 @@ function Menu({ Bedeutung }) {
                             <ul className="menu-item__subsublist">
                               {item.items.map((child, cIdx) => (
                                 <li key={cIdx}>
-                                  <Link to={child.link} className="menu-item__link">
+                                  <SmartLink to={child.link} className="menu-item__link">
                                     {child.Name[language]}
-                                  </Link>
+                                  </SmartLink>
                                 </li>
                               ))}
                             </ul>
@@ -148,9 +168,9 @@ function Menu({ Bedeutung }) {
 
                     return (
                       <li key={sIdx}>
-                        <Link to={item.link} className="menu-item__link">
+                        <SmartLink to={item.link} className="menu-item__link">
                           {item.Name[language]}
-                        </Link>
+                        </SmartLink>
                       </li>
                     );
                   })}

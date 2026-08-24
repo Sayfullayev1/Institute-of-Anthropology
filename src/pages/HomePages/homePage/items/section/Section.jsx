@@ -52,12 +52,14 @@ export default function Section() {
         },
         {
             icon: <i className="fa-solid fa-pen-to-square"></i>,
-            number: 700,
+            number: 32,
             label: {
                 uz: "WoS/Scopus ",
                 ru: "WoS/Scopus ",
                 en: "WoS/Scopus ",
             },
+            // Тот же канал, что и WoS/Scopus в меню Raqamlashtirish.
+            link: "https://t.me/anthropubhub",
         },
     ];
 
@@ -119,19 +121,40 @@ export default function Section() {
 
                 <div className="home-page__section__stats-section__wrapper">
                     {
-                        data.map((item, index) => (
-                            <div className="home-page__section__stat-item" key={index}>
-                                {item.icon}
-                                <div className="home-page__section__number">
-                                    {isVisible ? (
-                                        <CountUp start={0} end={item.number} duration={3} separator="" /> // Animate number when visible
-                                    ) : (
-                                        <span>0</span>
-                                    )}
+                        data.map((item, index) => {
+                            const content = (
+                                <>
+                                    {item.icon}
+                                    <div className="home-page__section__number">
+                                        {isVisible ? (
+                                            <CountUp start={0} end={item.number} duration={3} separator="" /> // Animate number when visible
+                                        ) : (
+                                            <span>0</span>
+                                        )}
+                                    </div>
+                                    <div className="home-page__section__label">{item.label[language]}</div>
+                                </>
+                            );
+
+                            // item.link — внешняя ссылка (напр. WoS/Scopus -> t.me/anthropubhub).
+                            // react-router <Link to="https://..."> внешние URL не открывает как
+                            // внешние, поэтому тут обычный <a target="_blank">, не <Link>.
+                            return item.link ? (
+                                <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="home-page__section__stat-item home-page__section__stat-item--link"
+                                    key={index}
+                                >
+                                    {content}
+                                </a>
+                            ) : (
+                                <div className="home-page__section__stat-item" key={index}>
+                                    {content}
                                 </div>
-                                <div className="home-page__section__label">{item.label[language]}</div>
-                            </div>
-                        ))
+                            );
+                        })
                     }
                 </div>
 
