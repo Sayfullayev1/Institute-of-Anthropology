@@ -182,16 +182,6 @@ export default function Section() {
                     <br />
                     +998 71 233-95-31
                 </p>
-                <p className="contacts-page__section____info__contact__fax">
-                    {
-                        language === "uz"
-                            ? "Faks :"
-                            : language === "ru"
-                            ? "Факс: "
-                            : "Fax: "
-                    }
-                    +998 71 262-64-62
-                </p>
                 <p className="contacts-page__section____info__contact__email">
                     E-mail: anthropology@academy.uz  
                 </p>

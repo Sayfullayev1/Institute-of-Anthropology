@@ -43,17 +43,17 @@
         "items": [
           {
             "Name": {
-              "uz": "Arxeologik antropologiya bo‘limi",
-              "en": "Archaeological Anthropology Department"
-            },
-            "link": "/archaeological-anthropology-department"
-          },
-          {
-            "Name": {
               "uz": "Geoantropologiya bo‘limi",
               "en": "Geoanthropology Department"
             },
             "link": "/geoanthropology-department"
+          },
+          {
+            "Name": {
+              "uz": "Arxeologik antropologiya bo‘limi",
+              "en": "Archaeological Anthropology Department"
+            },
+            "link": "/archaeological-anthropology-department"
           },
           {
             "Name": {
@@ -75,13 +75,6 @@
               "en": "Archaeological Geophysics Department"
             },
             "link": "/archaeological-geophysics-department"
-          },
-          {
-            "Name": {
-              "uz": "Falsafa bo‘limi",
-              "en": "Department of Philosophy"
-            },
-            "link": "/philosophy-department"
           }
         ]
       },
