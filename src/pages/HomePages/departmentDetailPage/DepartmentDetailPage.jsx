@@ -164,7 +164,7 @@ export default function DepartmentDetailPage({ deptSlug }) {
                 {staff.map((member) => (
                   <li key={member.id} className={style.staffGrid__item}>
                     <Link
-                      to={language === 'uz' ? `/staff/${member.slug}` : `/${language}/staff/${member.slug}`}
+                      to={language === 'uz' ? `/${deptSlug}/staff/${member.slug}` : `/${language}/${deptSlug}/staff/${member.slug}`}
                       className={style.staffGrid__link}
                     >
                       <div className={style.staffGrid__photo}>

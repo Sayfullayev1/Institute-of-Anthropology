@@ -250,7 +250,11 @@ root.render(
                 <Route path='/:lang?/socio-cultural-anthropology-department' element={<SocioCulturalAnthropologyDepartmentPage />} />
                 <Route path='/:lang?/archaeological-geophysics-department' element={<ArchaeologicalGeophysicsDepartmentPage />} />
                 <Route path='/:lang?/philosophy-department' element={<DepartmentDetailPage deptSlug="philosophy-department" />} />
-                <Route path='/:lang?/staff/:slug' element={<StaffDetailPage />} />
+                {/* Дженерик-маршрут вида /<deptSlug>/staff/<slug> — работает для
+                    любого отдела, использующего DepartmentDetailPage (сейчас
+                    только philosophy-department), без правки роутов при
+                    переводе следующих отделов на ту же систему. */}
+                <Route path='/:lang?/:deptSlug/staff/:slug' element={<StaffDetailPage />} />
 
 
               {/* Research Pages */}

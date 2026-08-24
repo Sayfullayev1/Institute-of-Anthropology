@@ -8,8 +8,20 @@ import Container from '@/components/container/Container';
 import { LanguageContext } from '@/context/LanguageContext';
 import getApiUrl from '@/api/api';
 
+// Те же 6 отделов, что в Bo'limlar (SiteMapeData.json) — нужны здесь только
+// для подписи хлебной крошки (URL теперь /<deptSlug>/staff/<slug>), сама
+// выборка сотрудника по-прежнему идёт по глобально уникальному slug.
+const DEPT_NAMES = {
+  'philosophy-department': { uz: 'Falsafa bo‘limi', en: 'Department of Philosophy' },
+  'archaeological-anthropology-department': { uz: 'Arxeologik antropologiya bo‘limi', en: 'Archaeological Anthropology Department' },
+  'geoanthropology-department': { uz: 'Geoantropologiya bo‘limi', en: 'Geoanthropology Department' },
+  'historical-anthropology-department': { uz: 'Tarixiy antropologiya bo‘limi', en: 'Historical Anthropology Department' },
+  'socio-cultural-anthropology-department': { uz: 'Ijtimoiy-madaniy antropologiya bo‘limi', en: 'Socio-Cultural Anthropology Department' },
+  'archaeological-geophysics-department': { uz: 'Arxeologik geofizika bo‘limi', en: 'Archaeological Geophysics Department' },
+};
+
 export default function StaffDetailPage() {
-  const { slug } = useParams();
+  const { deptSlug, slug } = useParams();
   const { language } = useContext(LanguageContext);
 
   const [item, setItem] = useState(null);
@@ -20,12 +32,26 @@ export default function StaffDetailPage() {
     setNotFound(false);
 
     axios.get(`${getApiUrl()}/api/departments/staff/by-slug/${slug}`)
-      .then((response) => setItem(response.data.data))
+      .then((response) => {
+        const data = response.data.data;
+        // URL вида /<deptSlug>/staff/<slug> — если slug существует, но
+        // принадлежит другому отделу, считаем это "не найдено", а не молча
+        // показываем человека под чужой хлебной крошкой.
+        if (data.departmentSlug && data.departmentSlug !== deptSlug) {
+          setNotFound(true);
+        } else {
+          setItem(data);
+        }
+      })
       .catch(() => setNotFound(true));
-  }, [slug]);
+  }, [slug, deptSlug]);
+
+  const deptName = DEPT_NAMES[deptSlug] || { uz: deptSlug, en: deptSlug };
+  const deptLink = language === 'uz' ? `/${deptSlug}` : `/${language}/${deptSlug}`;
 
   const menuData = [
     { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
+    { text: deptName, link: deptLink },
     { text: { uz: item ? item.fullName.uz : '...', en: item ? item.fullName.en : '...' }, link: '#' },
   ];
 
