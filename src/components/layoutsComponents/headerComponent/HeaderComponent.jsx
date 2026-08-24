@@ -11,14 +11,27 @@ export default function HeaderComponent() {
     const { language } = useContext(LanguageContext);
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Общая функция вкл/выкл скролла страницы — раньше closeMenu (клик по
+    // крестику/фону/ссылке) сбрасывал только body.style.overflow, а
+    // document.documentElement (html) оставался залипшим на 'hidden'.
+    // На мобильных именно html — та вкладка, что реально блокирует скролл
+    // всей страницы, так что после перехода по ссылке из меню скролл
+    // пропадал насовсем, даже когда сама страница уже успела прогрузиться.
+    const setBodyScrollLocked = (locked) => {
+        const overflowStyle = locked ? 'hidden' : 'auto';
+        document.body.style.overflow = overflowStyle;
+        document.documentElement.style.overflow = overflowStyle;
+    };
+
     const toggleMenu = () => {
         const nextState = !menuOpen;
         setMenuOpen(nextState);
+        setBodyScrollLocked(nextState);
+    };
 
-        // Управление скроллом
-        const overflowStyle = nextState ? 'hidden' : 'auto';
-        document.body.style.overflow = overflowStyle;
-        document.documentElement.style.overflow = overflowStyle;
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setBodyScrollLocked(false);
     };
 
     const LogoTitle = {
@@ -69,10 +82,7 @@ export default function HeaderComponent() {
                 </div>
 
                 {/* Передаем функцию закрытия в меню */}
-                <Menu Bedeutung={menuOpen} closeMenu={() => {
-                    setMenuOpen(false);
-                    document.body.style.overflow = 'auto';
-                }} />
+                <Menu Bedeutung={menuOpen} closeMenu={closeMenu} />
             </div>
         </header>
     );
