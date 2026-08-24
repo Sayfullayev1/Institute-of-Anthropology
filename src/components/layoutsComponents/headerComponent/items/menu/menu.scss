@@ -1,5 +1,26 @@
+// Затемнённая + размытая подложка слева от выезжающего меню (само меню
+// занимает не весь экран — width: 85%/max 400px, — а остаток экрана слева
+// раньше просто показывал страницу как есть, без затемнения и без
+// возможности закрыть меню кликом по нему).
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 270; // между контентом страницы и .menu-item (280) / .menu-button (300)
+  background: rgba(20, 15, 10, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &--show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 .menu-item {
-  width: 85%;
+  width: 60%;
   max-width: 400px;
   height: 100vh;
   position: fixed;
@@ -12,16 +33,36 @@
   transform: translateX(100%);
   box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
 
-  // Первая строка (Языки)
+  // Первая строка (Языки + кнопка закрытия)
   &__top-row {
-    padding: 30px 20px ;
-    // display: flex;
-    // justify-content: flex-end;
+    padding: 12px 20px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__close {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background: #f5f6f7;
+    color: #666;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+
+    &:hover { background: #fdfaf7; color: #bf6205; }
+    &:active { transform: scale(0.92); }
   }
 
   // Вторая строка (Поиск)
   &__search-row {
-    padding: 0 20px 15px;
+    padding: 0 20px 10px;
     border-bottom: 1px solid #f0f0f0;
   }
 
@@ -94,12 +135,12 @@
   }
 
   &__title {
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: #333;
     transition: all 0.3s ease;
@@ -129,15 +170,18 @@
 
   &__sublist {
     list-style: none;
-    padding: 10px 0 20px 40px;
+    // Правого паддинга не было вообще (0) — из-за justify-content:
+    // space-between в &__subtitle стрелка "Bo'limlar" упиралась прямо в
+    // край панели. Добавляем отступ, как у остальных уровней.
+    padding: 4px 16px 10px 32px;
     margin: 0;
 
-    li { padding: 10px 0; }
+    li { padding: 5px 0; }
 
     .menu-item__link {
       text-decoration: none;
       color: #555;
-      font-size: 14px;
+      font-size: 13.5px;
       &:hover { color: #bf6205; }
     }
   }
@@ -147,17 +191,23 @@
   }
 
   &__subtitle {
-    padding: 10px 0;
+    padding: 6px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
     transition: all 0.3s ease;
 
+    // Раньше стрелка тут была тонкая и серая (9px, наследовала цвет текста) —
+    // терялась среди соседних пунктов вроде "Jurnal"/"Yangiliklar", у которых
+    // иконки вообще нет. Делаем её акцентного цвета и покрупнее уже в закрытом
+    // виде — сразу видно, что "Bo'limlar" не просто ссылка, а разворачивает
+    // список, ещё до того, как по нему нажали.
     i {
-      font-size: 9px;
+      font-size: 13px;
+      color: #bf6205;
       transition: transform 0.3s;
     }
 
@@ -179,10 +229,10 @@
 
   &__subsublist {
     list-style: none;
-    padding: 0 0 10px 20px;
+    padding: 0 0 6px 16px;
     margin: 0;
 
-    li { padding: 8px 0; }
+    li { padding: 4px 0; }
 
     .menu-item__link {
       text-decoration: none;

@@ -27,7 +27,7 @@ function SmartLink({ to, className, onClick, children }) {
   );
 }
 
-function Menu({ Bedeutung }) {
+function Menu({ Bedeutung, closeMenu }) {
   const [statusClass, setStatusClass] = useState("");
   const isFirstRender = useRef(true);
   const { language } = useContext(LanguageContext);
@@ -84,9 +84,29 @@ function Menu({ Bedeutung }) {
   };
 
   return (
+    <>
+      {/* Клик по размытой/затемнённой области слева от меню закрывает его.
+          Элемент всегда в DOM (не условный рендер) — иначе не на чем было
+          бы анимировать прозрачность при закрытии, только резкое исчезновение. */}
+      <div
+        className={`menu-backdrop ${Bedeutung ? 'menu-backdrop--show' : ''}`}
+        onClick={closeMenu}
+        aria-hidden="true"
+      ></div>
     <nav className={`menu-item ${statusClass}`}>
       <div className="menu-item__top-row">
         <LanguageSwitcher />
+        {/* Отдельная кнопка закрытия — не гамбургер (тот при открытом меню
+            скрыт, см. .menu-button.is-open), а своя, выезжающая вместе с
+            панелью, т.к. она часть той же <nav>. */}
+        <button
+          type="button"
+          className="menu-item__close"
+          onClick={closeMenu}
+          aria-label={language === 'uz' ? 'Menyuni yopish' : 'Close menu'}
+        >
+          <i className="fa-solid fa-xmark"></i>
+        </button>
       </div>
       <div className="menu-item__search-row">
         <div className="menu-item__search-field">
@@ -109,7 +129,7 @@ function Menu({ Bedeutung }) {
               <ul>
                 {searchResults.map((result, i) => (
                   <li key={i}>
-                    <Link to={result.pageUrl} onClick={() => setLocalSearch("")}>
+                    <Link to={result.pageUrl} onClick={() => { setLocalSearch(""); closeMenu(); }}>
                       {result.text}
                     </Link>
                   </li>
@@ -155,7 +175,7 @@ function Menu({ Bedeutung }) {
                             <ul className="menu-item__subsublist">
                               {item.items.map((child, cIdx) => (
                                 <li key={cIdx}>
-                                  <SmartLink to={child.link} className="menu-item__link">
+                                  <SmartLink to={child.link} className="menu-item__link" onClick={closeMenu}>
                                     {child.Name[language]}
                                   </SmartLink>
                                 </li>
@@ -168,7 +188,7 @@ function Menu({ Bedeutung }) {
 
                     return (
                       <li key={sIdx}>
-                        <SmartLink to={item.link} className="menu-item__link">
+                        <SmartLink to={item.link} className="menu-item__link" onClick={closeMenu}>
                           {item.Name[language]}
                         </SmartLink>
                       </li>
@@ -181,6 +201,7 @@ function Menu({ Bedeutung }) {
         </ul>
       </div>
     </nav>
+    </>
   );
 }
 
