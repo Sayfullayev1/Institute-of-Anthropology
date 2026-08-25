@@ -56,7 +56,7 @@
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 
-    &:hover { background: #fdfaf7; color: #bf6205; }
+    &:hover { background: #fdfaf7; color: #1e90ff; }
     &:active { transform: scale(0.92); }
   }
 
@@ -74,56 +74,89 @@
     padding: 2px 12px;
     border: 1px solid #eee;
 
-    &__search-results {
+    input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 10px 5px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #1e90ff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+
+  // Раньше был вложен внутрь &__search-field — реальный селектор получался
+  // .menu-item__search-field__search-results, а в JSX используется
+  // .menu-item__search-results, так что эти стили никогда не применялись
+  // (отсюда и голый список без оформления на скриншоте).
+  &__search-results {
     background: #fff;
     border-radius: 8px;
-    margin-top: 5px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    max-height: 200px;
-    overflow-y: auto;
-        
+    margin-top: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
     ul {
       list-style: none;
-      padding: 0;
+      padding: 8px 8px 4px;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
-  
+
     li a {
       display: block;
-      padding: 10px 15px;
+      padding: 10px 12px;
       font-size: 13px;
+      font-weight: 500;
       color: #333;
       text-decoration: none;
-      border-bottom: 1px solid #f5f5f5;
-      &:hover { background: #f9f9f9; color: #bf6205; }
+      background: #f7f8f9;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      // "в один ряд" — обрезаем длинный заголовок многоточием, а не
+      // растягиваем карточку на 3-4 строки, как было раньше без стилей.
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+      &:hover { background: #eaf4ff; color: #1e90ff; border-color: #b8ddff; }
     }
-  
+
     .search-status {
-      padding: 10px;
+      padding: 12px;
       text-align: center;
       font-size: 12px;
       color: #999;
     }
-}   
-    
-    
-      input {
-        flex: 1;
-        border: none;
-        background: transparent;
-        padding: 10px 5px;
-        outline: none;
-        font-size: 14px;
-      }
-    
-      button {
-        background: none;
-        border: none;
-        color: #bf6205;
-        cursor: pointer;
-        font-size: 16px;
-      }
-    }
+  }
+
+  &__search-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    margin: 2px 8px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e90ff;
+    text-decoration: none;
+    border-top: 1px solid #f0f0f0;
+
+    i { font-size: 11px; }
+
+    &:hover { text-decoration: underline; }
+  }
 
   &__content {
     flex: 1;
@@ -152,7 +185,7 @@
 
     &.is-open {
       background: #fdfaf7;
-      color: #bf6205;
+      color: #1e90ff;
       i { transform: rotate(90deg); } // Поворот стрелки
     }
   }
@@ -182,7 +215,7 @@
       text-decoration: none;
       color: #555;
       font-size: 13.5px;
-      &:hover { color: #bf6205; }
+      &:hover { color: #1e90ff; }
     }
   }
 
@@ -207,12 +240,12 @@
     // список, ещё до того, как по нему нажали.
     i {
       font-size: 13px;
-      color: #bf6205;
+      color: #1e90ff;
       transition: transform 0.3s;
     }
 
     &.is-open {
-      color: #bf6205;
+      color: #1e90ff;
       i { transform: rotate(90deg); }
     }
   }
@@ -238,7 +271,7 @@
       text-decoration: none;
       color: #777;
       font-size: 13px;
-      &:hover { color: #bf6205; }
+      &:hover { color: #1e90ff; }
     }
   }
 

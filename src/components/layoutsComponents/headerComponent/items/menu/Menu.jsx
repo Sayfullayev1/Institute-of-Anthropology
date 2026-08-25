@@ -45,7 +45,6 @@ function Menu({ Bedeutung, closeMenu }) {
     isFirstRender.current = false;
   }, [Bedeutung]);
 
-  // Функция поиска обернута в useCallback с зависимостью [language]
   const handleSearchRequest = useCallback((query) => {
     if (!query.trim()) {
       setSearchResults([]);
@@ -53,14 +52,18 @@ function Menu({ Bedeutung, closeMenu }) {
     }
     const api = getApiUrl();
     setIsSearching(true);
+    // Бэкенд отдаёт только /api/search?q=... (без языка в пути — ищет по
+    // uz и en заголовкам сразу). /api/search/${language} — несуществующий
+    // роут, из-за него мобильный поиск всегда получал 404 и пустой список,
+    // хотя десктопный (SearchPage) всегда ходил на правильный путь.
     axios
-      .get(`${api}/api/search/${language}?q=${encodeURIComponent(query)}`)
+      .get(`${api}/api/search?q=${encodeURIComponent(query)}`)
       .then((res) => {
-        setSearchResults((res.data.results || []).slice(0, 5));
+        setSearchResults((res.data.results || []).slice(0, 3));
       })
       .catch((err) => console.error("Search Error:", err))
       .finally(() => setIsSearching(false));
-  }, [language]); // Добавили language сюда
+  }, []);
 
   // Эффект для Debounce поиска
   useEffect(() => {
@@ -126,15 +129,39 @@ function Menu({ Bedeutung, closeMenu }) {
             {isSearching ? (
               <div className="search-status">...</div>
             ) : searchResults.length > 0 ? (
-              <ul>
-                {searchResults.map((result, i) => (
-                  <li key={i}>
-                    <Link to={result.pageUrl} onClick={() => { setLocalSearch(""); closeMenu(); }}>
-                      {result.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <>
+                <ul>
+                  {searchResults.map((result, i) => (
+                    <li key={i}>
+                      {/* API отдаёт link/title, а не pageUrl/text — из-за неверного
+                          URL запроса (см. выше) это никогда не доходило до рендера
+                          с непустым списком, поэтому несовпадение имён полей
+                          оставалось незамеченным. */}
+                      <Link
+                        to={language === 'uz' ? result.link : `/${language}${result.link}`}
+                        onClick={() => { setLocalSearch(""); closeMenu(); }}
+                      >
+                        {result.title?.[language]}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                {/* Показываем только топ-3 в самом меню (не длинный список) — за
+                    полным результатом ведём на /search с тем же текстом, уже
+                    набитым в поисковую строку той страницы. */}
+                <Link
+                  className="menu-item__search-more"
+                  to={
+                    language === 'uz'
+                      ? `/search?q=${encodeURIComponent(localSearch)}`
+                      : `/${language}/search?q=${encodeURIComponent(localSearch)}`
+                  }
+                  onClick={() => { setLocalSearch(""); closeMenu(); }}
+                >
+                  {language === 'uz' ? 'Batafsil ko‘rish' : 'See more results'}
+                  <i className="fa-solid fa-arrow-right"></i>
+                </Link>
+              </>
             ) : (
               <div className="search-status">
                 {language === 'uz' ? 'Hech narsa topilmadi' : 'No results found'}

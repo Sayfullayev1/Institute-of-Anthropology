@@ -31,7 +31,7 @@
 .journalCard__titleLine {
   flex: 1;
   height: 1px;
-  background: #d9a441;
+  background: #1e90ff;
   min-width: 16px;
 }
 
@@ -109,13 +109,13 @@
 }
 
 .journalCard__tabActive {
-  background: #fbecc4;
-  color: #8a6d1f;
+  background: #dceefe;
+  color: #0f6dc4;
   font-weight: 600;
-  border-color: #edd9a0;
+  border-color: #a8d4ff;
 
   &:hover {
-    background: #fbecc4;
+    background: #dceefe;
   }
 }
 
@@ -130,7 +130,7 @@
   color: #1a1a1a;
   margin: 0 0 10px;
   padding-bottom: 6px;
-  border-bottom: 2px solid #d9a441;
+  border-bottom: 2px solid #1e90ff;
   display: inline-block;
 }
 
@@ -188,7 +188,7 @@
       top: 9px;
       width: 6px;
       height: 6px;
-      background: #d9a441;
+      background: #1e90ff;
       border-radius: 50%;
     }
   }
@@ -199,13 +199,13 @@
   width: fit-content;
   font-size: 14px;
   font-weight: 600;
-  color: #b8860b;
+  color: #1e90ff;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 
   &:hover {
-    border-color: #b8860b;
+    border-color: #1e90ff;
   }
 }
 
@@ -247,7 +247,7 @@
   border: none;
   padding: 0;
   font: inherit;
-  color: #b8860b;
+  color: #1e90ff;
   text-decoration: none;
   cursor: pointer;
 
@@ -294,7 +294,7 @@
     opacity: 0.75;
 
     .journalCard__apiArchiveTitle {
-      color: #b8860b;
+      color: #1e90ff;
     }
   }
 }
@@ -337,7 +337,7 @@
   cursor: pointer;
 
   &:hover {
-    color: #b8860b;
+    color: #1e90ff;
     text-decoration: underline;
   }
 }

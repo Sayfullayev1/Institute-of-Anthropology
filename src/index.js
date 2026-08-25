@@ -85,11 +85,9 @@ import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/Jou
   import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
 
   /* Departments Pages*/
-  import ArchaeologicalAnthropologyDepartmentPage from './pages/HomePages/archaeologicalAnthropologyDepartmentPage/ArchaeologicalAnthropologyDepartmentPage';
-  import GeoanthropologyDepartmentPage from './pages/HomePages/geoanthropologyDepartmentPage/GeoanthropologyDepartmentPage';
-  import HistoricalAnthropologyDepartmentPage from './pages/HomePages/historicalAnthropologyDepartmentPage/HistoricalAnthropologyDepartmentPage';
-  import SocioCulturalAnthropologyDepartmentPage from './pages/HomePages/socioCulturalAnthropologyDepartmentPage/SocioCulturalAnthropologyDepartmentPage';
-  import ArchaeologicalGeophysicsDepartmentPage from './pages/HomePages/archaeologicalGeophysicsDepartmentPage/ArchaeologicalGeophysicsDepartmentPage';
+  // Все 5 реальных отделов теперь на общей дженерик-системе (DepartmentDetailPage) —
+  // в админке для всех уже ведут контент (Nomi/Tavsif как минимум).
+  import DepartmentDetailPage from './pages/HomePages/departmentDetailPage/DepartmentDetailPage';
   import StaffDetailPage from './pages/staffDetailPage/StaffDetailPage';
 
 
@@ -243,15 +241,12 @@ root.render(
 
                 {/* Departments Pages */}
 
-                <Route path='/:lang?/geoanthropology-department' element={<GeoanthropologyDepartmentPage />} />
-                <Route path='/:lang?/archaeological-anthropology-department' element={<ArchaeologicalAnthropologyDepartmentPage />} />
-                <Route path='/:lang?/historical-anthropology-department' element={<HistoricalAnthropologyDepartmentPage />} />
-                <Route path='/:lang?/socio-cultural-anthropology-department' element={<SocioCulturalAnthropologyDepartmentPage />} />
-                <Route path='/:lang?/archaeological-geophysics-department' element={<ArchaeologicalGeophysicsDepartmentPage />} />
-                {/* Falsafa bo'limi (philosophy-department) был пилотным/тестовым
-                    отделом — убран полностью (нав/роут/админка/данные на бэкенде).
-                    Дженерик-маршрут ниже остаётся: сработает для любого будущего
-                    отдела, переведённого на DepartmentDetailPage, без правки роутов. */}
+                <Route path='/:lang?/geoanthropology-department' element={<DepartmentDetailPage deptSlug="geoanthropology-department" />} />
+                <Route path='/:lang?/archaeological-anthropology-department' element={<DepartmentDetailPage deptSlug="archaeological-anthropology-department" />} />
+                <Route path='/:lang?/historical-anthropology-department' element={<DepartmentDetailPage deptSlug="historical-anthropology-department" />} />
+                <Route path='/:lang?/socio-cultural-anthropology-department' element={<DepartmentDetailPage deptSlug="socio-cultural-anthropology-department" />} />
+                <Route path='/:lang?/archaeological-geophysics-department' element={<DepartmentDetailPage deptSlug="archaeological-geophysics-department" />} />
+                {/* Дженерик-маршрут — работает для любого отдела на DepartmentDetailPage. */}
                 <Route path='/:lang?/:deptSlug/staff/:slug' element={<StaffDetailPage />} />
 
 

@@ -19,11 +19,21 @@
 }
 
 .department__title {
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
   color: #2b2b2b;
   margin: 0 0 20px;
   overflow-wrap: break-word;
+}
+
+// Nomi-поле в формате "Qisqa nomi – tavsif": короткая часть остаётся жирной
+// и крупной (стиль выше), а само описание после тире — заметно мельче и
+// обычным начертанием, чтобы читалось как подпись к названию, а не спорило
+// с ним за главное внимание.
+.department__title__desc {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
 }
 
 .department__section {
@@ -37,7 +47,7 @@
   color: #2b2b2b;
   margin: 0 0 14px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #d9a441;
+  border-bottom: 2px solid #1e90ff;
   display: inline-block;
 }
 
@@ -71,7 +81,7 @@
       top: 8px;
       width: 6px;
       height: 6px;
-      background: #d9a441;
+      background: #1e90ff;
       border-radius: 50%;
     }
   }
@@ -97,7 +107,7 @@
   }
 
   a {
-    color: #b8860b;
+    color: #1e90ff;
     text-decoration: none;
 
     &:hover {
@@ -111,8 +121,8 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #8a6d1f;
-  background: #fbecc4;
+  color: #0f6dc4;
+  background: #dceefe;
   padding: 3px 9px;
   border-radius: 4px;
 }
@@ -152,12 +162,12 @@
 
   &:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    border-color: #d9a441;
+    border-color: #1e90ff;
     transform: translateY(-2px);
   }
 
   &:hover .staffGrid__name {
-    color: #b8860b;
+    color: #1e90ff;
   }
 }
 

@@ -15,6 +15,19 @@ const PUBLICATION_TYPE_LABEL = {
   catalog: { uz: 'Katalog', en: 'Catalog' },
 };
 
+// Пока в админке ещё нет содержимого отдела (info === null), брать название
+// неоткуда, кроме info.name — без этого хлебная крошка показывала «...»
+// вместо, например, «Arxeologik antropologiya bo‘limi». Те же 6 отделов,
+// что в Bo'limlar (SiteMapeData.json) и в сайдбаре админки.
+const DEPT_NAMES = {
+  'philosophy-department': { uz: 'Falsafa bo‘limi', en: 'Department of Philosophy' },
+  'archaeological-anthropology-department': { uz: 'Arxeologik antropologiya bo‘limi', en: 'Archaeological Anthropology Department' },
+  'geoanthropology-department': { uz: 'Geoantropologiya bo‘limi', en: 'Geoanthropology Department' },
+  'historical-anthropology-department': { uz: 'Tarixiy antropologiya bo‘limi', en: 'Historical Anthropology Department' },
+  'socio-cultural-anthropology-department': { uz: 'Ijtimoiy-madaniy antropologiya bo‘limi', en: 'Socio-Cultural Anthropology Department' },
+  'archaeological-geophysics-department': { uz: 'Arxeologik geofizika bo‘limi', en: 'Archaeological Geophysics Department' },
+};
+
 export default function DepartmentDetailPage({ deptSlug }) {
   const { language } = useContext(LanguageContext);
 
@@ -37,9 +50,12 @@ export default function DepartmentDetailPage({ deptSlug }) {
       .catch(() => setInfo(null));
   }, [deptSlug]);
 
+  const fallbackName = DEPT_NAMES[deptSlug] || { uz: deptSlug, en: deptSlug };
+  const nameUz = info?.name?.uz || fallbackName.uz;
+  const nameEn = info?.name?.en || fallbackName.en;
   const menuData = [
     { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
-    { text: { uz: info ? info.name.uz : '...', en: info ? info.name.en : '...' }, link: `/${deptSlug}` },
+    { text: { uz: nameUz, en: nameEn }, link: `/${deptSlug}` },
   ];
 
   if (info === undefined) {
@@ -70,7 +86,15 @@ export default function DepartmentDetailPage({ deptSlug }) {
 
       <Container>
         <div className={style.department}>
-          <h1 className={style.department__title}>{info.name[language]}</h1>
+          <h1 className={style.department__title}>
+            {language === 'en' ? nameEn : nameUz}
+            {info.tagline?.[language] && (
+              // Тире — часть оформления, не данных: админ заполняет Nomi и
+              // Tavsif как два отдельных поля, дефис между ними ставится
+              // только здесь, во фронтенде.
+              <span className={style.department__title__desc}> – {info.tagline[language]}</span>
+            )}
+          </h1>
 
           {info.mission?.[language] && (
             <section className={style.department__section}>

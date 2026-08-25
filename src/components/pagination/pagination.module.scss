@@ -24,8 +24,8 @@
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 
   &:hover:not(:disabled) {
-    border-color: #d9a441;
-    color: #b8860b;
+    border-color: #1e90ff;
+    color: #1e90ff;
   }
 
   &:disabled {
@@ -35,13 +35,13 @@
 }
 
 .pagination__pageActive {
-  background: #d9a441;
-  border-color: #d9a441;
+  background: #1e90ff;
+  border-color: #1e90ff;
   color: #fff;
   font-weight: 600;
 
   &:hover:not(:disabled) {
-    background: #c9941f;
+    background: #0f6dc4;
     color: #fff;
   }
 }
