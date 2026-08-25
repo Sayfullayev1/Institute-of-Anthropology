@@ -51,7 +51,6 @@ export default function FooterComponent() {
           <h4 className="footer__title">MANZIL</h4>
           <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
           <p>Telefonlar: +998 71 262-64-62</p>
-          <p>Faks: +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
         </div>
       </div>

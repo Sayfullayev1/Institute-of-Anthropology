@@ -5,6 +5,9 @@ import styles from './section.module.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 import getApiUrl from '@/api/api';
 import Pagination from '@/components/pagination/Pagination';
+
+
+import journalCover from '@/public/images/journal/Uzbek_Anthropological_Journal_Cover_Vector-преобразовано-из-svg.png';
 import materialCultureCover from '@/public/images/journal/material-culture-cover.jpg';
 
 const ARCHIVE_PAGE_SIZE = 20;
@@ -13,7 +16,7 @@ const ARCHIVE_PAGE_SIZE = 20;
 const journals = [
   {
     title: { uz: "Uzbek Anthropological Journal", en: 'Uzbek Anthropological Journal' },
-    image: '',
+    image: journalCover,
     issn: '2181-0000',
     since: '1998',
     periodicity: { uz: 'Yiliga 4 marta', en: '4 issues per year' },

@@ -75,6 +75,20 @@
               "en": "Archaeological Geophysics Department"
             },
             "link": "/archaeological-geophysics-department"
+          },
+          {
+            "Name": {
+              "uz": "Ilmiy kengash",
+              "en": "Scientific Council"
+            },
+            "link": "/scientific-council"
+          },
+          {
+            "Name": {
+              "uz": "OAK Ilmiy Kengashi",
+              "en": "Higher Attestation Commission"
+            },
+            "link": "/higher-attestation-commission"
           }
         ]
       },

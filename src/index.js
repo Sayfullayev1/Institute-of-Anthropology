@@ -89,8 +89,8 @@ import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/Jou
   // в админке для всех уже ведут контент (Nomi/Tavsif как минимум).
   import DepartmentDetailPage from './pages/HomePages/departmentDetailPage/DepartmentDetailPage';
   import StaffDetailPage from './pages/staffDetailPage/StaffDetailPage';
-
-
+  import ScientificCouncilPage from './pages/HomePages/scientificCouncilPage/ScientificCouncilPage';  
+  import HigherAttestationCommissionPage from './pages/HomePages/higherAttestationCommissionPage/HigherAttestationCommissionPage';
 
 /* Research Page*/
 import ArticlesPage from './pages/ResearchPages/articlesPage/ArticlesPage';
@@ -248,7 +248,8 @@ root.render(
                 <Route path='/:lang?/archaeological-geophysics-department' element={<DepartmentDetailPage deptSlug="archaeological-geophysics-department" />} />
                 {/* Дженерик-маршрут — работает для любого отдела на DepartmentDetailPage. */}
                 <Route path='/:lang?/:deptSlug/staff/:slug' element={<StaffDetailPage />} />
-
+                <Route path="/:lang?/scientific-council" element={<ScientificCouncilPage />} /> 
+                <Route path="/:lang?/higher-attestation-commission" element={<HigherAttestationCommissionPage />} />
 
               {/* Research Pages */}
 
@@ -273,7 +274,7 @@ root.render(
               <Route path="/:lang?/international-organizations" element={<InternationalOrganizationsPage />} />
               <Route path="/:lang?/international-meetings" element={<InternationalMeetingsPage />} />
               <Route path="/:lang?/partners" element={<PartnersPage />} />
-
+              
 
               {/* Communication Pages */}
 

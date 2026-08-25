@@ -5,6 +5,8 @@ import "./convert.scss";
 // Word хранит выравнивание как прямое форматирование параграфа (w:jc val="center"/"right"),
 // а не как именованный стиль — mammoth по умолчанию не переносит такое форматирование в HTML.
 // Помечаем такие параграфы синтетическим styleName, чтобы styleMap ниже могла их поймать.
+// (Раньше ловилось только center — абзацы вроде "Institut Nizomidan", выровненные
+// в Word по правому краю, из-за этого рендерились обычным justify.)
 const markCenteredParagraphs = mammoth.transforms.paragraph((paragraph) => {
   if (paragraph.alignment === "center") {
     paragraph.styleName = "CenteredParagraph";
@@ -59,16 +61,16 @@ export default function Convert({ language }) {
   useEffect(() => {
     // 1. Сначала определяем путь к файлу в зависимости от языка
     let currentFayl = "";
-    
+
     if (language === "uz") {
-      currentFayl = "/infoFolder/charterOfTheCenterPageDocuments/NIZOM_ANTROPOLOGIYA_INSTITUT_UZ.docx";
+      currentFayl = "/infoFolder/ScientificCouncilPageDocument/Institut_Ilmiy_Kengashi_UZ.docx";
     }  else {
-      currentFayl = "/infoFolder/charterOfTheCenterPageDocuments/NIZOM_ANTROPOLOGIYA_INSTITUT_EN.docx";
+      currentFayl = "/infoFolder/ScientificCouncilPageDocument/Institute_Scientific_Council_EN.docx";
     }
 
     // 2. Теперь загружаем этот файл
     setHtml(""); // Очищаем старый текст перед загрузкой нового
-    
+
     fetch(currentFayl)
       .then((res) => {
         if (!res.ok) throw new Error(language === "uz" ? "Fayl topilmadi" : "File not found");
@@ -91,7 +93,7 @@ export default function Convert({ language }) {
             : "<p>Error loading document</p>"
         );
       });
-      
+
   }, [language]); // Массив зависимостей: перезапускать при смене языка
 
   return (
