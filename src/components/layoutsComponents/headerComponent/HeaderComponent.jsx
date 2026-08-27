@@ -14,14 +14,44 @@ export default function HeaderComponent() {
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
 
-    // Растягиваем подзаголовок пробелами (text-align-last: justify в scss)
-    // до ширины заголовка. Пересчитываем при смене языка (другой текст) и
-    // при ресайзе — у title/subtitle свой font-size на каждый брейкпоинт,
-    // без пересчёта ширина "залипала" бы от предыдущего брейкпоинта.
+    // Растягиваем подзаголовок до ширины заголовка через letter-spacing —
+    // равномерно раздвигаем ВСЕ буквы (а не пробелы между словами), пока
+    // строка не займёт ровно ширину title. Пересчитываем при смене языка
+    // (другой текст) и при ресайзе — у title/subtitle свой font-size на
+    // каждый брейкпоинт, без пересчёта величина "залипала" бы от
+    // предыдущего брейкпоинта.
     useEffect(() => {
         const syncSubtitleWidth = () => {
             if (!titleRef.current || !subtitleRef.current) return;
-            subtitleRef.current.style.width = `${titleRef.current.offsetWidth}px`;
+            const subtitleEl = subtitleRef.current;
+            const titleWidth = titleRef.current.offsetWidth;
+
+            // Сбрасываем letter-spacing перед замером «естественной» ширины —
+            // иначе к уже растянутому значению добавится ещё одна добавка.
+            // display временно переключаем на inline-block: у block-элемента
+            // внутри <h1> ширина бокса всегда растягивается на всю доступную
+            // ширину контейнера (это и держит subtitle на отдельной строке) —
+            // offsetWidth в этом состоянии вернул бы ширину РАСТЯНУТОГО бокса,
+            // а не реальную ширину самого текста. inline-block сжимается по
+            // контенту, поэтому даёт настоящий "естественный" замер.
+            subtitleEl.style.letterSpacing = '0px';
+            subtitleEl.style.display = 'inline-block';
+            const naturalWidth = subtitleEl.offsetWidth;
+            subtitleEl.style.display = 'block';
+
+            const gaps = subtitleEl.textContent.length - 1;
+            if (gaps <= 0) return;
+
+            // Только растягиваем (положительный letter-spacing), никогда не
+            // сжимаем: на узких экранах title иногда переносится на 2 строки
+            // (например "Institute of" / "Anthropology"), и offsetWidth тогда
+            // отдаёт ширину этой короткой обёрнутой строки — если бы под неё
+            // сжимался subtitle, буквы слипались бы в нечитаемое пятно.
+            // Без запаса сверху subtitle в этом случае просто остаётся
+            // естественной (нерастянутой) ширины — читаемо, пусть и не равно
+            // title один-в-один.
+            const extraPerGap = Math.max(0, (titleWidth - naturalWidth) / gaps);
+            subtitleEl.style.letterSpacing = `${extraPerGap}px`;
         };
         syncSubtitleWidth();
         // Roboto грузится удалённо (index.css, display=swap) — первый замер
@@ -57,13 +87,13 @@ export default function HeaderComponent() {
     };
 
     const LogoTitle = {
-        uz: { 
-            title: "Antropologiya instituti", 
-            subtitle: "O'zbekiston Respublikasi Fanlar akademiyasi" 
+        uz: {
+            title: "Antropologiya instituti",
+            subtitle: "O'zbekiston Respublikasi Fanlar akademiyasi"
         },
-        en: { 
-            title: "Institute of Anthropology", 
-            subtitle: "Uzbekistan Academy of Sciences", 
+        en: {
+            title: "Institute of Anthropology",
+            subtitle: "Uzbekistan Academy of Sciences",
         },
     };
 
@@ -72,15 +102,14 @@ export default function HeaderComponent() {
             <div className='header_wrapper'>
                 <div className='header__container'>
                     <div className='header__logo'>
-                        <Link to={`/${language === "uz" ? "" : language}`}>
+                        <Link to={`/${language === "en" ? "" : language}`}>
                             <img src={logoImage} alt="Logo" />
                         </Link>
                     </div>
-                    {/* titleRef/subtitleRef: подзаголовок растягивается пробелами
-                        (text-align-last: justify) до ширины заголовка — см. эффект
-                        выше и .header__subtitle в headerComponent.scss. Заголовок
-                        раньше был голым текстовым узлом внутри <h1> — не за что
-                        было зацепить ref, поэтому обёрнут в свой <span>. */}
+                    {/* titleRef/subtitleRef: подзаголовок растягивается через
+                        letter-spacing до ширины заголовка — см. эффект выше.
+                        Заголовок раньше был голым текстовым узлом внутри <h1> —
+                        не за что было зацепить ref, поэтому обёрнут в свой <span>. */}
                     <h1 className='header__title'>
                         <span ref={titleRef} className="header__title__text">{LogoTitle[language].title}</span>
                         <span ref={subtitleRef} className={`header__subtitle header__subtitle--${language}`}>{LogoTitle[language].subtitle}</span>

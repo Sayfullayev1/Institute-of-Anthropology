@@ -19,78 +19,28 @@ import NotFoundPage from './pages/OtherPages/notFoundPage/NotFoundPage';
 import SearchPage from './pages/OtherPages/searchPage/SearchPage';
 
 
-/* About Pages*/
-import HistoryOfTheCenterPage from './pages/aboutPages/historyOfTheCenterPage/HistoryOfTheCenterPage';
-
-
-// import Management from './pages/aboutPages/management/Management';
-// import CharterOfTheCenterPage from './pages/aboutPages/charterOfTheCenterPage/CharterOfTheCenterPage';
-import AcademicsOfTheCenterPage from './pages/aboutPages/academicsOfTheCenterPage/AcademicsOfTheCenterPage';
-
-
-
-
-
-/* Publications Page*/
-
-import TeachingAidsPage from './pages/publicationsPages/teachingAidsPage/TeachingAidsPage';
-import UzbekistanHistoryOfMaterialCulturePage from './pages/publicationsPages/uzbekistanHistoryOfMaterialCulturePage/UzbekistanHistoryOfMaterialCulturePage';
-
-
-
-
-
-/* News Page*/
-
-import ArticlesDetailPage from './pages/publicationsPages/articlesDetailPage/ArticlesDetailPage';
-// import NewsPage from './pages/HomePages/NewsPages/newsPage/NewsPage';
-// import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
-
-
-
-
-
-/* ACTIVITIY Page */
-
-import TheMostImportantResearchResultsPage from './pages/activityPages/theMostImportantResearchResultsPage/TheMostImportantResearchResultsPage';
-import ScienceActionPlanPage from './pages/activityPages/scienceActionPlanPage/ScienceActionPlanPage';
-import BoardOfYoungScientistsPage from './pages/activityPages/boardOfYoungScientistsPage/BoardOfYoungScientistsPage';
-
-
-
-
-/* Contacts Page*/ 
-import ContactsPage from './pages/contactsPage/ContactsPage';
-
-
-
-
-
 
 
 
 /* Home Page*/
 import HomeRouteGuard from './components/homeRouteGuard/HomeRouteGuard';
 import MissionPage from './pages/HomePages/missionPage/MissionPage';
-import StructurePage from './pages/HomePages/structurePage/StructurePage'
 import ManagementPage from './pages/HomePages/managementPage/ManagementPage'
 import ManagementDetailPage from './pages/HomePages/managementDetailPage/ManagementDetailPage';
 import CharterOfTheCenterPage from './pages/HomePages/charterOfTheCenterPage/CharterOfTheCenterPage';
 import JournalPage from './pages/HomePages/journalPage/JournalPage';
 import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/JournalIssueDetailPage';
-
+import ContactsPage from './pages/HomePages/contactsPage/ContactsPage';
 
   /* News Pages*/
-  import NewsPage from './pages/HomePages/NewsPages/newsPage/NewsPage';
-  import NewsDetailPage from './pages/HomePages/NewsPages/newsDetailPage/NewsDetailPage';
+  import NewsPage from './pages/HomePages/newsPage/NewsPage';
+  import NewsDetailPage from './pages/HomePages/newsDetailPage/NewsDetailPage';
 
   /* Departments Pages*/
   // Все 5 реальных отделов теперь на общей дженерик-системе (DepartmentDetailPage) —
   // в админке для всех уже ведут контент (Nomi/Tavsif как минимум).
   import DepartmentDetailPage from './pages/HomePages/departmentDetailPage/DepartmentDetailPage';
-  import StaffDetailPage from './pages/staffDetailPage/StaffDetailPage';
-  import ScientificCouncilPage from './pages/HomePages/scientificCouncilPage/ScientificCouncilPage';  
-  import HigherAttestationCommissionPage from './pages/HomePages/higherAttestationCommissionPage/HigherAttestationCommissionPage';
+  import StaffDetailPage from './pages/HomePages/staffDetailPage/StaffDetailPage';
 
 /* Research Page*/
 import ArticlesPage from './pages/ResearchPages/articlesPage/ArticlesPage';
@@ -99,7 +49,12 @@ import ConferencesPage from './pages/ResearchPages/conferencesPage/ConferencesPa
 
 
 
-/* Commercialization Page*/
+
+/* Councils Pages*/
+import InstituteScientificCouncilPage from './pages/CouncilsPages/instituteScientificCouncilPage/InstituteScientificCouncilPage';
+import CouncilForConferralOfAcademicDegreesPage from './pages/CouncilsPages/councilForConferralOfAcademicDegreesPage/CouncilForConferralOfAcademicDegreesPage';
+import EarlyCareerResearchersCouncilPage from './pages/CouncilsPages/earlyCareerResearchersCouncilPage/EarlyCareerResearchersCouncilPage';
+import EthicsCommitteePage from './pages/CouncilsPages/ethicsCommitteePage/EthicsCommitteePage';
 
 
 
@@ -133,9 +88,15 @@ import InstitutionalPage from './pages/CommunicationPages/institutionalPage/Inst
 
 /* Digitalization Page */
 import OrcidPage from './pages/DigitalizationPages/orcidPage/OrcidPage';
-import WosPage from './pages/DigitalizationPages/wosPage/WosPage';
-import ScopusPage from './pages/DigitalizationPages/scopusPage/ScopusPage';
 import CybersecurityPage from './pages/DigitalizationPages/cybersecurityPage/CybersecurityPage';
+
+
+
+/* Commercialization Page */
+import Year2023Page from './pages/CommercializationPages/year2023Page/Year2023Page';
+import Year2024Page from './pages/CommercializationPages/year2024Page/Year2024Page';
+import Year2025Page from './pages/CommercializationPages/year2025Page/Year2025Page';
+import Year2026Page from './pages/CommercializationPages/year2026Page/Year2026Page';
 
 
 
@@ -171,66 +132,12 @@ root.render(
 
             <Route path="/:lang?" element={<HomeRouteGuard />} />
 
-
-            {/* About Pages*/}
-
-            <Route path="/:lang?/history-of-the-center" element={<HistoryOfTheCenterPage />} />
-
-
-            {/* <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} /> */}
-
-            <Route path='/:lang?/monographs' element={<MonographsPage />} />
-
-            <Route path='/:lang?/academics-of-the-center' element={<AcademicsOfTheCenterPage />} />
-
-            {/* <Route path='/:lang?/management' element={<Management />} /> */}
-
-
-
-            {/* Publications Page*/}
-
-
-            <Route path='/:lang?/articles/:id' element={<ArticlesDetailPage />} />
-
-            <Route path='/:lang?/teaching-aids' element={<TeachingAidsPage/>}/>
-
-            <Route path='/:lang?/uzbekistan-history-of-material-culture' element={<UzbekistanHistoryOfMaterialCulturePage/>}/>
-
-
-
-            {/* ACTIVITIY Page */}
-
-            <Route path='/:lang?/the-most-important-research-results' element={<TheMostImportantResearchResultsPage/>}/>
-
-            <Route path='/:lang?/science-action-plan' element={<ScienceActionPlanPage/>}/>
-
-            <Route path='/:lang?/board-of-young-scientists' element={<BoardOfYoungScientistsPage/>}/>
-
-
-
-            {/* Contacts Page */}
-
-            <Route path="/:lang?/contacts" element={<ContactsPage />} />
-
-
-
-             {/* News Page 
-             <Route path="/:lang?/events" element={<ArticlesPage />} />
-             <Route path="/:lang?/events/:id" element={<ArticlesDetailPage />} />
-             <Route path="/:lang?/wednesday-readings" element={<ArticlesPage />} />
-             <Route path="/:lang?/wednesday-readings/:id" element={<ArticlesDetailPage/>} />
-            */}
-
-
-
-              {/* Home Page */}
-
               <Route path="/:lang?/mission" element={<MissionPage />} />
-              <Route path="/:lang?/structure" element={<StructurePage/>} />
               <Route path="/:lang?/management" element={<ManagementPage/>} />
               <Route path="/:lang?/management/:slug" element={<ManagementDetailPage/>} />
               <Route path='/:lang?/charter-of-the-center' element={<CharterOfTheCenterPage />} />
               <Route path='/:lang?/journal' element={<JournalPage />} />
+              <Route path="/:lang?/contacts" element={<ContactsPage />} />
 
                 {/* News Page */}
                 <Route path="/:lang?/news" element={<NewsPage />} />
@@ -248,13 +155,20 @@ root.render(
                 <Route path='/:lang?/archaeological-geophysics-department' element={<DepartmentDetailPage deptSlug="archaeological-geophysics-department" />} />
                 {/* Дженерик-маршрут — работает для любого отдела на DepartmentDetailPage. */}
                 <Route path='/:lang?/:deptSlug/staff/:slug' element={<StaffDetailPage />} />
-                <Route path="/:lang?/scientific-council" element={<ScientificCouncilPage />} /> 
-                <Route path="/:lang?/higher-attestation-commission" element={<HigherAttestationCommissionPage />} />
 
               {/* Research Pages */}
 
               <Route path="/:lang?/articles" element={<ArticlesPage />} />
               <Route path="/:lang?/conferences" element={<ConferencesPage />} />
+              <Route path='/:lang?/monographs' element={<MonographsPage />} />
+
+
+              {/* Councils Pages */}
+
+              <Route path="/:lang?/institute-scientific-council" element={<InstituteScientificCouncilPage />} />
+              <Route path="/:lang?/early-career-researchers-council" element={<EarlyCareerResearchersCouncilPage />} />
+              <Route path="/:lang?/council-for-conferral-of-academic-degrees" element={<CouncilForConferralOfAcademicDegreesPage />} />
+              <Route path="/:lang?/ethics-committee" element={<EthicsCommitteePage />} />
 
 
               {/* Staff Pages */}
@@ -288,9 +202,15 @@ root.render(
               {/* Digitalization Pages */}
 
               <Route path="/:lang?/orcid" element={<OrcidPage />} />
-              <Route path="/:lang?/wos" element={<WosPage />} />
-              <Route path="/:lang?/scopus" element={<ScopusPage />} />
               <Route path="/:lang?/cybersecurity" element={<CybersecurityPage />} />
+
+
+              {/* Commercialization Pages */}
+
+              <Route path="/:lang?/year-2023" element={<Year2023Page />} />
+              <Route path="/:lang?/year-2024" element={<Year2024Page />} />
+              <Route path="/:lang?/year-2025" element={<Year2025Page />} />
+              <Route path="/:lang?/year-2026" element={<Year2026Page />} />
 
 
 

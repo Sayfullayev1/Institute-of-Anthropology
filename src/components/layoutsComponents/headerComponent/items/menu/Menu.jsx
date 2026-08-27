@@ -138,7 +138,7 @@ function Menu({ Bedeutung, closeMenu }) {
                           с непустым списком, поэтому несовпадение имён полей
                           оставалось незамеченным. */}
                       <Link
-                        to={language === 'uz' ? result.link : `/${language}${result.link}`}
+                        to={language === 'en' ? result.link : `/${language}${result.link}`}
                         onClick={() => { setLocalSearch(""); closeMenu(); }}
                       >
                         {result.title?.[language]}
@@ -152,7 +152,7 @@ function Menu({ Bedeutung, closeMenu }) {
                 <Link
                   className="menu-item__search-more"
                   to={
-                    language === 'uz'
+                    language === 'en'
                       ? `/search?q=${encodeURIComponent(localSearch)}`
                       : `/${language}/search?q=${encodeURIComponent(localSearch)}`
                   }

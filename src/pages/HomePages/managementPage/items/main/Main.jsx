@@ -67,7 +67,7 @@ export default function Main() {
                 </div>
                 {item.slug && (item.bio?.uz?.trim() || item.bio?.en?.trim()) && (
                   <Link
-                    to={language === 'uz' ? `/management/${item.slug}` : `/${language}/management/${item.slug}`}
+                    to={language === 'en' ? `/management/${item.slug}` : `/${language}/management/${item.slug}`}
                     className="management-page__main__section__item__more"
                   >
                     {language === 'en' ? 'Learn more' : 'Batafsil'}

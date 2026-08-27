@@ -43,7 +43,7 @@ export default function Section() {
     e.preventDefault();
     const trimmed = inputValue.trim();
     if (!trimmed) return;
-    const basePath = language === 'uz' ? '/search' : `/${language}/search`;
+    const basePath = language === 'en' ? '/search' : `/${language}/search`;
     navigate(`${basePath}?q=${encodeURIComponent(trimmed)}`);
   };
 
@@ -58,7 +58,7 @@ export default function Section() {
   }
 
   function buildLink(link) {
-    return language === 'uz' ? link : `/${language}${link}`;
+    return language === 'en' ? link : `/${language}${link}`;
   }
 
   return (

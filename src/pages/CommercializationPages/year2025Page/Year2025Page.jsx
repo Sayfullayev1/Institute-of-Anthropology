@@ -1,14 +1,11 @@
 import React from 'react'
 import Main from './items/main/Main';
-import Section from './items/section/Section';
 
 export default function Year2025Page() {
   return (
     <div className='year-2025-page'>
 
         <Main/>
-
-        <Section/>
 
     </div>
   )

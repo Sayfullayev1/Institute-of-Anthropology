@@ -96,7 +96,12 @@
   font-size: 15px;
   line-height: 1.7;
   color: #444;
-  text-align: justify;
+  // На узких экранах в строке умещается 2-3 слова — тот же "лишний"
+  // остаток ширины браузер раскидывает всего на 1-2 пробела вместо
+  // множества, из-за чего пробелы становятся огромными и неровными
+  // ("реки" в тексте). justify включаем только начиная с брейкпоинта
+  // ниже (700px), где строка уже достаточно широкая, чтобы это не било в глаза.
+  text-align: left;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   margin: 0;
@@ -116,5 +121,9 @@
   .staff__photo {
     flex-shrink: 0;
     align-self: flex-start;
+  }
+
+  .staff__bio {
+    text-align: justify;
   }
 }

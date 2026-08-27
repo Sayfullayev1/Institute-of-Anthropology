@@ -11,7 +11,7 @@ export default function Section() {
     if (!link) return null;
     // Если ссылка уже начинается с http или /, корректируем под язык
     const baseLink = link.startsWith('/') ? link : `/${link}`;
-    return language === 'uz' ? baseLink : `/${language}${baseLink}`.replace(/\/+/g, '/');
+    return language === 'en' ? baseLink : `/${language}${baseLink}`.replace(/\/+/g, '/');
   };
 
   return (

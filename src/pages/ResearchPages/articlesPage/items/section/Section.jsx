@@ -1,8 +1,6 @@
 import React, { useContext, useState } from 'react'; // eslint-disable-line no-unused-vars
 import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
-import getApiUrl from '@/api/api'; // eslint-disable-line no-unused-vars
-import axios from 'axios'; // eslint-disable-line no-unused-vars
 
 import PagePlaceholder from '@/components/pagePlaceholder/PagePlaceholder';
 
@@ -12,7 +10,7 @@ export default function Section() {
 
 
     return (
-        <section className="contacts-page__section">
+        <section className="articles-page__section">
           
             <PagePlaceholder/>
 

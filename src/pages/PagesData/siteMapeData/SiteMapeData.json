@@ -15,13 +15,6 @@
       },
       {
         "Name": {
-          "uz": "Tuzilma",
-          "en": "Structure"
-        },
-        "link": "/structure"
-      },
-      {
-        "Name": {
           "uz": "Rahbariyat",
           "en": "Management"
         },
@@ -75,20 +68,6 @@
               "en": "Archaeological Geophysics Department"
             },
             "link": "/archaeological-geophysics-department"
-          },
-          {
-            "Name": {
-              "uz": "Ilmiy kengash",
-              "en": "Scientific Council"
-            },
-            "link": "/scientific-council"
-          },
-          {
-            "Name": {
-              "uz": "OAK Ilmiy Kengashi",
-              "en": "Higher Attestation Commission"
-            },
-            "link": "/higher-attestation-commission"
           }
         ]
       },
@@ -112,6 +91,43 @@
           "en": "Contacts"
         },
         "link": "/contacts"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Kengashlar",
+      "en": "Councils"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Institut ilmiy kengashi",
+          "en": "Institute Scientific Council"
+        },
+        "link": "/institute-scientific-council"
+      },
+      {
+        "Name": {
+          "uz": "Yosh olimlar kengashi",
+          "en": "Early-Career Researchers Council"
+        },
+        "link": "/early-career-researchers-council"
+      },
+      {
+        "Name": {
+          "uz": "Ilmiy darajalar beruvchi Ilmiy Kengash",
+          "en": "Council for the Conferral of Academic Degrees"
+        },
+        "link": "/council-for-conferral-of-academic-degrees"
+      },
+      {
+        "Name": {
+          "uz": "Etika Komissiyasi",
+          "en": "Ethics Committee"
+        },
+        "link": "/ethics-committee"
       }
     ]
   },
@@ -142,43 +158,6 @@
           "en": "Conferences"
         },
         "link": "/conferences"
-      }
-    ]
-  },
-  {
-    "Name": {
-      "uz": "Tijoratlashtirish",
-      "en": "Commercialization"
-    },
-    "link": "",
-    "items": [
-      {
-        "Name": {
-          "uz": "2023",
-          "en": "2023"
-        },
-        "link": "/year-2023"
-      },
-      {
-        "Name": {
-          "uz": "2024",
-          "en": "2024"
-        },
-        "link": "/year-2024"
-      },
-      {
-        "Name": {
-          "uz": "2025",
-          "en": "2025"
-        },
-        "link": "/year-2025"
-      },
-      {
-        "Name": {
-          "uz": "2026",
-          "en": "2026"
-        },
-        "link": "/year-2026"
       }
     ]
   },
@@ -265,7 +244,7 @@
         "Name": {
           "uz": "Xalqaro yig‘ilishlar",
           "en": "International Meetings"
-        },
+        },  
         "link": "/international-meetings"
       },
       {
@@ -274,6 +253,89 @@
           "en": "Partners"
         },
         "link": "/partners"
+      }
+    ]
+  },
+  {
+    "Name": {
+      "uz": "Inovatsiya",
+      "en": "Inovation"
+    },
+    "link": "",
+    "items": [
+      {
+        "Name": {
+          "uz": "Tijoratlashtirish",
+          "en": "Commercialization"
+        },
+        "link": "",
+        "items": [
+          {
+            "Name": {
+              "uz": "2023",
+              "en": "2023"
+            },
+            "link": "/year-2023"
+          },
+          {
+            "Name": {
+              "uz": "2024",
+              "en": "2024"
+            },
+            "link": "/year-2024"
+          },
+          {
+            "Name": {
+              "uz": "2025",
+              "en": "2025"
+            },
+            "link": "/year-2025"
+          },
+          {
+            "Name": {
+              "uz": "2026",
+              "en": "2026"
+            },
+            "link": "/year-2026"
+          }
+        ]
+      },
+      {
+        "Name": {
+          "uz": "Raqamlashtirish",
+          "en": "Digitalization"
+        },
+        "link": "",
+        "items": [
+          {
+            "Name": {
+              "uz": "ORCID",
+              "en": "ORCID"
+            },
+            "link": "/orcid"
+          },
+          {
+            "Name": {
+              "uz": "WoS",
+              "en": "WoS"
+            },
+            "link": "https://t.me/anthropubhub"
+          },
+          {
+            "Name": {
+              "uz": "Scopus",
+              "en": "Scopus"
+            },
+            "link": "https://t.me/anthropubhub"
+          },
+          {
+            "Name": {
+              "uz": "Kiberxavfsizlik",
+              "en": "Cybersecurity"
+            },
+            "link": "/cybersecurity"
+          }
+        ]
       }
     ]
   },
@@ -318,43 +380,6 @@
           "en": "Institutional"
         },
         "link": "/institutional"
-      }
-    ]
-  },
-  {
-    "Name": {
-      "uz": "Raqamlashtirish",
-      "en": "Digitalization"
-    },
-    "link": "",
-    "items": [
-      {
-        "Name": {
-          "uz": "ORCID",
-          "en": "ORCID"
-        },
-        "link": "/orcid"
-      },
-      {
-        "Name": {
-          "uz": "WoS",
-          "en": "WoS"
-        },
-        "link": "https://t.me/anthropubhub"
-      },
-      {
-        "Name": {
-          "uz": "Scopus",
-          "en": "Scopus"
-        },
-        "link": "https://t.me/anthropubhub"
-      },
-      {
-        "Name": {
-          "uz": "Kiberxavfsizlik",
-          "en": "Cybersecurity"
-        },
-        "link": "/cybersecurity"
       }
     ]
   }

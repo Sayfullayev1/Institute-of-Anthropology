@@ -7,14 +7,16 @@ export const LanguageProvider = ({ children }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    // Английский теперь язык по умолчанию (без префикса, "/"),
+    // узбекский — с префиксом "/uz".
     const getLangFromPath = (path) => {
-        return /^\/en(\/|$)/.test(path) ? 'en' : 'uz';
+        return /^\/uz(\/|$)/.test(path) ? 'uz' : 'en';
     };
 
     const [language, setLanguage] = useState(() => {
         const langFromUrl = getLangFromPath(window.location.pathname);
         const savedLang = localStorage.getItem('app_lang');
-        return langFromUrl || savedLang || 'uz';
+        return langFromUrl || savedLang || 'en';
     });
 
     useEffect(() => {
@@ -22,8 +24,8 @@ export const LanguageProvider = ({ children }) => {
         const savedLang = localStorage.getItem('app_lang');
 
         // ЛОГИКА РЕДИРЕКТА:
-        if (location.pathname === '/' && savedLang === 'en') {
-            navigate('/en' + location.search, { replace: true });
+        if (location.pathname === '/' && savedLang === 'uz') {
+            navigate('/uz' + location.search, { replace: true });
             return;
         }
 
@@ -31,22 +33,22 @@ export const LanguageProvider = ({ children }) => {
             setLanguage(currentLang);
             localStorage.setItem('app_lang', currentLang);
         }
-        
-        // ESLint ругался на отсутствие этих зависимостей. 
+
+        // ESLint ругался на отсутствие этих зависимостей.
         // Добавляем их, чтобы билд на Vercel прошел успешно.
     }, [location.pathname, location.search, navigate, language]);
 
     const changeLanguage = (newLang) => {
         if (newLang === language) return;
-        
+
         localStorage.setItem('app_lang', newLang);
         const currentPath = location.pathname;
         let newPath;
 
-        if (newLang === 'en') {
-            newPath = currentPath.startsWith('/en') ? currentPath : `/en${currentPath}`;
+        if (newLang === 'uz') {
+            newPath = currentPath.startsWith('/uz') ? currentPath : `/uz${currentPath}`;
         } else {
-            newPath = currentPath.replace(/^\/en(\/|$)/, '/');
+            newPath = currentPath.replace(/^\/uz(\/|$)/, '/');
         }
 
         const cleanPath = newPath.replace(/\/+/g, '/').replace(/(.)\/$/, '$1') || '/';

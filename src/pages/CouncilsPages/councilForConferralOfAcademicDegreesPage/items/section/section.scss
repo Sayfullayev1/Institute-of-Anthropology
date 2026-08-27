@@ -1,0 +1,22 @@
+.council-for-conferral-of-academic-degrees-page__section {
+  // max-width/margin для горизонтали уже задаёт обёртывающий Container —
+  // здесь только вертикальный отступ и шрифт.
+  padding: 40px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+// Ссылка на PDF: чёрным в покое, сине-голубым с подчёркиванием при
+// наведении (без свечения).
+.council-for-conferral-of-academic-degrees-page__pdfLink {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: rgb(0, 156, 255);
+    text-decoration: underline;
+  }
+}

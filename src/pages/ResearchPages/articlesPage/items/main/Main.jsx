@@ -25,7 +25,7 @@ export default function Main() {
 
 
   return (
-    <main className='contacts-page__main'>
+    <main className='articles-page__main'>
         
 
         <Category data={menuData}/>

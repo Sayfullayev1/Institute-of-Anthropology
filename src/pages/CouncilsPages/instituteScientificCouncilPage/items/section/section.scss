@@ -1,0 +1,31 @@
+.institute-scientific-council-page__section {
+  // max-width/margin для горизонтали уже задаёт обёртывающий Container —
+  // здесь только вертикальный отступ и шрифт.
+  padding: 30px 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .institute-scientific-council-page__section {
+    font-size: 16px;
+  }
+}
+
+// Ссылка на PDF со списком состава Ilmiy Kengash — чёрным в покое,
+// сине-голубым с подчёркиванием при наведении (без свечения) — тот же
+// стиль, что и на странице Ilmiy kengash / Higher Attestation Commission.
+.institute-scientific-council-page__pdfLink {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: rgb(0, 156, 255);
+    text-decoration: underline;
+  }
+}

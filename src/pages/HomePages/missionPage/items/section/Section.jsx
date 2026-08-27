@@ -2,6 +2,10 @@ import React, { useContext } from 'react';
 import styles from './section.module.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 
+// Тот же org-chart, что и на странице Tuzilma (Structure) — по языку.
+import structureImgUz from '@/public/images/HomePagesImages/sectionImages/structure-uz.png';
+import structureImgEn from '@/public/images/HomePagesImages/sectionImages/structure-en.png';
+
 const CONTENT = {
   mission: {
     uz: "Institut missiyasi — geoantropologiya, arxeologik va tarixiy antropologiya, ijtimoiy-madaniy antropologiya hamda arxeologik geofizika sohalarida kompleks tadqiqotlar olib borish orqali inson va tevarak-muhit o‘rtasidagi o‘zaro munosabatlar, madaniy landshaftlar, ijtimoiy tuzilmalar va sivilizasion jarayonlarni ilmiy asosda o‘rganish, ilmiy merosni saqlash va zamonaviy bilimlar yaratishdan iborat.",
@@ -15,6 +19,7 @@ const CONTENT = {
 
 export default function Section() {
   const { language } = useContext(LanguageContext);
+  const structureImg = language === 'en' ? structureImgEn : structureImgUz;
 
   return (
     <section className={styles.container}>
@@ -30,6 +35,18 @@ export default function Section() {
           {language === 'en' ? "Institute's Strategic Goal" : 'Institut strategik maqsadi'}
         </h2>
         <p className={styles.text}>{CONTENT.goal[language]}</p>
+      </div>
+
+      <div className={styles.block}>
+        <h2 className={styles.heading}>
+          {language === 'en' ? "Structure" 
+          : 'Tuzilma'}
+        </h2>
+        <img
+          className={styles.structureImg}
+          src={structureImg}
+          alt={language === 'en' ? 'Structure' : 'Tuzilma'}
+        />
       </div>
     </section>
   );

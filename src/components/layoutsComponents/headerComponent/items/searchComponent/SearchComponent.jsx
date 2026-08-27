@@ -26,7 +26,7 @@ export default function SearchComponent() {
     const goToSearchPage = () => {
         const query = searchQuery.trim();
         if (!query) return;
-        const basePath = language === 'uz' ? '/search' : `/${language}/search`;
+        const basePath = language === 'en' ? '/search' : `/${language}/search`;
         navigate(`${basePath}?q=${encodeURIComponent(query)}`);
         setIsSearchOpen(false);
         setSearchQuery('');

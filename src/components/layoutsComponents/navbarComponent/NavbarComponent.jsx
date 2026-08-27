@@ -22,7 +22,7 @@ function SmartLink({ to, language, className, onClick, children }) {
   return (
     <Link
       className={className}
-      to={language === 'uz' ? to : `/${language}${to}`}
+      to={language === 'en' ? to : `/${language}${to}`}
       onClick={onClick}
     >
       {children}
