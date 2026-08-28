@@ -12,7 +12,15 @@ const isExternalLink = (link) => /^https?:\/\//.test(link || '');
 // react-router <Link to="https://..."> не открывает внешние ссылки как
 // внешние — трактует to как внутренний путь SPA. Для внешних (например,
 // WoS/Scopus → t.me/anthropubhub) рендерим обычный <a target="_blank">.
-function SmartLink({ to, className, onClick, children }) {
+//
+// Для внутренних ссылок важно приписать текущий языковой префикс (/uz) —
+// иначе переход по пункту мобильного меню всегда вёл на английский путь без
+// префикса, а LanguageContext (см. getLangFromPath) на КАЖДОЙ смене маршрута
+// выводит язык заново из URL: без префикса это всегда 'en', поэтому UZ молча
+// сбрасывался на EN при любом переходе через это меню. У десктопного
+// NavbarComponent его SmartLink уже делает это (see `to={language === 'en' ? to : `/${language}${to}`}`) —
+// здесь просто был пропущен тот же проп.
+function SmartLink({ to, language, className, onClick, children }) {
   if (isExternalLink(to)) {
     return (
       <a href={to} className={className} target="_blank" rel="noopener noreferrer" onClick={onClick}>
@@ -21,7 +29,7 @@ function SmartLink({ to, className, onClick, children }) {
     );
   }
   return (
-    <Link to={to} className={className} onClick={onClick}>
+    <Link to={language === 'en' ? to : `/${language}${to}`} className={className} onClick={onClick}>
       {children}
     </Link>
   );
@@ -202,7 +210,7 @@ function Menu({ Bedeutung, closeMenu }) {
                             <ul className="menu-item__subsublist">
                               {item.items.map((child, cIdx) => (
                                 <li key={cIdx}>
-                                  <SmartLink to={child.link} className="menu-item__link" onClick={closeMenu}>
+                                  <SmartLink to={child.link} language={language} className="menu-item__link" onClick={closeMenu}>
                                     {child.Name[language]}
                                   </SmartLink>
                                 </li>
@@ -215,7 +223,7 @@ function Menu({ Bedeutung, closeMenu }) {
 
                     return (
                       <li key={sIdx}>
-                        <SmartLink to={item.link} className="menu-item__link" onClick={closeMenu}>
+                        <SmartLink to={item.link} language={language} className="menu-item__link" onClick={closeMenu}>
                           {item.Name[language]}
                         </SmartLink>
                       </li>
