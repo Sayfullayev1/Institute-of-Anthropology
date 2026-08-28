@@ -1,10 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 
 // Оригинальный код StatCounter использует document.write(), что несовместимо
 // с React (перезаписывает весь документ при вызове после начальной загрузки) —
 // поэтому вместо этого создаём тег <script> вручную через useEffect, как и в
 // остальных счётчиках (Yandex.Metrika/GA4) в этом проекте.
+
+import { LanguageContext } from "@/context/LanguageContext";
+
+
 export default function StatCounterWidget() {
+  const { language } = useContext(LanguageContext);
+
   useEffect(() => {
     window.sc_project = 13352411;
     window.sc_invisible = 0;
@@ -41,7 +47,11 @@ export default function StatCounterWidget() {
         rel="noopener noreferrer"
         style={{ marginLeft: 8, fontSize: 12 }}
       >
-        View My Stats
+        {
+          language === "uz"
+            ? "Web Sayt statistikasi"
+            : "Web Site statistics"
+        }
       </a>
     </div>
   );
