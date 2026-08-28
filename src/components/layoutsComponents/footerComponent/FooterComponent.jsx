@@ -4,10 +4,6 @@ import { LanguageContext } from '@/context/LanguageContext';
 
 import imge from '@/public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
 
-// Вставить сюда embed-URL публичного отчёта Looker Studio (Share → Embed
-// report, доступ "Anyone with the link can view"), например:
-// "https://lookerstudio.google.com/embed/reporting/<report-id>/page/<page-id>"
-const LOOKER_STUDIO_EMBED_URL = '';
 
 export default function FooterComponent() {
 
@@ -56,29 +52,6 @@ export default function FooterComponent() {
           <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
           <p>Telefonlar: +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
-
-          {/* Публичный дашборд посещаемости (Looker Studio, подключённый к GA4).
-              LOOKER_STUDIO_EMBED_URL пока пуст — реальный embed-адрес вставляется
-              после публикации отчёта в Looker Studio (Share → Embed report,
-              доступ "Anyone with the link"). Пока пусто — рендерим плейсхолдер
-              вместо <iframe src=""> (пустой src грузил бы текущую страницу сам в себя). */}
-          {LOOKER_STUDIO_EMBED_URL ? (
-            <iframe
-              title={language === 'uz' ? 'Sayt tashrifi statistikasi' : 'Site visit statistics'}
-              width="100%"
-              height="600"
-              src={LOOKER_STUDIO_EMBED_URL}
-              frameBorder="0"
-              style={{ border: 0 }}
-              allowFullScreen
-            />
-          ) : (
-            <p className="footer__analyticsPlaceholder">
-              {language === 'uz'
-                ? 'Tashrif statistikasi tez orada shu yerda ko‘rinadi'
-                : 'Visit statistics will appear here soon'}
-            </p>
-          )}
         </div>
 
        
