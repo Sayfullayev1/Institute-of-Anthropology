@@ -55,7 +55,7 @@ export default function FooterComponent() {
 
           <a
             className="footer__metrikaInformer"
-            href="https://metrika.yandex.ru/dashboard?id=112038790"
+            href="https://metrika.yandex.ru/stat/informer/?id=112038790&lang=ru"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
