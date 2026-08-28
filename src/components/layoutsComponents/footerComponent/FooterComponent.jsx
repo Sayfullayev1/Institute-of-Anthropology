@@ -3,6 +3,7 @@ import './footerComponent.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 
 import imge from '@/public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
+import StatCounterWidget from '@/components/statCounterWidget/StatCounterWidget';
 
 
 export default function FooterComponent() {
@@ -66,6 +67,8 @@ export default function FooterComponent() {
               title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
             />
           </a>
+
+          <StatCounterWidget />
         </div>
 
        

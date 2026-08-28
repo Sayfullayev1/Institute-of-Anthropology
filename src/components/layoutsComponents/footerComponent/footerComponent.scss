@@ -78,6 +78,20 @@
   margin-top: 8px;
 }
 
+.footer__statCounter {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  a {
+    color: #999;
+
+    &:hover {
+      color: #6cb2ff;
+    }
+  }
+}
+
 // .icon-facebook::before {
 //   content: '📘';
 // }
