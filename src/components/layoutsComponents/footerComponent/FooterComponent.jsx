@@ -52,11 +52,17 @@ export default function FooterComponent() {
           <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
           <p>Telefonlar: +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
-          <p className="footer__analyticsNote">
+          <a
+            className="footer__analyticsNote"
+            href="https://policies.google.com/technologies/partner-sites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-solid fa-chart-line"></i>
             {language === "uz"
-              ? "Ushbu sayt Google Analytics xizmatidan foydalanadi."
-              : "This site uses Google Analytics."}
-          </p>
+              ? "Ushbu sayt Google Analytics xizmatidan foydalanadi"
+              : "This site uses Google Analytics"}
+          </a>
         </div>
       </div>
     </footer>
