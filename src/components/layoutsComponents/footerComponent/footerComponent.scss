@@ -73,26 +73,6 @@
   margin-top: 10px;
 }
 
-.footer__analyticsNote {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: #999;
-  text-decoration: none;
-  margin-top: 8px;
-  transition: color 0.2s ease;
-
-  i {
-    font-size: 11px;
-  }
-
-  &:hover {
-    color: #6cb2ff;
-    text-decoration: underline;
-  }
-}
-
 // .icon-facebook::before {
 //   content: '📘';
 // }
