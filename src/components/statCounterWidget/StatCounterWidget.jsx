@@ -13,8 +13,18 @@ export default function StatCounterWidget() {
 
   useEffect(() => {
     window.sc_project = 13352411;
-    window.sc_invisible = 0;
+    // 0 = "не невидимый" — просит скрипт самому вставить в страницу свой
+    // визуальный виджет (в конец document.body, где мы его вешаем ниже).
+    // Мы уже рисуем собственный бейдж (логотип + скрытый пиксель-счётчик)
+    // через JSX ниже — второй, "родной" виджет от скрипта не нужен и как
+    // раз вызывал дублирование/съезжание вниз страницы.
+    window.sc_invisible = 1;
     window.sc_security = "effa21bf";
+
+    // На случай, если эффект отработает больше одного раза (hot-reload в
+    // dev-режиме при правке этого файла) — не плодим второй <script>.
+    const existing = document.querySelector('script[src="https://statcounter.com/counter/counter.js"]');
+    if (existing) return undefined;
 
     const script = document.createElement("script");
     script.src = "https://statcounter.com/counter/counter.js";
