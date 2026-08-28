@@ -12,6 +12,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import YandexMetrika from './components/yandexMetrika/YandexMetrika';
 
 
 /* Other Pages */
@@ -123,6 +124,7 @@ root.render(
 
 
         <ScrollToTop />
+        <YandexMetrika />
 
         <Routes>
 

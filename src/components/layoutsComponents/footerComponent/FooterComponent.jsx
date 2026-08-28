@@ -52,6 +52,20 @@ export default function FooterComponent() {
           <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
           <p>Telefonlar: +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
+
+          <a
+            className="footer__metrikaInformer"
+            href="https://metrika.yandex.ru/stat/informer/?id=112038790&lang=ru"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              src="https://informer.yandex.ru/informer/112038790/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+              style={{ width: 88, height: 31, border: 0 }}
+              alt="Яндекс.Метрика"
+              title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+            />
+          </a>
         </div>
 
        
