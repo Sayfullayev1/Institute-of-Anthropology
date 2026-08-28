@@ -67,8 +67,14 @@ export default function NavbarComponent() {
                       to={item.link}
                       language={language}
                       onClick={(e) => {
-                        if (item.items && item.items.length > 0) {
-                          e.preventDefault(); // Предотвращаем переход только если есть подменю
+                        // "Bosh sahifa"/Home — единственный пункт верхнего уровня
+                        // с реальной ссылкой (item.link непустой) — по требованию
+                        // руководства он должен вести на главную по клику, как
+                        // обычная ссылка. Остальные пункты верхнего уровня — это
+                        // просто заголовки выпадающих подменю (link: "" в JSON),
+                        // для них клик по-прежнему только раскрывает подменю.
+                        if (item.items && item.items.length > 0 && !item.link) {
+                          e.preventDefault(); // Предотвращаем переход только если нет своей ссылки
                           handleSubmenuClick(index); // Для клика
                         }
                       }}
