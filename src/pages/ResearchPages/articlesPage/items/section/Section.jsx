@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
@@ -62,6 +62,7 @@ export default function Section() {
     const [openYear, setOpenYear] = useState(null);
     const [years, setYears] = useState(null); // null = ещё грузится
     const [error, setError] = useState(false);
+    const itemRefs = useRef({}); // { [year]: <li> элемента года }
 
     useEffect(() => {
         let cancelled = false;
@@ -78,6 +79,21 @@ export default function Section() {
     const toggleYear = (year) => {
         setOpenYear((prev) => (prev === year ? null : year));
     };
+
+    // Пока один год схлопывается, а другой (открываемый) находится ниже по
+    // странице, скролл остаётся на прежней пиксельной позиции — читателя
+    // "бросает" туда, куда сдвинулся контент, а не к началу нового года.
+    // Ждём, пока закончится transition в section.scss (0.45s), и докручиваем
+    // к самому началу только что открытого года.
+    useEffect(() => {
+        if (!openYear) return undefined;
+        const el = itemRefs.current[openYear];
+        if (!el) return undefined;
+        const timer = setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 480);
+        return () => clearTimeout(timer);
+    }, [openYear]);
 
     if (error) {
         return (
@@ -105,7 +121,11 @@ export default function Section() {
                 {years.map(({ year, publications }) => {
                     const isOpen = openYear === year;
                     return (
-                        <li key={year} className="articles-page__yearItem">
+                        <li
+                            key={year}
+                            ref={(el) => { itemRefs.current[year] = el; }}
+                            className="articles-page__yearItem"
+                        >
                             <button
                                 type="button"
                                 className={`articles-page__yearHeader${isOpen ? ' articles-page__yearHeader--open' : ''}`}
