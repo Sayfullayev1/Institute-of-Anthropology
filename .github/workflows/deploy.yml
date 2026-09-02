@@ -1,4 +1,4 @@
-name: Deploy Backend to ServerPlus
+name: Deploy Frontend to ServerPlus
 
 on:
   push:
@@ -13,11 +13,11 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: '185.196.219.24' # IP вашего сервера
+          host: '185.196.218.176' # IP вашего сервера
           username: 'ubuntu'
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Ключ мы добавим в GitHub на следующем шаге
           script: |
-            cd /var/www/html/backend
+            cd /var/www/html/frontend
             git pull origin main
             npm install
-            pm2 restart my-backend || pm2 start index.js --name "my-backend"
+            CI=true npm run build
