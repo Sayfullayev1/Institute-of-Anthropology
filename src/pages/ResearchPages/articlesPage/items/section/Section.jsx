@@ -3,9 +3,17 @@ import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 
 // Реального контента по годам пока нет — раскрывающийся текст временно
-// заглушка (по запросу). Когда появятся данные, здесь достаточно заменить
-// содержимое articles-page__yearPlaceholder на реальный список статей.
+// заглушка (по запросу — развёрнутый вариант вместо однострочника). Когда
+// появятся данные, здесь достаточно заменить содержимое
+// articles-page__yearPlaceholder на реальный список статей.
 const YEARS = ['2024', '2025', '2026'];
+
+const PLACEHOLDER_TEXT = {
+    uz: (year) =>
+        `Ushbu bo‘limda Antropologiya institutining ${year}-yilda nashr etilgan ilmiy maqolalari to‘liq ro‘yxati joylashtiriladi — taqrizlanadigan milliy va xalqaro jurnallarda, konferensiya materiallari to‘plamlarida hamda jamoaviy nashrlarda chop etilgan maqolalar, muallif(lar), jurnal nomi, son va (mavjud bo‘lsa) DOI kabi bibliografik ma’lumotlar bilan birga, imkon qadar to‘liq matn yoki annotatsiyaga havola qo‘shilgan holda. ${year}-yil uchun arxiv hozircha tayyorlanmoqda va yakunlangach shu yerda e’lon qilinadi.`,
+    en: (year) =>
+        `This section will host the full list of scientific articles published by the Institute of Anthropology's researchers in ${year} — papers appearing in peer-reviewed national and international journals, conference proceedings, and collective volumes, together with bibliographic details (author(s), journal, issue and, where available, DOI), and a link to the full text or abstract wherever possible. The archive for ${year} is currently being compiled and will be published here once it is ready.`,
+};
 
 export default function Section() {
     const { language } = useContext(LanguageContext);
@@ -37,9 +45,7 @@ export default function Section() {
 
                             <div className={`articles-page__yearPanel${isOpen ? ' articles-page__yearPanel--open' : ''}`}>
                                 <p className="articles-page__yearPlaceholder">
-                                    {language === 'uz'
-                                        ? `${year}-yil uchun maqolalar tez orada qo‘shiladi.`
-                                        : `Articles for ${year} will be added soon.`}
+                                    {PLACEHOLDER_TEXT[language](year)}
                                 </p>
                             </div>
                         </li>
