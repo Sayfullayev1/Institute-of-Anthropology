@@ -15,6 +15,32 @@ const PLACEHOLDER_TEXT = {
         `This section will host the full list of scientific articles published by the Institute of Anthropology's researchers in ${year} — papers appearing in peer-reviewed national and international journals, conference proceedings, and collective volumes, together with bibliographic details (author(s), journal, issue and, where available, DOI), and a link to the full text or abstract wherever possible. The archive for ${year} is currently being compiled and will be published here once it is ready.`,
 };
 
+// Реальные публикации по годам — по мере появления новых просто добавляем
+// элементы в соответствующий массив. Год без публикаций показывает общий
+// текст-заглушку (PLACEHOLDER_TEXT) вместо пустого списка.
+const PUBLICATIONS = {
+    '2024': [
+        {
+            title: 'New Data for Asymmetric Core Reduction in Western Tian Shan Piedmonts: The Ertash Sai 2 Open-Air Site',
+            link: 'https://www.tandfonline.com/journals/ylit20',
+        },
+        {
+            title: 'New Data for Asymmetric Core Reduction in Western Tian Shan Piedmonts: The Ertash Sai 2 Open-Air Site',
+            link: 'https://www.tandfonline.com/journals/ylit20',
+        },
+        {
+            title: 'New Data for Asymmetric Core Reduction in Western Tian Shan Piedmonts: The Ertash Sai 2 Open-Air Site',
+            link: 'https://www.tandfonline.com/journals/ylit20',
+        },
+        {
+            title: 'New Data for Asymmetric Core Reduction in Western Tian Shan Piedmonts: The Ertash Sai 2 Open-Air Site',
+            link: 'https://www.tandfonline.com/journals/ylit20',
+        },
+    ],
+    '2025': [],
+    '2026': [],
+};
+
 export default function Section() {
     const { language } = useContext(LanguageContext);
 
@@ -31,6 +57,7 @@ export default function Section() {
             <ul className="articles-page__yearList">
                 {YEARS.map((year) => {
                     const isOpen = openYear === year;
+                    const publications = PUBLICATIONS[year] || [];
                     return (
                         <li key={year} className="articles-page__yearItem">
                             <button
@@ -44,9 +71,27 @@ export default function Section() {
                             </button>
 
                             <div className={`articles-page__yearPanel${isOpen ? ' articles-page__yearPanel--open' : ''}`}>
-                                <p className="articles-page__yearPlaceholder">
-                                    {PLACEHOLDER_TEXT[language](year)}
-                                </p>
+                                {publications.length > 0 ? (
+                                    <ul className="articles-page__publicationList">
+                                        {publications.map((pub, idx) => (
+                                            <li key={idx} className="articles-page__publicationItem">
+                                                <p className="articles-page__publicationTitle">{pub.title}</p>
+                                                <a
+                                                    className="articles-page__publicationLink"
+                                                    href={pub.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {pub.link.replace(/^https?:\/\//, '')}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="articles-page__yearPlaceholder">
+                                        {PLACEHOLDER_TEXT[language](year)}
+                                    </p>
+                                )}
                             </div>
                         </li>
                     );
