@@ -23,18 +23,18 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 22px 4px;
+  padding: 16px 2px;
   background: none;
   border: none;
   font: inherit;
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 700;
   color: #222;
   text-align: left;
   cursor: pointer;
 
   i {
-    font-size: 15px;
+    font-size: 13px;
     color: #1e90ff;
     transition: transform 0.25s ease;
   }
@@ -48,23 +48,32 @@
   }
 }
 
+// Раскрытие через grid-template-rows (0fr → 1fr) вместо фиксированного
+// max-height — предыдущий вариант с потолком в 8000px анимировал ОДНУ и ту
+// же дистанцию (0 → 8000px) независимо от реальной высоты контента, из-за
+// чего короткие панели (заглушка, один пункт) визуально "дёргались"/почти
+// мгновенно вылетали, а не плавно разворачивались. Grid-строка тянется
+// ровно на высоту реального содержимого — плавно для любой длины списка.
 .articles-page__yearPanel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 
-  // Список цитат может быть длинным (десятки записей) — фиксированный
-  // потолок специально сильно с запасом, чтобы ничего не обрезалось.
   &--open {
-    max-height: 8000px;
+    grid-template-rows: 1fr;
   }
+}
+
+.articles-page__yearPanelInner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .articles-page__yearPlaceholder {
   margin: 0;
-  padding: 0 4px 24px;
-  font-size: 17px;
-  line-height: 1.7;
+  padding: 0 2px 20px;
+  font-size: 14px;
+  line-height: 1.65;
   color: #666;
 }
 
@@ -72,21 +81,22 @@
 // стандартном оформлении публикаций научного учреждения.
 .articles-page__citationList {
   margin: 0;
-  padding: 0 4px 24px 0;
+  padding: 0 2px 20px 0;
   list-style: none;
   counter-reset: citation;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .articles-page__citationItem {
   counter-increment: citation;
   position: relative;
-  padding-left: 34px;
-  font-size: 16px;
-  line-height: 1.55;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 1.5;
   color: #333;
+  overflow-wrap: break-word;
 
   &::before {
     content: counter(citation) '.';
@@ -101,9 +111,41 @@
 .articles-page__citationLink {
   color: #1e90ff;
   text-decoration: underline;
+  overflow-wrap: break-word;
   word-break: break-all;
 
   &:hover {
     color: #0f6dc4;
+  }
+}
+
+// Планшет и выше — тот же масштаб текста, что был задуман изначально;
+// на телефоне (база выше) всё чуть компактнее, чтобы длинные цитаты с
+// висячим отступом не давили на и без того узкую колонку.
+@media (min-width: 700px) {
+  .articles-page__yearHeader {
+    padding: 22px 4px;
+    font-size: 24px;
+
+    i {
+      font-size: 15px;
+    }
+  }
+
+  .articles-page__yearPlaceholder {
+    padding: 0 4px 24px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .articles-page__citationList {
+    padding: 0 4px 24px 0;
+    gap: 18px;
+  }
+
+  .articles-page__citationItem {
+    padding-left: 34px;
+    font-size: 18px;
+    line-height: 1.55;
   }
 }

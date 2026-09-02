@@ -117,19 +117,21 @@ export default function Section() {
                             </button>
 
                             <div className={`articles-page__yearPanel${isOpen ? ' articles-page__yearPanel--open' : ''}`}>
-                                {publications.length > 0 ? (
-                                    <ol className="articles-page__citationList">
-                                        {publications.map((pub) => (
-                                            <li key={pub.id} className="articles-page__citationItem">
-                                                {renderCitation(pub.text)}
-                                            </li>
-                                        ))}
-                                    </ol>
-                                ) : (
-                                    <p className="articles-page__yearPlaceholder">
-                                        {PLACEHOLDER_TEXT[language](year)}
-                                    </p>
-                                )}
+                                <div className="articles-page__yearPanelInner">
+                                    {publications.length > 0 ? (
+                                        <ol className="articles-page__citationList">
+                                            {publications.map((pub) => (
+                                                <li key={pub.id} className="articles-page__citationItem">
+                                                    {renderCitation(pub.text)}
+                                                </li>
+                                            ))}
+                                        </ol>
+                                    ) : (
+                                        <p className="articles-page__yearPlaceholder">
+                                            {PLACEHOLDER_TEXT[language](year)}
+                                        </p>
+                                    )}
+                                </div>
                             </div>
                         </li>
                     );
