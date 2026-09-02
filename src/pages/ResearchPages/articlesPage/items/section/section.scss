@@ -51,10 +51,12 @@
 .articles-page__yearPanel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease-out;
+  transition: max-height 0.4s ease-out;
 
+  // Список цитат может быть длинным (десятки записей) — фиксированный
+  // потолок специально сильно с запасом, чтобы ничего не обрезалось.
   &--open {
-    max-height: 600px;
+    max-height: 8000px;
   }
 }
 
@@ -66,37 +68,42 @@
   color: #666;
 }
 
-.articles-page__publicationList {
-  list-style: none;
+// Библиографический список — нумерация + висячий отступ, как в
+// стандартном оформлении публикаций научного учреждения.
+.articles-page__citationList {
   margin: 0;
-  padding: 0 4px 24px;
+  padding: 0 4px 24px 0;
+  list-style: none;
+  counter-reset: citation;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.articles-page__publicationItem {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-left: 14px;
-  border-left: 2px solid #1e90ff;
+.articles-page__citationItem {
+  counter-increment: citation;
+  position: relative;
+  padding-left: 34px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+
+  &::before {
+    content: counter(citation) '.';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: #444;
+  }
 }
 
-.articles-page__publicationTitle {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
-  color: #1a1a1a;
-}
-
-.articles-page__publicationLink {
-  font-size: 14px;
+.articles-page__citationLink {
   color: #1e90ff;
-  text-decoration: none;
+  text-decoration: underline;
+  word-break: break-all;
 
   &:hover {
-    text-decoration: underline;
+    color: #0f6dc4;
   }
 }
