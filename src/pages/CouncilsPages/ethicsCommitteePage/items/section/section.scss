@@ -1,2 +1,86 @@
 .ethics-committee-page__section {
+  padding: 40px 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ethics-committee-page__pdfLink {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  width: fit-content;
+
+  &:hover {
+    color: rgb(0, 156, 255);
+    text-decoration: underline;
+  }
+}
+
+.ethics-committee-page__composition {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.ethics-committee-page__compositionTitle {
+  margin: 0 0 16px;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #000000;
+}
+
+.ethics-committee-page__memberList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: member;
+}
+
+.ethics-committee-page__memberItem {
+  counter-increment: member;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &::before {
+    content: counter(member) '.';
+    flex-shrink: 0;
+    width: 22px;
+    font-weight: 700;
+    color: #666666;
+  }
+}
+
+.ethics-committee-page__memberName {
+  font-weight: 600;
+  color: #000000;
+}
+
+.ethics-committee-page__memberRole {
+  margin-left: auto;
+  padding-left: 12px;
+  font-size: 0.9em;
+  color: #666666;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .ethics-committee-page__memberItem {
+    flex-wrap: wrap;
+  }
+
+  .ethics-committee-page__memberRole {
+    margin-left: 32px;
+  }
 }
