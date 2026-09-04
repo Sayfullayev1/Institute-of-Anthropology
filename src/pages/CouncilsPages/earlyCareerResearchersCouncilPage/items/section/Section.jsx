@@ -11,7 +11,7 @@ const CONTENT = {
         membersTitle: 'Kengash xodimlari',
         paragraphs: [
             "O'zbekiston Fanlar akademiyasi Antropologiya instituti huzuridagi Yosh olimlar kengashi – institut qoshidagi doimiy faoliyat yurituvchi jamoat tuzilmasi.",
-            "Kengash tarkibiga rais, uning o'rinbosari va a'zolar kiradi.",
+              "Kengash tarkibiga rais, uning o'rinbosari va a'zolar kiradi.",
             "Kengash tarkibida 40 yoshgacha bo'lgan doktorantlar, tayanch doktorantlar, stajyor-tadqiqotchilar, mustaqil izlanuvchilar, yosh olimlar hamda mutaxassislar mavjud.",
             "Kengash tomonidan muntazam ravishda ilmiy seminarlar yo'lga qo'yilgan bo'lib, ularda antropologiya fanining turli yo'nalishlarini qamrab olinadi.",
         ],

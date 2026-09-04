@@ -9,7 +9,7 @@ import NotFoundPage from '../../pages/OtherPages/notFoundPage/NotFoundPage';
 // (en по умолчанию, без префикса), либо входит в список реально
 // поддерживаемых языков — иначе это битая ссылка, а не язык,
 // и нужно показать 404, а не Bosh sahifa/Home.
-const SUPPORTED_LANGS = ['uz'];
+const SUPPORTED_LANGS = ['uz', 'en'];
 
 export default function HomeRouteGuard() {
   const { lang } = useParams();
