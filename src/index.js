@@ -54,6 +54,7 @@ import ConferencesPage from './pages/ResearchPages/conferencesPage/ConferencesPa
 import InstituteScientificCouncilPage from './pages/CouncilsPages/instituteScientificCouncilPage/InstituteScientificCouncilPage';
 import CouncilForConferralOfAcademicDegreesPage from './pages/CouncilsPages/councilForConferralOfAcademicDegreesPage/CouncilForConferralOfAcademicDegreesPage';
 import EarlyCareerResearchersCouncilPage from './pages/CouncilsPages/earlyCareerResearchersCouncilPage/EarlyCareerResearchersCouncilPage';
+import InstituteTradeUnionCommitteePage from './pages/CouncilsPages/instituteTradeUnionCommitteePage/InstituteTradeUnionCommitteePage';
 import EthicsCommitteePage from './pages/CouncilsPages/ethicsCommitteePage/EthicsCommitteePage';
 
 
@@ -167,6 +168,7 @@ root.render(
 
               <Route path="/:lang?/institute-scientific-council" element={<InstituteScientificCouncilPage />} />
               <Route path="/:lang?/early-career-researchers-council" element={<EarlyCareerResearchersCouncilPage />} />
+              <Route path="/:lang?/institute-trade-union-committee" element={<InstituteTradeUnionCommitteePage />} />
               <Route path="/:lang?/council-for-conferral-of-academic-degrees" element={<CouncilForConferralOfAcademicDegreesPage />} />
               <Route path="/:lang?/ethics-committee" element={<EthicsCommitteePage />} />
 

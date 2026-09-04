@@ -37,8 +37,8 @@ export default function Section() {
             number: 40,
             label: {
                 uz: "ILMIY XODIMLAR",
-                ru: "УЧЕНЫЕ",
-                en: "SCIENTISTS",
+                ru: "НАУЧНЫЕ СОТРУДНИКИ",
+                en: "RESEARCHERS",
             },
         },
         {

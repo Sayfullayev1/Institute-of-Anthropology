@@ -3,11 +3,12 @@ import './carousel.scss';
 import riverCanyon from '@/public/images/HomePagesImages/carouselImages/river-canyon.jpg';
 import desert from '@/public/images/HomePagesImages/carouselImages/desert.jpg';
 import excavation from '@/public/images/HomePagesImages/carouselImages/excavation.jpg';
+import caveCamp from '@/public/images/HomePagesImages/carouselImages/cave-camp.jpg';
 
 export default function Carousel() {
   const [index, setIndex] = useState(0);
 
-  const images = [desert, riverCanyon, excavation];
+  const images = [desert, caveCamp, riverCanyon, excavation];
 
   const goToSlide = (i) => {
     setIndex(i);

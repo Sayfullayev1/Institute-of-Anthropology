@@ -1,2 +1,58 @@
 .early-career-researchers-council-page__section {
+  padding: 30px 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+// Тот же визуальный язык, что и у Institut missiyasi/departmentDetailPage —
+// сине-голубое подчёркивание, inline-block по ширине текста, без центровки.
+.early-career-researchers-council-page__title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1e90ff;
+  display: inline-block;
+}
+
+.early-career-researchers-council-page__title--members {
+  display: block;
+  width: fit-content;
+  margin-top: 32px;
+}
+
+.early-career-researchers-council-page__paragraph {
+  margin: 0 0 16px;
+  text-align: justify;
+  text-indent: 30px;
+  color: #1a1a1a;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Ссылка на PDF — чёрным в покое, сине-голубым с подчёркиванием при наведении
+// (без свечения), тот же стиль, что и на остальных страницах Kengashlar.
+.early-career-researchers-council-page__pdfLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: rgb(0, 156, 255);
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 480px) {
+  .early-career-researchers-council-page__section {
+    font-size: 16px;
+  }
 }
