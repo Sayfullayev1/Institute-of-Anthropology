@@ -39,8 +39,15 @@ export default function HeaderComponent() {
             const naturalWidth = subtitleEl.offsetWidth;
             subtitleEl.style.display = 'block';
 
-            const gaps = subtitleEl.textContent.length - 1;
-            if (gaps <= 0) return;
+            // letter-spacing добавляет отступ ПОСЛЕ КАЖДОГО символа, включая
+            // последний — то есть при N символах прибавка применяется N раз,
+            // а не (N-1) раз "между буквами", как можно было бы подумать.
+            // Раньше здесь делили на (length - 1) — из-за этого при
+            // применении letter-spacing строка систематически становилась
+            // на один "шаг" шире цели (заметнее на коротких subtitle, где
+            // сам шаг крупнее).
+            const charCount = subtitleEl.textContent.length;
+            if (charCount <= 1) return;
 
             // Только растягиваем (положительный letter-spacing), никогда не
             // сжимаем: на узких экранах title иногда переносится на 2 строки
@@ -50,7 +57,7 @@ export default function HeaderComponent() {
             // Без запаса сверху subtitle в этом случае просто остаётся
             // естественной (нерастянутой) ширины — читаемо, пусть и не равно
             // title один-в-один.
-            const extraPerGap = Math.max(0, (titleWidth - naturalWidth) / gaps);
+            const extraPerGap = Math.max(0, (titleWidth - naturalWidth) / charCount);
             subtitleEl.style.letterSpacing = `${extraPerGap}px`;
         };
         syncSubtitleWidth();

@@ -1,17 +1,86 @@
 <!DOCTYPE html>
-<html lang="uz"> <!-- Лучше сменить на ru или уз, если сайт не на английском -->
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!-- Исправленный путь -->
-  <link rel="icon" href="%PUBLIC_URL%/logo192.jpg" /> 
+  <link rel="icon" href="%PUBLIC_URL%/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="%PUBLIC_URL%/logo192.png" sizes="192x192" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Устав центра антропологии" />
-  
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.jpg" />
+  <meta name="theme-color" content="#180d8f" />
+
+  <!-- Дефолт на случай, если конкретная страница не задаёт свой <Helmet> —
+       см. src/index.js (HelmetProvider defaultTitle/titleTemplate) и
+       src/pages/**/*.jsx (react-helmet-async). Название продублировано на
+       трёх языках специально: у сайта нет русской версии интерфейса, но
+       люди ищут именно "институт антропологии узбекистана" по-русски —
+       без буквального совпадения текста Google эту фразу не свяжет с сайтом.
+       Только <title> — meta description и canonical здесь намеренно НЕ
+       заданы: react-helmet-async умеет подменять только <title> из статичного
+       HTML "на лету", а meta/link просто добавляет новые теги рядом со
+       старыми (не убирая их) — получались бы дубли description/canonical,
+       и браузер/бот брал бы первый (статичный), игнорируя то, что реально
+       задаёт DefaultSeo.jsx/страница. Их полностью держит Helmet (см.
+       src/components/defaultSeo/DefaultSeo.jsx). -->
+  <title>Institute of Anthropology — Antropologiya instituti — Институт антропологии Узбекистана</title>
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <title>Project</title>
+  <!-- Open Graph / соцсети — здесь только то, что одинаково для ЛЮБОЙ
+       страницы (картинка, имя сайта, тип, локали). og:title/og:description/
+       og:url — по той же причине, что и <meta description> выше — задаются
+       по месту через Helmet конкретной страницей (см. HomePage.jsx), чтобы
+       не плодить дубли; страницы без своего Helmet останутся без og:title,
+       это лучше, чем показывать в превью чужой (главной) заголовок. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Institute of Anthropology" />
+  <meta property="og:image" content="https://anthropology.uz/logo512.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="uz_UZ" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://anthropology.uz/logo512.png" />
+
+  <!-- Structured data — помогает Google связать разные варианты названия
+       (англ/узб/рус) с одной и той же организацией (Knowledge Graph). -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ResearchOrganization",
+      "name": "Institute of Anthropology",
+      "alternateName": [
+        "Antropologiya instituti",
+        "O'zbekiston Respublikasi Fanlar akademiyasi Antropologiya instituti",
+        "Институт антропологии Узбекистана",
+        "Институт антропологии Академии наук Республики Узбекистан",
+        "IAASU"
+      ],
+      "url": "https://anthropology.uz",
+      "logo": "https://anthropology.uz/logo512.png",
+      "image": "https://anthropology.uz/logo512.png",
+      "email": "anthropology@academy.uz",
+      "telephone": "+998712626462",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mirzo Ulug'bek ko'chasi, 81",
+        "addressLocality": "Toshkent",
+        "postalCode": "100170",
+        "addressCountry": "UZ"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Academy of Sciences of the Republic of Uzbekistan",
+        "url": "https://academy.uz"
+      },
+      "sameAs": [
+        "https://academy.uz",
+        "https://my.academy.uz",
+        "https://oak.uz",
+        "https://daraja.ilmiy.uz",
+        "https://uzarchaeology.uz",
+        "https://t.me/anthropubhub"
+      ]
+    }
+  </script>
 </head>
 <body>
   <noscript>Вам нужно включить JavaScript для работы этого приложения.</noscript>

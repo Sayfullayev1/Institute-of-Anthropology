@@ -1,17 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Antropologiya instituti",
+  "name": "O'zbekiston Respublikasi Fanlar akademiyasi Antropologiya instituti",
   "icons": [
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    },
     {
       "src": "logo192.png",
       "type": "image/png",
@@ -25,6 +15,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#180d8f",
   "background_color": "#ffffff"
 }

@@ -12,6 +12,7 @@ import { LanguageProvider } from './context/LanguageContext';
 
 
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
+import DefaultSeo from './components/defaultSeo/DefaultSeo';
 
 
 /* Other Pages */
@@ -122,7 +123,7 @@ root.render(
 
       <LanguageProvider>
 
-
+        <DefaultSeo />
         <ScrollToTop />
 
         <Routes>

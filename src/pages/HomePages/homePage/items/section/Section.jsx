@@ -33,6 +33,20 @@ export default function Section() {
         //     },
         // },
         {
+            // fa-building-user — институт целиком (здание) + один человек,
+            // а не 2 фигуры как у fa-users (Ilmiy xodimlar) — чисто и
+            // разборчиво на маленьком размере, при этом логично отличает
+            // "весь штат" (умумий, включая административный/технический
+            // персонал) от "только научные сотрудники".
+            icon: <i className="fa-solid fa-building-user"></i>,
+            number: 70,
+            label: {
+                uz: "UMUMIY XODIMLAR",
+                ru: "ВСЕГО СОТРУДНИКОВ",
+                en: "TOTAL STAFF",
+            },
+        },
+        {
             icon: <i className="fa fa-users"></i>,
             number: 40,
             label: {
