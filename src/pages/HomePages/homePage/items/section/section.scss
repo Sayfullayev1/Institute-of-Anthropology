@@ -103,27 +103,30 @@
             color: #fff;
         }
 
-        &-grid {
+        // -columns = сами 3 колонки (по одной на под-массив resources1),
+        // -column = содержимое одной колонки. На мобильном все 3 колонки
+        // просто идут одна под другой (общий длинный список) — сеткой в
+        // несколько колонок становятся только с 1000px (см. медиа-запрос).
+        &-columns {
             max-width: 70%;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            // justify-items: center;
-            // padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        &-column {
+            display: flex;
+            flex-direction: column;
             gap: 35px;
         }
 
         &-item {
-            // width: 400px;
             display: flex;
             align-items: center;
             gap: 15px;
             color: #fff;
         }
-
-        // &-item:nth-child(even) {
-        //     margin-left: auto; // Чётные элементы уезжают вправо
-        // }
 
         &-icon {
             width: 50px;
@@ -175,16 +178,30 @@
             background-color: #727272; /* Серый фон */
            
     
-            &-grid {
+            &-columns {
                 max-width: 70%;
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                // justify-items: center;
-                // padding: 20px;
                 gap: 35px;
             }
-    
+
+            // Первые 2 колонки занимают свою обычную клетку (растягиваются
+            // на всю её ширину), а 3-я (которой не хватило пары) уезжает
+            // вниз на всю ширину. Центрируем САМ БЛОК (ограничиваем его
+            // шириной одной обычной колонки и двигаем margin:auto) — а не
+            // align-items:center на списке, который центрировал бы КАЖДУЮ
+            // строку по отдельности своей собственной шириной: из-за разной
+            // длины текста иконки у строк съезжали в разные стороны
+            // (неровный левый край). Так все иконки внутри блока остаются
+            // на одной вертикальной линии.
+            &-column:nth-child(3) {
+                grid-column: 1 / -1;
+                width: 100%;
+                max-width: calc((100% - 35px) / 2);
+                margin: 0 auto;
+            }
+
         }
     }
 }
@@ -234,25 +251,28 @@
             
            
     
-            &-grid {
-                max-width: 70%;
+            // От 1000px и выше показываем реальные 3 колонки (по числу
+            // под-массивов в resources1) side-by-side, а не эмулируем их
+            // 2-колоночной сеткой с ручным сдвигом чётных элементов.
+            &-columns {
+                max-width: 1300px;
                 margin: 0 auto;
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                // justify-items: center;
-                // padding: 20px;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 40px;
             }
 
-            &-item {
-                width: 400px;
+            &-column {
+                gap: 30px;
             }
 
-             &-item:nth-child(even) {
-                margin-left: auto; // Чётные элементы уезжают вправо
+            // На реальной 3-колоночной сетке хак из 650px-брейкпоинта
+            // (растягивание 3-й колонки на всю ширину + центровка) больше
+            // не нужен — у каждой колонки уже есть своя пара.
+            &-column:nth-child(3) {
+                grid-column: auto;
+                align-items: stretch;
             }
-
-    
         }
     }
 }
@@ -281,12 +301,11 @@
             padding: 30px 0;
 
 
-            &-grid {
+            &-columns {
                 max-width: 1300px;
-                // margin: 0 auto;
                 padding: 0 4%;
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             &-title{

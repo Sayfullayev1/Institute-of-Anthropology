@@ -23,21 +23,7 @@ export default function Section() {
     }, []);
 
     const data = [
-        // {
-        //     icon: <i className="fa-brands fa-envira"></i>,
-        //     number: 10000,
-        //     label: {
-        //         uz: "GERBARIY KOLLEKSIYASI",
-        //         ru: "ГЕРБАРИЙ КОЛЛЕКЦИЯСИ",
-        //         en: "HERBARIUM COLLECTION",
-        //     },
-        // },
         {
-            // fa-building-user — институт целиком (здание) + один человек,
-            // а не 2 фигуры как у fa-users (Ilmiy xodimlar) — чисто и
-            // разборчиво на маленьком размере, при этом логично отличает
-            // "весь штат" (умумий, включая административный/технический
-            // персонал) от "только научные сотрудники".
             icon: <i className="fa-solid fa-building-user"></i>,
             number: 70,
             label: {
@@ -78,55 +64,87 @@ export default function Section() {
     ];
 
 
-    const resources = [
-        
-        {
-            // Старый academy.uz теперь редиректит на gov.uz (портал
-            // объединённых госсайтов) битой ссылкой (склеивает путь без
-            // слэша — .../academydist/img/logo.png), поэтому старый логотип
-            // не грузился. Берём актуальный логотип с новой версии сайта.
-            icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="O'zbekiston Respublikasi Fanlar akademiyasi" />,
-            title: "O‘zbekiston Respublikasi Fanlar akademiyasi",
-            link: "academy.uz",
-        },
-        {
-            icon: <img src="https://www.scimagojr.com/multisitebar/sjr-sitebar-128.png" alt="Icon 2" />,
-            title: "SCImago Journal & Country Rank",
-            link: "scimagojr.com/",
-        },
-        {
-            icon: <img src="https://my.academy.uz/img/logo.png" alt="Icon 2" />,
-            title: "Ўзбекистон Республикаси Фанлар академияси",
-            link: "my.academy.uz",
-        },
-        {
-            icon: <img src="https://botany.uz/wp-content/uploads/2018/04/1473339456usefull2.png" alt="Icon 3" />,
-            title: "Interaktiv davlat xizmatlarining Yagona portali",
-            link: "my.gov.uz",
-        },
-        {
-            icon: <img src="https://oak.uz/images/gerb.png"  alt="OAK Logo" />,
-            title: "O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi",
-            link: "oak.uz",
-        },
-        {
-            // Раньше тут стояла битая иконка с academy.uz (не имеет отношения
-            // к этому сайту вообще) — теперь настоящий favicon daraja.ilmiy.uz.
-            icon: <img src="https://daraja.ilmiy.uz/favicon.ico" alt="Daraja.ilmiy.uz" />,
-            title: "Oliy taʼlimdan keyingi taʼlimni muvofiqlashtirishning yagona elektron tizimi",
-            link: "daraja.ilmiy.uz",
-        },
-        {
-            icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="Fanlar akademiyasi — ilmiy axborot markazi" />,
-            title: "Davlat ilmiy dasturlarining yagona intellektual elektron platformasi",
-            link: "academy.uz/ilmiy_axborot_markazi",
-        },
-        {
-            icon: <img src="https://uzarchaeology.uz/assets/logo-CqxLmTt7.png" alt="O'zbekiston arxeologik yodgorliklar xaritasi" />,
-            title: "O'zbekiston arxeologik yodgorliklar xaritasi",
-            link: "uzarchaeology.uz",
-        }
+    // Foydali manbalar — 3 колонки, один под-массив = одна колонка.
+    const resources1 =[
+        [
+            {
+                icon: <img src="https://api-portal.gov.uz/uploads/352/2025/09/08/5e2858a3-5fc0-d12a-e6c8-5d6e28333962_authority_352.png" alt="O'zbekiston Respublikasi Fanlar akademiyasi" />,
+                title:  {
+                            uz: "O‘zbekiston Respublikasi Fanlar akademiyasi",
+                            en: "Academy of Sciences of the Republic of Uzbekistan"
+                        },
+                link: "academy.uz",
+            },
+            {
+                icon: <img src="https://my.academy.uz/img/logo.png" alt="" />,
+                title:  {
+                            uz: "О‘zbekiston Respublikasi Fanlar akademiyasi",
+                            en: "Academy of Sciences of the Republic of Uzbekistan",
+                        },
+                link: "my.academy.uz",
+            },
+            {
+                icon: <img src="https://oak.uz/images/gerb.png"  alt="" />,
+                title:  {
+                            uz: "O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi",
+                            en: "Higher Attestation Commission at the Academy of Sciences of the Republic of Uzbekistan"
+                        },
+                link: "oak.uz",
+            },
+        ],
+        [
+            {
+                // Битый favicon (gov.uz/oz/edu/favicon.ico отдавал HTML вместо
+                // иконки) — заменено на реальный favicon этого же портала,
+                // взятый напрямую из <link rel="icon"> его собственной страницы.
+                icon: <img src="https://api-portal.gov.uz/uploads/7/2025/06/20/62a99df6-a2f5-6531-77dd-f8d1e6adc293_authority_7.ico" alt="" />,
+                title:  {
+                            uz: "O‘zbekiston Respublikasi Oliy taʼlim, fan va innovatsiyalar vazirligi",
+                            en: "Ministry of Higher Education, Science and Innovation of the Republic of Uzbekistan"
+                        },
+                link: "https://gov.uz/oz/edu",
+            },
+            {
+                icon: <img src="https://daraja.ilmiy.uz/favicon.ico" alt="" />,
+                title:  {
+                            uz: "Oliy taʼlimdan keyingi taʼlimni muvofiqlashtirishning yagona elektron tizimi",
+                            en: "Unified electronic system of coordination of postgraduate education",
+                        },
+                link: "https://daraja.ilmiy.uz",
+            },
+            {
+                // Тот же случай — loyiha.ilmiy.uz/favicon.ico отдавал HTML.
+                // Реальный favicon сайта лежит по другому пути (см. его
+                // собственный <link rel="icon">).
+                icon: <img src="https://loyiha.ilmiy.uz/assets/media/logos/favicon.png" alt="" />,
+                title:  {
+                            uz: "Davlat ilmiy dasturlarini shakllantirish va monitoring qilish yagona intellektual elektron platformasi",
+                            en: "Unified intellectual electronic platform for the formation and monitoring of state scientific programs",
+                        },
+                link: "https://loyiha.ilmiy.uz",
+            }
+        ],
+        [
+            {
+                icon: <img src="https://www.arxeologiya.uz/wp-content/uploads/2024/04/newlogo.jpg" alt="" />,
+                title:  {
+                            uz: "Samarqand Arxeologiya Instituti",
+                            en: "Samarkand Institute of Archaeology",
+                        },
+                link: "https://www.arxeologiya.uz",
+            },
+            {
+                icon: <img src="https://uzarchaeology.uz/assets/logo-CqxLmTt7.png" alt="" />,
+                title:  {
+                            uz: "O'zbekiston arxeologik yodgorliklar xaritasi",
+                            en: "Map of Archaeological Monuments of Uzbekistan",
+                        },
+                link: "https://uzarchaeology.uz/",
+            },
+        ],
     ];
+
+
 
     return (
         <section className="home-page__section">
@@ -193,21 +211,31 @@ export default function Section() {
 
             <div className="home-page__section__resources">
                 <h2 className="home-page__section__resources-title">Foydali manbalar</h2>
-                <div className="home-page__section__resources-grid">
-                    {resources.map((item, index) => (
-                        <div className="home-page__section__resources-item" key={index}>
-                            <div className="home-page__section__resources-icon">{item.icon}</div>
-                            <div>
-                                <p className="home-page__section__resources-text">{item.title}</p>
-                                <Link
-                                    to={`https://${item.link}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="home-page__section__resources-link"
-                                >
-                                    {item.link}
-                                </Link>
-                            </div>
+                <div className="home-page__section__resources-columns">
+                    {resources1.map((column, colIndex) => (
+                        <div className="home-page__section__resources-column" key={colIndex}>
+                            {column.map((item, index) => {
+                                const href = /^https?:\/\//.test(item.link) ? item.link : `https://${item.link}`;
+                                const displayLink = href.replace(/^https?:\/\//, '');
+                                return (
+                                    <div className="home-page__section__resources-item" key={index}>
+                                        <div className="home-page__section__resources-icon">{item.icon}</div>
+                                        <div>
+                                            <p className="home-page__section__resources-text">
+                                                {item.title[language] || item.title.uz}
+                                            </p>
+                                            <Link
+                                                to={href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="home-page__section__resources-link"
+                                            >
+                                                {displayLink}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     ))}
                 </div>
