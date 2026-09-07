@@ -1,21 +1,22 @@
-import React, { useContext, useState } from 'react'; // eslint-disable-line no-unused-vars
+import React, { useContext } from 'react';
 import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
-import getApiUrl from '@/api/api'; // eslint-disable-line no-unused-vars
-import axios from 'axios'; // eslint-disable-line no-unused-vars
-
-import PagePlaceholder from '@/components/pagePlaceholder/PagePlaceholder';
 
 export default function Section() {
-    // eslint-disable-next-line no-unused-vars
     const { language } = useContext(LanguageContext);
-
 
     return (
         <section className="international-projects-page__section">
-
-            <PagePlaceholder/>
-
+            <p className="international-projects-page__section__link-row">
+                {language === 'en' ? 'Farhod Maksudov — profile at the University of Bologna: ' : 'Farhod Maksudov — Boloniya universiteti profili: '}
+                <a
+                    href="https://site.unibo.it/kalam/en/pi/farhod-maksudov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    https://site.unibo.it/kalam/en/pi/farhod-maksudov
+                </a>
+            </p>
         </section>
     );
 }
