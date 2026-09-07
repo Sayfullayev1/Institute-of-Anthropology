@@ -21,10 +21,8 @@ function ConferenceCard({ item, language }) {
       </div>
 
       <div className={styles.card__body}>
-        {item.date && (
-          <span className={styles.card__date}>
-            {new Date(item.date).toLocaleDateString(language === 'en' ? 'en-GB' : 'uz-UZ')}
-          </span>
+        {item.year && (
+          <span className={styles.card__date}>{item.year}</span>
         )}
         <h3 className={styles.card__title}>{title}</h3>
         {description && <p className={styles.card__desc}>{description}</p>}
