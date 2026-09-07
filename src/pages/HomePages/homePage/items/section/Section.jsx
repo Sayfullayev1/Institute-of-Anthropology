@@ -86,7 +86,7 @@ export default function Section() {
             {
                 icon: <img src="https://oak.uz/images/gerb.png"  alt="" />,
                 title:  {
-                            uz: "O‘zbekiston Respublikasi Oliy ta’lim, fan va innovatsiyalar vazirligi huzuridagi Oliy attestatsiya komissiyasi",
+                            uz: "O‘zbekiston Respublikasi Fanlar akademiyasi huzuridagi Oliy attestatsiya komissiyasi",
                             en: "Higher Attestation Commission at the Academy of Sciences of the Republic of Uzbekistan"
                         },
                 link: "oak.uz",
