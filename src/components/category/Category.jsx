@@ -4,6 +4,17 @@ import './category.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 import { Link } from 'react-router-dom';
 
+// Все страницы отдают сюда "голые" пути (link: '/', link: '/journal' и т.д.),
+// без учёта текущего языка — Link ставил их буквально, поэтому клик по
+// хлебной крошке на узбекской версии страницы сбрасывал на английскую (её
+// URL без префикса), теряя выбранный язык. Английский — без префикса,
+// узбекский — с "/uz" (см. ту же логику в LanguageContext.jsx).
+function localizeLink(path, language) {
+  if (!path || path === '#' || language !== 'uz') return path;
+  if (path.startsWith('/uz')) return path;
+  return path === '/' ? '/uz' : `/uz${path}`;
+}
+
 export default function Category({ data }) {
   const { language } = useContext(LanguageContext); // Получаем язык из контекста
 
@@ -39,7 +50,7 @@ export default function Category({ data }) {
                   return (
                     <li className='category__list__item'  key={index}>
 
-                      <Link className='category__list__item__link' to={item.link}>{item.text[language]}</Link>
+                      <Link className='category__list__item__link' to={localizeLink(item.link, language)}>{item.text[language]}</Link>
 
                       <span className='category__list__item__arrowWrapper'>
                           <i className="fa fa-chevron-right"></i>  
