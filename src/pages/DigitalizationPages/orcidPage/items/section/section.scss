@@ -1,2 +1,78 @@
 .orcid-page__section {
+    padding: 30px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &__dept {
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #222;
+            margin: 0 0 18px;
+            padding-bottom: 10px;
+            display: inline-block;
+            border-bottom: 3px solid #1e90ff;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 12px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__member {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            padding: 14px 16px;
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                min-width: 0;
+            }
+
+            &__name {
+                font-size: 14px;
+                font-weight: 600;
+                color: #222;
+            }
+
+            &__position {
+                font-size: 12px;
+                color: #888;
+            }
+
+            &__orcid {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #A6CE39;
+                text-decoration: none;
+                white-space: nowrap;
+                flex-shrink: 0;
+
+                i {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
 }

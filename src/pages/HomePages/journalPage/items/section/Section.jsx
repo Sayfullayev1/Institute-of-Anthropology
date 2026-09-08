@@ -10,7 +10,7 @@ import Pagination from '@/components/pagination/Pagination';
 import journalCover from '@/public/images/journal/Uzbek_Anthropological_Journal_Cover_Vector-преобразовано-из-svg.png';
 import materialCultureCover from '@/public/images/journal/material-culture-cover.jpg';
 
-const ARCHIVE_PAGE_SIZE = 20;
+const ARCHIVE_PAGE_SIZE = 10;
 
 // TODO: имитационный (заглушечный) текст для первого журнала — заменить на реальные данные, когда будут готовы.
 const journals = [
@@ -163,6 +163,15 @@ function ApiArchiveList({ archiveApiPath, language }) {
 
 function JournalCard({ data, language }) {
   const [activeTab, setActiveTab] = useState('main');
+  // Once the archive tab has been opened at least once, ApiArchiveList stays
+  // mounted forever (just hidden via CSS below) instead of being removed from
+  // the tree — иначе переключение на другую вкладку и обратно размонтировало
+  // бы её и заново дёргало API за тем же списком/страницей.
+  const [hasOpenedArchive, setHasOpenedArchive] = useState(false);
+
+  useEffect(() => {
+    if (activeTab === 'archive') setHasOpenedArchive(true);
+  }, [activeTab]);
 
   // "Nashrlar arxivi" показываем только у журналов, у которых реально есть
   // архив (API-данные или заполненный список) — не рисуем пустую/фейковую кнопку.
@@ -238,8 +247,10 @@ function JournalCard({ data, language }) {
             </>
           )}
 
-          {activeTab === 'archive' && data.archiveApiPath && (
-            <ApiArchiveList archiveApiPath={data.archiveApiPath} language={language} />
+          {hasOpenedArchive && data.archiveApiPath && (
+            <div style={{ display: activeTab === 'archive' ? 'block' : 'none' }}>
+              <ApiArchiveList archiveApiPath={data.archiveApiPath} language={language} />
+            </div>
           )}
 
           {activeTab === 'archive' && data.archive && (
