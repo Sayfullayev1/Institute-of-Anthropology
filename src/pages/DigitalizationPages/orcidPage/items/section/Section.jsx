@@ -2,12 +2,6 @@ import React, { useContext } from 'react';
 import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 
-const POSITIONS = {
-    headPhd: { uz: "Bo'lim boshlig'i, PhD", en: 'Head of Department, PhD' },
-    seniorPhd: { uz: 'Katta ilmiy xodim, PhD', en: 'Senior Researcher, PhD' },
-    junior: { uz: 'Kichik ilmiy xodim', en: 'Junior Researcher' },
-};
-
 const DEPARTMENTS = [
     {
         title: { uz: "Geoantropologiya bo'limi", en: 'Geoanthropology Department' },
@@ -46,10 +40,10 @@ const DEPARTMENTS = [
     {
         title: { uz: "Arxeologik geofizika bo'limi", en: 'Archaeological Geophysics Department' },
         members: [
-            { name: 'Zakirov Azamat Shuxratovich', position: POSITIONS.headPhd, orcid: '0000-0002-9245-6747' },
-            { name: 'Yanbukhtin Ilyas Rustamovich', position: POSITIONS.seniorPhd, orcid: '0000-0003-0019-9702' },
-            { name: "Musaev Ulug'bek", position: POSITIONS.junior, orcid: '0009-0001-0151-8683' },
-            { name: 'Qulboyev Nishonboy', position: POSITIONS.junior, orcid: '0009-0002-7741-102X' },
+            { name: 'Zakirov Azamat Shuxratovich', orcid: '0000-0002-9245-6747' },
+            { name: 'Yanbukhtin Ilyas Rustamovich', orcid: '0000-0003-0019-9702' },
+            { name: "Musaev Ulug'bek", orcid: '0009-0001-0151-8683' },
+            { name: 'Qulboyev Nishonboy', orcid: '0009-0002-7741-102X' },
         ],
     },
 ];
@@ -63,14 +57,7 @@ function DepartmentBlock({ dept, language }) {
                 <ul className="orcid-page__section__dept__list">
                     {dept.members.map((m) => (
                         <li key={m.orcid} className="orcid-page__section__dept__member">
-                            <div className="orcid-page__section__dept__member__info">
-                                <span className="orcid-page__section__dept__member__name">{m.name}</span>
-                                {m.position && (
-                                    <span className="orcid-page__section__dept__member__position">
-                                        {m.position[language]}
-                                    </span>
-                                )}
-                            </div>
+                            <span className="orcid-page__section__dept__member__name">{m.name}</span>
                             <a
                                 className="orcid-page__section__dept__member__orcid"
                                 href={`https://orcid.org/${m.orcid}`}
@@ -78,7 +65,7 @@ function DepartmentBlock({ dept, language }) {
                                 rel="noopener noreferrer"
                             >
                                 <i className="fa-brands fa-orcid" />
-                                {m.orcid}
+                                <span>{m.orcid}</span>
                             </a>
                         </li>
                     ))}
