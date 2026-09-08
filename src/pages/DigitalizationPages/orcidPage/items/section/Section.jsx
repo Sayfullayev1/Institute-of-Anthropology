@@ -13,8 +13,8 @@ const DEPARTMENTS = [
         title: { uz: "Geoantropologiya bo'limi", en: 'Geoanthropology Department' },
         members: [
             { name: 'Muxammadiyev A.', orcid: '0009-0008-7183-9125' },
-            { name: 'Мухтаров Г. А.', orcid: '0000-0002-5405-0041' },
-            { name: 'Гордеева Е. А.', orcid: '0009-0008-5093-254X' },
+            { name: 'Muxtarov G. A.', orcid: '0000-0002-5405-0041' },
+            { name: 'Gordeeva E. A.', orcid: '0009-0008-5093-254X' },
             { name: 'Oynazarov X.', orcid: '0009-0001-7906-7106' },
             { name: 'Murodova D.', orcid: '0000-0003-3895-4080' },
             { name: 'Isabekov B.', orcid: '0009-0006-3659-2521' },
