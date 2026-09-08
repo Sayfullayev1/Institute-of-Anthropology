@@ -1,2 +1,28 @@
 .social-media-page__section {
+    padding: 30px 0 50px;
+
+    &__telegram {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 22px;
+        background: #fff;
+        border: 1px solid #dfe3e8;
+        border-radius: 8px;
+        color: #229ed9;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        transition: border-color 0.2s ease, background 0.2s ease;
+
+        i {
+            font-size: 19px;
+        }
+
+        &:hover {
+            border-color: #229ed9;
+            background: #f2faff;
+        }
+    }
 }

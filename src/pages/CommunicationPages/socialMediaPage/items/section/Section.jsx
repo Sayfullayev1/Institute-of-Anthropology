@@ -1,21 +1,18 @@
-import React, { useContext, useState } from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import './section.scss';
-import { LanguageContext } from '@/context/LanguageContext';
-import getApiUrl from '@/api/api'; // eslint-disable-line no-unused-vars
-import axios from 'axios'; // eslint-disable-line no-unused-vars
-
-import PagePlaceholder from '@/components/pagePlaceholder/PagePlaceholder';
 
 export default function Section() {
-    // eslint-disable-next-line no-unused-vars
-    const { language } = useContext(LanguageContext);
-
-
     return (
         <section className="social-media-page__section">
-
-            <PagePlaceholder/>
-
+            <a
+                className="social-media-page__section__telegram"
+                href="https://t.me/Antro_uz"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa-brands fa-telegram" />
+                <span>ANTRO.UZ</span>
+            </a>
         </section>
     );
 }
