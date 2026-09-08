@@ -138,7 +138,7 @@ function ApiArchiveList({ archiveApiPath, language }) {
       <ul className={styles.journalCard__apiArchiveList}>
         {result.data.map((item) => (
           <li key={item.id} className={styles.journalCard__apiArchiveItem}>
-            <Link to={`/journal/${item.id}`} className={styles.journalCard__apiArchiveLink}>
+            <Link to={`/${language}/journal/${item.id}`} className={styles.journalCard__apiArchiveLink}>
               <div className={styles.journalCard__apiArchiveCover}>
                 {item.coverImage ? (
                   <img src={item.coverImage} alt={item.title[language]} />
