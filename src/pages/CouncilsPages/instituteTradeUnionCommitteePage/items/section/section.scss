@@ -1,3 +1,21 @@
+// Отдельный, плоский селектор (как на других Councils-страницах) — важно,
+// чтобы НЕ быть вложенным в &__section, иначе он скомпилируется в
+// ...__section__pdfLink, а класс в JSX ...__pdfLink — цвет молча не применится.
+.institute-trade-union-committee-page__pdfLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: rgb(0, 156, 255);
+    text-decoration: underline;
+  }
+}
+
 .institute-trade-union-committee-page__section {
   font-family: "Roboto", sans-serif;
   width: 100%;

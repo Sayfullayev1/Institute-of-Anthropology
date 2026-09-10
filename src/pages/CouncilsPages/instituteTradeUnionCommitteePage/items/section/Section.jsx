@@ -8,6 +8,11 @@ import badriddinovImg from '@/public/images/tradeUnionImages/doston-badriddinov.
 import bekmirzayevImg from '@/public/images/tradeUnionImages/islomjon-bekmirzayev.jpg';
 import nishonboyImg from '@/public/images/tradeUnionImages/qulboyev-nishonboy.jpg';
 
+// PDF загружен через POST /api/documents/:category (project2/routes/documentsRoute),
+// хранится в R2 по пути documents/TradeUnionCommitteeDocument/...
+const WORK_PLAN_2026_PDF_URL =
+    "https://pub-d3fea7e1325a4d3884872459c74a4426.r2.dev/documents/TradeUnionCommitteeDocument/1789049350325-335349959-Kasaba_uyushmasi_qomitasi_2026_ish_rejasi.pdf";
+
 const MEMBERS = [
     {
         photo: askarovImg,
@@ -69,6 +74,17 @@ export default function Section() {
                     </li>
                 ))}
             </ul>
+
+            <a
+                className="institute-trade-union-committee-page__pdfLink"
+                href={WORK_PLAN_2026_PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {language === 'en'
+                    ? 'Trade Union Committee Work Plan for 2026 (PDF)'
+                    : "Kasaba uyushmasi qo'mitasining 2026 yilgi ish rejasi (PDF)"}
+            </a>
         </section>
     );
 }

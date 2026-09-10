@@ -30,10 +30,6 @@ const CONTENT = {
             "Shubhali havolalar va noma'lum manbalardan kelgan xabarlarga ehtiyot bo'ling (fishing)",
             "Institut nomidan shaxsiy ma'lumot yoki to'lov talab qiluvchi xabarlarga ishonmang",
         ],
-        moreInfo:
-            "Kiberxavfsizlik bo'yicha qo'shimcha ma'lumot va tavsiyalar uchun O'zbekiston Respublikasi Kiberxavfsizlik markazining rasmiy saytiga murojaat qilishingiz mumkin:",
-        moreInfoLinkText: 'cybersecurity.uz',
-        moreInfoLinkHref: 'https://cybersecurity.uz',
     },
     en: {
         title: 'Information Security',
@@ -56,10 +52,6 @@ const CONTENT = {
             'Be cautious of suspicious links and messages from unknown sources (phishing)',
             'Do not trust messages claiming to be from the Institute that request personal data or payment',
         ],
-        moreInfo:
-            'For further information and recommendations on cybersecurity, you may visit the official website of the Cybersecurity Center of the Republic of Uzbekistan:',
-        moreInfoLinkText: 'cybersecurity.uz',
-        moreInfoLinkHref: 'https://cybersecurity.uz',
     },
 };
 
@@ -93,18 +85,6 @@ export default function Section() {
                     <li key={i}>{text}</li>
                 ))}
             </ul>
-
-            <p className="cybersecurity-page__section__paragraph">
-                {c.moreInfo}{' '}
-                <a
-                    className="cybersecurity-page__section__link"
-                    href={c.moreInfoLinkHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {c.moreInfoLinkText}
-                </a>
-            </p>
         </section>
     );
 }
