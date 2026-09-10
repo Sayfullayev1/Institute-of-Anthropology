@@ -28,7 +28,7 @@ const journals = [
       uz: ['OAK ilmiy nashrlar roʻyxati', 'Milliy iqtibos indeksi', 'CentralAsia Research Base'],
       en: ['National list of peer-reviewed journals', 'National citation index', 'CentralAsia Research Base'],
     },
-    link: 'https://jurnal.anthropology.uz',
+    link: 'https://journal.anthropology.uz',
     linkLabel: { uz: 'Jurnal sahifasiga oʻtish', en: 'Go to journal page' },
     reference: {
       uz: [
