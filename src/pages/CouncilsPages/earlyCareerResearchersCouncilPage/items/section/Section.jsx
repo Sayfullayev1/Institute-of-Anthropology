@@ -25,7 +25,7 @@ const MEMBERS = [
 const CONTENT = {
     uz: {
         title: 'Kengash haqida',
-        membersTitle: 'Kengash xodimlari',
+        membersTitle: "Kengash a'zolari",
         paragraphs: [
             "O'zbekiston Fanlar akademiyasi Antropologiya instituti huzuridagi Yosh olimlar kengashi – institut qoshidagi doimiy faoliyat yurituvchi jamoat tuzilmasi.",
               "Kengash tarkibiga rais, uning o'rinbosari va a'zolar kiradi.",
