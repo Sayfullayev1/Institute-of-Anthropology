@@ -1,2 +1,71 @@
 .expertise-page__section {
+  padding: 30px 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+
+  &__title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1e90ff;
+    display: inline-block;
+  }
+
+  &__subtitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin: 28px 0 12px;
+  }
+
+  &__paragraph {
+    margin: 0;
+    text-align: justify;
+    text-indent: 30px;
+    color: #1a1a1a;
+  }
+
+  &__docList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: rgb(0, 156, 255);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__date {
+      font-size: 0.9em;
+      color: #777;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .expertise-page__section {
+    font-size: 16px;
+  }
 }

@@ -48,8 +48,18 @@
 .footer__links li {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.footer__links li a {
   color: #eee;
+  text-decoration: none;
   cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #6cb2ff;
+    text-decoration: underline;
+  }
 }
 
 .footer__search {

@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 import './section.scss';
 import { LanguageContext } from '@/context/LanguageContext';
+import getApiUrl from '@/api/api';
 
 // Флаги — тот же источник и формат, что уже используется в LanguageSwitcher
 // (flagpedia.net, ISO-коды стран).
@@ -12,143 +14,79 @@ const AGREEMENT_TYPE = {
   scientificMou: { uz: 'Ilmiy hamkorlik bo‘yicha memorandum', en: 'Memorandum on Scientific Cooperation' },
 };
 
-const PARTNERS = [
-  {
-    year: 2022,
-    items: [
-      {
-        nameUz: 'Arxeologiya instituti, Xitoy Ijtimoiy Fanlar Akademiyasi',
-        nameEn: 'Institute of Archaeology, Chinese Academy of Social Sciences',
-        countryUz: 'Xitoy', countryEn: 'China', code: 'cn',
-        type: 'mou', years: 5,
-      },
-      {
-        nameUz: 'Arxeologiya va etnografiya instituti, Rossiya Fanlar akademiyasi Sibir bo‘limi',
-        nameEn: 'Institute of Archaeology and Ethnography, Siberian Branch of the Russian Academy of Sciences',
-        countryUz: 'Rossiya', countryEn: 'Russia', code: 'ru',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'Milliy Ilmiy Tadqiqotlar Markazi (CNRS)',
-        nameEn: 'National Centre for Scientific Research (CNRS)',
-        countryUz: 'Fransiya', countryEn: 'France', code: 'fr',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'O‘rta Yer Dengizi Biologik Xilma-xillik va Ekologiya Instituti',
-        nameEn: 'Mediterranean Institute of Biodiversity and Ecology',
-        countryUz: 'Fransiya', countryEn: 'France', code: 'fr',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'Abu-Dabidagi Nyu-York Universiteti',
-        nameEn: 'New York University Abu Dhabi',
-        countryUz: 'BAA', countryEn: 'UAE', code: 'ae',
-        type: 'mou', years: 5,
-      },
-    ],
-  },
-  {
-    year: 2023,
-    items: [
-      {
-        nameUz: 'Varshava universiteti',
-        nameEn: 'University of Warsaw',
-        countryUz: 'Polsha', countryEn: 'Poland', code: 'pl',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'Marg‘ulan nomidagi arxeologiya instituti',
-        nameEn: 'A.Kh. Margulan Institute of Archaeology',
-        countryUz: 'Qozog‘iston', countryEn: 'Kazakhstan', code: 'kz',
-        type: 'mou', years: 5,
-      },
-      {
-        nameUz: 'Xalqaro Turk Akademiyasi',
-        nameEn: 'International Turkic Academy',
-        countryUz: 'Qozog‘iston', countryEn: 'Kazakhstan', code: 'kz',
-        type: 'scientificMou', years: 3,
-      },
-    ],
-  },
-  {
-    year: 2024,
-    items: [
-      {
-        nameUz: 'Sent-Luisdagi Vashington Universiteti',
-        nameEn: 'Washington University in St. Louis',
-        countryUz: 'AQSh', countryEn: 'USA', code: 'us',
-        type: 'mou', years: 5,
-      },
-      {
-        nameUz: 'Anqara Yildirim Boyazid Universiteti',
-        nameEn: 'Ankara Yıldırım Beyazıt University',
-        countryUz: 'Turkiya', countryEn: 'Turkey', code: 'tr',
-        type: 'mou', years: 5,
-      },
-    ],
-  },
-  {
-    year: 2025,
-    items: [
-      {
-        nameUz: 'Arxeologiya va Madaniyatda Fan va Texnologiya Ilmiy Tadqiqot Markazi (STARC)',
-        nameEn: 'Science and Technology in Archaeology and Culture Research Center (STARC), The Cyprus Institute',
-        countryUz: 'Kipr', countryEn: 'Cyprus', code: 'cy',
-        type: 'mou', years: 5,
-      },
-      {
-        nameUz: 'Xo‘ja Ahmad Yassaviy nomidagi xalqaro Qozoq-Turk Universiteti',
-        nameEn: 'Khoja Akhmet Yassawi International Kazakh-Turkish University',
-        countryUz: 'Qozog‘iston', countryEn: 'Kazakhstan', code: 'kz',
-        type: 'mou', years: 5,
-      },
-      {
-        nameUz: 'Turkiya Arxeologiya va madaniy meros instituti',
-        nameEn: 'Turkish Institute of Archaeology and Cultural Heritage',
-        countryUz: 'Turkiya', countryEn: 'Turkey', code: 'tr',
-        type: 'cooperation', years: 5,
-      },
-    ],
-  },
-  {
-    year: 2026,
-    items: [
-      {
-        nameUz: 'YUNESKO homiyligidagi Madaniyatlarni yaqinlashtirish xalqaro markazi',
-        nameEn: 'International Centre for the Rapprochement of Cultures under the auspices of UNESCO',
-        countryUz: 'Qozog‘iston', countryEn: 'Kazakhstan', code: 'kz',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'Mug‘la Sitki Koçman universiteti',
-        nameEn: 'Muğla Sıtkı Koçman University',
-        countryUz: 'Turkiya', countryEn: 'Turkey', code: 'tr',
-        type: 'cooperation', years: 5,
-      },
-      {
-        nameUz: 'Rossiya Fanlar akademiyasi Sibir bo‘limining Davlat ommaviy ilmiy-texnika kutubxonasi',
-        nameEn: 'State Public Scientific and Technical Library, Siberian Branch of the Russian Academy of Sciences',
-        countryUz: 'Rossiya', countryEn: 'Russia', code: 'ru',
-        type: 'cooperation', years: 5,
-      },
-    ],
-  },
-];
+// Список хранится плоским списком на бэкенде (управляется из админки,
+// Xalqaro hamkorlik → Hamkorlar) — группировка по году делается здесь же,
+// на фронтенде, из поля item.year.
+function groupByYear(items) {
+  const byYear = new Map();
+  items.forEach((item) => {
+    if (!byYear.has(item.year)) byYear.set(item.year, []);
+    byYear.get(item.year).push(item);
+  });
+  return Array.from(byYear.entries())
+    .sort((a, b) => a[0] - b[0])
+    .map(([year, groupItems]) => ({ year, items: groupItems }));
+}
 
 export default function Section() {
   const { language } = useContext(LanguageContext);
+  const [partners, setPartners] = useState(null); // null = ещё грузится
+  const [error, setError] = useState(false);
   let counter = 0;
+
+  useEffect(() => {
+    let cancelled = false;
+    axios.get(`${getApiUrl()}/api/partners`)
+      .then((res) => {
+        if (!cancelled) setPartners(res.data.data || []);
+      })
+      .catch(() => {
+        if (!cancelled) setError(true);
+      });
+    return () => { cancelled = true; };
+  }, []);
+
+  const intro = language === 'en'
+    ? 'International agreements and memoranda of understanding signed by the Institute of Anthropology with foreign scientific and academic organizations.'
+    : 'Antropologiya institutining xorijiy ilmiy-ta’lim tashkilotlari bilan tuzgan xalqaro shartnoma va memorandumlari.';
+
+  if (error) {
+    return (
+      <section className="partners-page__section">
+        <p className="partners-page__section__intro">{intro}</p>
+        <p className="partners-page__section__placeholder">
+          {language === 'uz' ? "Ma'lumotlarni yuklashda xatolik yuz berdi." : 'Failed to load data.'}
+        </p>
+      </section>
+    );
+  }
+
+  if (partners === null) {
+    return (
+      <section className="partners-page__section">
+        <p className="partners-page__section__intro">{intro}</p>
+        <p className="partners-page__section__placeholder">
+          {language === 'uz' ? 'Yuklanmoqda...' : 'Loading...'}
+        </p>
+      </section>
+    );
+  }
+
+  const groups = groupByYear(partners);
 
   return (
     <section className="partners-page__section">
-      <p className="partners-page__section__intro">
-        {language === 'en'
-          ? 'International agreements and memoranda of understanding signed by the Institute of Anthropology with foreign scientific and academic organizations.'
-          : 'Antropologiya institutining xorijiy ilmiy-ta’lim tashkilotlari bilan tuzgan xalqaro shartnoma va memorandumlari.'}
-      </p>
+      <p className="partners-page__section__intro">{intro}</p>
 
-      {PARTNERS.map((group) => (
+      {groups.length === 0 && (
+        <p className="partners-page__section__placeholder">
+          {language === 'uz'
+            ? 'Bu bo‘limda institutning xalqaro hamkorlari haqida ma’lumot joylashtiriladi.'
+            : "This section will host information about the Institute's international partners."}
+        </p>
+      )}
+
+      {groups.map((group) => (
         <div className="partners-page__section__year-group" key={group.year}>
           <h2 className="partners-page__section__year">{group.year} {language === 'en' ? '' : 'yil'}</h2>
 
@@ -157,11 +95,11 @@ export default function Section() {
               counter += 1;
               const type = AGREEMENT_TYPE[item.type];
               return (
-                <li className="partners-page__section__item" key={counter}>
+                <li className="partners-page__section__item" key={item.id}>
                   <span className="partners-page__section__item-number">{counter}</span>
 
                   <div className="partners-page__section__item-flag">
-                    <img src={flagUrl(item.code)} alt={language === 'en' ? item.countryEn : item.countryUz} />
+                    <img src={flagUrl(item.countryCode)} alt={language === 'en' ? item.countryEn : item.countryUz} />
                   </div>
 
                   <div className="partners-page__section__item-body">
@@ -171,7 +109,7 @@ export default function Section() {
                     <p className="partners-page__section__item-meta">
                       {language === 'en' ? item.countryEn : item.countryUz}
                       {' · '}
-                      {type[language === 'en' ? 'en' : 'uz']}
+                      {type ? type[language === 'en' ? 'en' : 'uz'] : item.type}
                       {' · '}
                       {language === 'en'
                         ? `${item.years} years`

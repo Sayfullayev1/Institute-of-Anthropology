@@ -3,6 +3,31 @@
   // здесь только вертикальный отступ и шрифт.
   padding: 40px 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.council-for-conferral-of-academic-degrees-page__title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1e90ff;
+  display: inline-block;
+}
+
+.council-for-conferral-of-academic-degrees-page__paragraph {
+  margin: 0 0 24px;
+  text-align: justify;
+  text-indent: 30px;
+  color: #1a1a1a;
+}
+
+@media (min-width: 480px) {
+  .council-for-conferral-of-academic-degrees-page__section {
+    font-size: 16px;
+  }
 }
 
 // Ссылка на PDF: чёрным в покое, сине-голубым с подчёркиванием при

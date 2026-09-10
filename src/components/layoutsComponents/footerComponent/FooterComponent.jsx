@@ -1,14 +1,31 @@
 import React, { useContext } from 'react';
 import './footerComponent.scss';
+import { Link } from 'react-router-dom';
 import { LanguageContext } from '@/context/LanguageContext';
 
 import imge from '@/public/images/footerImage/photo_2026-05-25_19-15-05.jpg';
 import StatCounterWidget from '@/components/statCounterWidget/StatCounterWidget';
 
+// Xuddi Category.jsx'dagi kabi — en'da prefiks yo'q, uz'da /uz qo'shiladi.
+function localizeLink(path, language) {
+  if (!path || language !== 'uz') return path;
+  return path.startsWith('/uz') ? path : `/uz${path}`;
+}
+
+// HAVOLALAR — saytning o'zidagi haqiqiy, qiziqarli sahifalarga havolalar
+// (vaqtincha tanlov, keyinchalik yangilanishi mumkin).
+const FOOTER_LINKS = [
+  { link: '/council-for-conferral-of-academic-degrees', text: { uz: 'Ixtisoslashgan kengash', en: 'Specialized Council' } },
+  { link: '/journal', text: { uz: 'Jurnal', en: 'Journal' } },
+  { link: '/monographs', text: { uz: 'Monografiyalar', en: 'Monographs' } },
+  { link: '/orcid', text: { uz: 'ORCID', en: 'ORCID' } },
+  { link: '/international-projects', text: { uz: 'Xalqaro loyihalar', en: 'International Projects' } },
+  { link: '/achievements', text: { uz: 'Yutuqlar', en: 'Achievements' } },
+];
 
 export default function FooterComponent() {
 
-  const { language } = useContext(LanguageContext); 
+  const { language } = useContext(LanguageContext);
 
   
   
@@ -36,9 +53,11 @@ export default function FooterComponent() {
         <div className="footer__section">
           <h4 className="footer__title">HAVOLALAR</h4>
           <ul className="footer__links">
-            <li>{language === "uz" ? "> Ixtisoslashgan kengash" : "> Specialized Council"}</li>
-            <li>{language === "uz" ? "> Disertatsiya va avtoreferatlar" : "> Dissertations and Abstracts"}</li>
-            <li>{language === "uz" ? "> Laboratoriyalar" : "> Laboratories"}</li>
+            {FOOTER_LINKS.map((item) => (
+              <li key={item.link}>
+                <Link to={localizeLink(item.link, language)}>{'> '}{item.text[language]}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
