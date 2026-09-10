@@ -1,2 +1,110 @@
 .institute-trade-union-committee-page__section {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 20px 5%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item__img {
+    width: 175px;
+    aspect-ratio: 1 / 1.2;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  &__item__text h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    position: relative;
+  }
+
+  &__item__text h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #007bff;
+    margin-top: 5px;
+  }
+
+  &__item__text .job-title {
+    margin: 15px 0 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+// Full design for larger screens starting at 550px
+@media (min-width: 550px) {
+  .institute-trade-union-committee-page__section {
+    padding: 40px 3%;
+
+    &__item {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+
+    &__item__img {
+      min-width: 235px;
+    }
+
+    &__item__text {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__item__text h3 {
+      font-size: 1.6em;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    &__item__text h3::after {
+      width: 50px;
+    }
+
+    &__item__text .job-title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Full design for desktops starting at 1300px
+@media (min-width: 1300px) {
+  .institute-trade-union-committee-page__section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 4%;
+  }
 }

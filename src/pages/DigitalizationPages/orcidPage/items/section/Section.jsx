@@ -10,6 +10,7 @@ const DEPARTMENTS = [
     {
         title: { uz: 'Rahbariyat', en: 'Management' },
         members: [
+            { name: 'Farhod Maksudov', orcid: '0000-0002-8492-0634' },
             { name: 'Zafar Rakhmanov', orcid: '0000-0001-9083-791X' },
             { name: 'Jamshid Adilov', orcid: '0009-0008-3067-0415' },
         ],
