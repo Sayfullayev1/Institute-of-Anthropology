@@ -9,16 +9,6 @@ const YOK_ACTION_PLAN_PDF_URL =
 const MEMBERS = [
     { name: "Qulboyev Nishonboy Sobur o'g'li", position: { uz: 'Yosh olimlar kengashi raisi', en: 'Chairman of the Early-Career Researchers Council' } },
     { name: "Askarov Ollabergan Ikrom o'g'li", position: { uz: "Rais o'rinbosari", en: 'Deputy Chairman' } },
-    { name: 'Oynazarov Xoliyor Gaimnazarovich', position: { uz: "A'zo", en: 'Member' } },
-    { name: 'Asanov Eldar Enverivich', position: { uz: "A'zo", en: 'Member' } },
-    { name: "Adilov Jamshid Xasan o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: "Badirdinov Doston Rustam o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: "Najmiddinov Abdulbositxon Ne'matjon o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: "Artikov Ulug'bek Latifjon o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: "Choriyev Shohrux Xoltura o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: "Bekmirzayev Islomjon Ibroxim o'g'li", position: { uz: "A'zo", en: 'Member' } },
-    { name: 'Yakubov Davlat Farruxovich', position: { uz: "A'zo", en: 'Member' } },
-    { name: 'Uralov Abror', position: { uz: "A'zo", en: 'Member' } },
 ];
 
 const CONTENT = {
