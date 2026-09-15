@@ -1,2 +1,50 @@
 .research-advisors-page__section {
+  padding: 30px 0 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.research-advisors-page__title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1e90ff;
+  display: inline-block;
+}
+
+.research-advisors-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.research-advisors-page__list__item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.research-advisors-page__list__num {
+  color: #888;
+  min-width: 20px;
+}
+
+.research-advisors-page__list__name {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+@media (min-width: 480px) {
+  .research-advisors-page__section {
+    font-size: 16px;
+  }
 }
