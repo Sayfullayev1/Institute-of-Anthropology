@@ -5,6 +5,7 @@ import axios from 'axios';
 import style from './staffDetailPage.module.scss';
 import Category from '@/components/category/Category';
 import Container from '@/components/container/Container';
+import UserPlaceholder from '@/components/userPlaceholder/UserPlaceholder';
 import { LanguageContext } from '@/context/LanguageContext';
 import getApiUrl from '@/api/api';
 
@@ -81,7 +82,9 @@ export default function StaffDetailPage() {
               {item.photo ? (
                 <img src={item.photo} alt={item.fullName[language]} />
               ) : (
-                <div className={style.staff__photoPlaceholder} />
+                <div className={style.staff__photoPlaceholder}>
+                  <UserPlaceholder className={style.staff__photoIcon} />
+                </div>
               )}
             </div>
 

@@ -6,6 +6,7 @@ import style from './departmentDetailPage.module.scss';
 import Category from '@/components/category/Category';
 import Container from '@/components/container/Container';
 import PagePlaceholder from '@/components/pagePlaceholder/PagePlaceholder';
+import UserPlaceholder from '@/components/userPlaceholder/UserPlaceholder';
 import { LanguageContext } from '@/context/LanguageContext';
 import getApiUrl from '@/api/api';
 
@@ -195,7 +196,9 @@ export default function DepartmentDetailPage({ deptSlug }) {
                         {member.photo ? (
                           <img src={member.photo} alt={member.fullName?.[language]} />
                         ) : (
-                          <div className={style.staffGrid__photoPlaceholder} />
+                          <div className={style.staffGrid__photoPlaceholder}>
+                            <UserPlaceholder className={style.staffGrid__photoIcon} />
+                          </div>
                         )}
                       </div>
                       <span className={style.staffGrid__name}>{member.fullName?.[language]}</span>
