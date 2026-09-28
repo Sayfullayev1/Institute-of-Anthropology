@@ -296,7 +296,8 @@
     padding: 0;
     width: 22%;
     grid-template-columns: 1fr;
-
+    align-self: flex-start;
+    align-content: start;
   }
 
   .card{
