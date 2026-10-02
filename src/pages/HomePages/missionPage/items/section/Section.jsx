@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import styles from './section.module.scss';
 import { LanguageContext } from '@/context/LanguageContext';
+import StructureChart from '../structureChart/StructureChart';
 
-// Тот же org-chart, что и на странице Tuzilma (Structure) — по языку.
-import structureImgUz from '@/public/images/HomePagesImages/sectionImages/structure-uz.png';
-import structureImgEn from '@/public/images/HomePagesImages/sectionImages/structure-en.png';
+// Фото-версия схемы (structure-uz.png/en.png) временно отключена — ниже
+// теперь HTML/CSS-копия (StructureChart). Картинку не удаляли, просто
+// закомментировали импорт — чтобы вернуть, раскомментировать здесь и в
+// JSX ниже.
+// import structureImgUz from '@/public/images/HomePagesImages/sectionImages/structure-uz.png';
+// import structureImgEn from '@/public/images/HomePagesImages/sectionImages/structure-en.png';
 
 const CONTENT = {
   mission: {
@@ -19,7 +23,7 @@ const CONTENT = {
 
 export default function Section() {
   const { language } = useContext(LanguageContext);
-  const structureImg = language === 'en' ? structureImgEn : structureImgUz;
+  // const structureImg = language === 'en' ? structureImgEn : structureImgUz;
 
   return (
     <section className={styles.container}>
@@ -42,11 +46,16 @@ export default function Section() {
           {language === 'en' ? "Structure" 
           : 'Tuzilma'}
         </h2>
-        <img
+        {/* Фото временно скрыто (не удалено) — пользователь тестирует
+            HTML/CSS-версию ниже. Чтобы вернуть картинку: раскомментировать
+            этот <img> и оба импорта/переменную structureImg выше. */}
+        {/* <img
           className={styles.structureImg}
           src={structureImg}
           alt={language === 'en' ? 'Structure' : 'Tuzilma'}
-        />
+        /> */}
+
+        <StructureChart language={language} />
       </div>
     </section>
   );

@@ -1,0 +1,419 @@
+// Цвета/шрифт — по structure-uz.png.
+$chart-fill: #dce9f5;
+$chart-border: #2c5a85;
+$chart-text: #1d3f62;
+$chart-line: #1d3550;
+$chart-font: 'Times New Roman', Times, serif;
+
+
+// Пороги раскладок — по ширине ЭКРАНА (@media), а не блока.
+// Ширина блока со схемой зависит от полей страницы, которые сами
+// меняются на своих брейкпоинтах, — из-за этого раскладка по
+// @container прыгала туда-обратно (950px → планшет, 900px → снова десктоп).
+// По экрану переключение идёт строго в одну сторону.
+//  ≤ $bp-tablet — планшетная раскладка, ≤ $bp-phone — телефонная.
+// Английские подписи длиннее, поэтому для en планшет включается раньше.
+$bp-tablet-uz: 1024px;
+$bp-tablet-en: 1200px;
+$bp-phone: 600px;
+
+.wrap {
+  margin-top: 18px;
+  container-type: inline-size;
+}
+
+.title {
+  margin: 0 0 2.2cqw;
+  text-align: center;
+  font-family: $chart-font;
+  font-weight: 700;
+  font-size: 1.8cqw;
+  line-height: 1.25;
+  color: $chart-text;
+}
+
+/* ───────────── desktop: копия PNG ───────────── */
+
+// Все размеры — в cqw от ширины .wrap: схема масштабируется как PNG.
+.canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2520 / 1185;
+}
+
+.box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.4cqw 0.9cqw;
+  text-align: center;
+  background: $chart-fill;
+  border: 0.2cqw solid $chart-border;
+  border-radius: 0.55cqw;
+  color: $chart-text;
+  font-family: $chart-font;
+  font-size: 1.78cqw;
+  line-height: 1.2;
+}
+
+// цифра в углу — текст на PNG сидит чуть выше центра
+.hasCount {
+  padding-bottom: 1.4cqw;
+}
+
+.boxDashed {
+  border-style: dashed;
+}
+
+.boxBold {
+  font-weight: 700;
+  font-size: 1.85cqw;
+}
+
+.boxTop {
+  align-items: flex-start;
+  padding-top: 0.7cqw;
+}
+
+.sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+.count {
+  position: absolute;
+  right: 1cqw;
+  bottom: 0.4cqw;
+  font-size: 1.5cqw;
+}
+
+.line {
+  position: absolute;
+  background: $chart-line;
+  // длину линия получает инлайном, толщину — отсюда.
+  // Не тоньше 2px: иначе на дробных процентах часть линий
+  // рендерится в 1px, часть в 2px — схема выглядит неряшливо.
+  min-width: max(2px, 0.2cqw);
+  min-height: max(2px, 0.2cqw);
+}
+
+/* ───────────── общие боксы планшета и телефона ───────────── */
+
+$c-line: 2px; // толщина линий
+$c-gap: 10px; // зазор между боксами в дереве
+$c-trunk: 18px; // отступ ствола от левого края родителя (планшет)
+
+.cBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 9px 14px;
+  background: $chart-fill;
+  border: 2px solid $chart-border;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba($chart-text, 0.08);
+  color: $chart-text;
+  font-family: $chart-font;
+  font-size: 16px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.cBoxDashed {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.cBoxBold {
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cHasCount {
+  padding-right: 50px;
+}
+
+// численность — просто цифрой справа по центру, без кружка-бейджа
+.cCount {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ───────────── дерево ───────────── */
+
+// Отросток рисует сам бокс (::before) — поэтому он всегда точно в середине
+// бокса, сколько бы строк ни было в подписи. У последнего ребёнка ствол
+// тоже рисует бокс (::after) и обрывается ровно на отростке.
+// Отступы — CSS-переменными, чтобы телефон мог их ужать.
+.tree {
+  --trunk: #{$c-trunk};
+  --indent: 20px;
+
+  list-style: none;
+  margin: 0 0 0 var(--trunk);
+  padding: 0;
+
+  > li {
+    position: relative;
+    padding: $c-gap 0 0 var(--indent);
+  }
+
+  // Ствол собран из отрезков (по одному на li). Перехлёст 1px сверху
+  // и снизу — иначе на масштабе 125%/150% стыки округляются по-разному
+  // и на стволе появляются щербинки.
+  > li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    bottom: -1px;
+    border-left: $c-line solid $chart-line;
+  }
+
+  > li > .cBox::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--indent) - 2px); // 2px — рамка бокса
+    top: 50%;
+    width: var(--indent);
+    margin-top: -$c-line * 0.5;
+    border-top: $c-line solid $chart-line;
+  }
+
+  > li:last-child > .cBox::after {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--indent) - 2px);
+    top: -$c-gap - 3px; // +1px перехлёста со стволом выше
+    height: calc(50% + #{$c-gap + 3px});
+    border-left: $c-line solid $chart-line;
+  }
+}
+
+/* ───────────── планшет ───────────── */
+
+$t-col-gap: 28px; // между боксами верхнего ряда
+$t-branch-gap: 24px; // между двумя ветками
+$t-drop: 18px; // высота вертикалей к шине и от неё
+
+.tablet {
+  display: none;
+}
+
+// верхний ряд: Ilmiy kengash — Direktor — Yosh olimlar kengashi
+.tTop {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  column-gap: $t-col-gap;
+
+  > .cBox {
+    justify-content: center;
+    text-align: center;
+    min-height: 64px;
+  }
+}
+
+.tDirector::before,
+.tDirector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: $t-col-gap;
+  margin-top: -$c-line * 0.5;
+  border-top: $c-line solid $chart-line;
+}
+
+.tDirector::before {
+  right: calc(100% + 2px);
+}
+
+.tDirector::after {
+  left: calc(100% + 2px);
+}
+
+// шина и две ветки под ней
+.tBranches {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: $t-branch-gap;
+  align-items: start;
+  padding-top: $t-drop * 2;
+
+  // вертикаль от директора к шине (+1px перехлёста с шиной)
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: $t-drop + 1px;
+    margin-left: -$c-line * 0.5;
+    border-left: $c-line solid $chart-line;
+  }
+
+  // шина: от центра левой ветки до ствола правой
+  &::after {
+    content: '';
+    position: absolute;
+    top: $t-drop;
+    left: calc(25% - #{$t-branch-gap * 0.25});
+    right: calc(50% - #{$t-branch-gap * 0.5 + $c-trunk + $c-line});
+    margin-top: -$c-line * 0.5;
+    border-top: $c-line solid $chart-line;
+  }
+}
+
+.tLeft,
+.tRight {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -$t-drop - 1px; // перехлёст с шиной
+    height: $t-drop + 2px; // и с тем, что ниже
+    border-left: $c-line solid $chart-line;
+  }
+}
+
+.tLeft::before {
+  left: 50%;
+  margin-left: -$c-line * 0.5;
+}
+
+.tRight::before {
+  left: $c-trunk;
+}
+
+// первый бокс правой ветки — вровень с замдиректора слева
+.tRight > .tree > li:first-child {
+  padding-top: 0;
+}
+
+.tHead {
+  justify-content: center;
+  text-align: center;
+  min-height: 64px;
+}
+
+/* ───────────── телефон ───────────── */
+
+$p-council-gap: 14px;
+
+.phone {
+  display: none;
+
+  .cBox {
+    font-size: 15px;
+  }
+
+  .cBoxBold {
+    font-size: 17px;
+  }
+
+  // ужатые отступы: на 320px вложенным боксам остаётся больше ширины
+  .tree {
+    --trunk: 14px;
+    --indent: 14px;
+  }
+
+  .cBox {
+    padding: 9px 12px;
+  }
+
+  .cHasCount {
+    padding-right: 44px;
+  }
+
+  .cCount {
+    right: 8px;
+  }
+}
+
+.pCouncils {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: $p-council-gap;
+}
+
+// советы — совещательные органы: пунктир, как на схеме
+.pCouncil {
+  justify-content: center;
+  text-align: center;
+  min-height: 48px;
+  padding: 8px 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 2px);
+    height: $p-council-gap - 2px;
+    margin-left: -$c-line * 0.5;
+    border-left: $c-line dashed $chart-line;
+  }
+}
+
+.phone .pCouncil {
+  font-size: 14px;
+}
+
+/* ───────────── переключение раскладок ───────────── */
+
+@mixin show-tablet {
+  .canvas {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+
+  .title {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: #{$bp-tablet-uz}) {
+  .wrap {
+    @include show-tablet;
+  }
+}
+
+@media (max-width: #{$bp-tablet-en}) {
+  .wrapEn {
+    @include show-tablet;
+  }
+}
+
+// идёт последним: перекрывает обе планшетные ветки выше
+@media (max-width: #{$bp-phone}) {
+  .wrap {
+    .canvas,
+    .tablet {
+      display: none;
+    }
+
+    .phone {
+      display: block;
+    }
+
+    .title {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+  }
+}
