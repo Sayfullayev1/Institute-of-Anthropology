@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import style from './managementDetailPage.module.scss';
+import style from './administrationDetailPage.module.scss';
 import Category from '@/components/category/Category';
 import Container from '@/components/container/Container';
 import { LanguageContext } from '@/context/LanguageContext';
 import getApiUrl from '@/api/api';
 
-export default function ManagementDetailPage() {
+export default function AdministrationDetailPage() {
   const { slug } = useParams();
   const { language } = useContext(LanguageContext);
 
@@ -19,6 +19,8 @@ export default function ManagementDetailPage() {
     setItem(null);
     setNotFound(false);
 
+    // Бэкенд-эндпоинт остался /api/management (см. комментарий в
+    // administrationPage/items/main/Main.jsx) — не трогаем.
     axios.get(`${getApiUrl()}/api/management/by-slug/${slug}`)
       .then((response) => setItem(response.data.data))
       .catch(() => setNotFound(true));
@@ -26,7 +28,7 @@ export default function ManagementDetailPage() {
 
   const menuData = [
     { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
-    { text: { uz: 'Rahbariyat', en: 'Management' }, link: '/management' },
+    { text: { uz: 'Boshqaruv', en: 'Administration' }, link: '/administration' },
     { text: { uz: item ? item.name[language] : '...', en: item ? item.name[language] : '...' }, link: '#' },
   ];
 
@@ -79,7 +81,7 @@ export default function ManagementDetailPage() {
               </ul>
 
               <h2 className={style.staff__subheading}>
-                {language === 'en' ? 'About' : 'Batafsil ma’lumot'}
+                {language === 'en' ? 'Research interest' : 'Izlanish yonalishi'}
               </h2>
               {item.bio?.[language] ? (
                 <p className={style.staff__bio}>{item.bio[language]}</p>

@@ -1,4 +1,4 @@
-.management-page__main {
+.administration-page__main {
   font-family: "Roboto", sans-serif;
 
   &__section {
@@ -101,7 +101,7 @@
 
 // Full design for larger screens starting at 550px
 @media (min-width: 550px) {
-  .management-page__main {
+  .administration-page__main {
     &__section {
       padding: 40px 3%;
 
@@ -145,7 +145,7 @@
 
 // Full design for desktops starting at 1300px
 @media (min-width: 1300px) {
-  .management-page__main {
+  .administration-page__main {
     &__section {
       max-width: 1300px;
       margin: 0 auto;

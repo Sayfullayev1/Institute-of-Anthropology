@@ -26,8 +26,8 @@ import SearchPage from './pages/OtherPages/searchPage/SearchPage';
 /* Home Page*/
 import HomeRouteGuard from './components/homeRouteGuard/HomeRouteGuard';
 import MissionPage from './pages/HomePages/missionPage/MissionPage';
-import ManagementPage from './pages/HomePages/managementPage/ManagementPage'
-import ManagementDetailPage from './pages/HomePages/managementDetailPage/ManagementDetailPage';
+import AdministrationPage from './pages/HomePages/administrationPage/AdministrationPage'
+import AdministrationDetailPage from './pages/HomePages/administrationDetailPage/AdministrationDetailPage';
 import JournalPage from './pages/HomePages/journalPage/JournalPage';
 import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/JournalIssueDetailPage';
 import ContactsPage from './pages/HomePages/contactsPage/ContactsPage';
@@ -134,8 +134,8 @@ root.render(
             <Route path="/:lang?" element={<HomeRouteGuard />} />
 
               <Route path="/:lang?/mission" element={<MissionPage />} />
-              <Route path="/:lang?/administration" element={<ManagementPage/>} />
-              <Route path="/:lang?/management/:slug" element={<ManagementDetailPage/>} />
+              <Route path="/:lang?/administration" element={<AdministrationPage/>} />
+              <Route path="/:lang?/administration/:slug" element={<AdministrationDetailPage/>} />
               <Route path='/:lang?/journal' element={<JournalPage />} />
               <Route path="/:lang?/contacts" element={<ContactsPage />} />
 
