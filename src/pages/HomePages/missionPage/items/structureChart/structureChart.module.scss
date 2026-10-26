@@ -305,7 +305,7 @@ $t-drop: 18px; // высота вертикалей к шине и от неё
 // сжиматься вместе с остальной схемой (та же логика, что у .box/.title в
 // начале файла), а не оставаться куском фиксированного размера.
 .titleOf {
-  margin: 0 0 0.6cqw;
+  margin: 0.6cqw 0;
   font-size: 2.9cqw;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -398,7 +398,7 @@ $p-council-gap: 14px;
   }
 
   .titleOf {
-    margin-bottom: 6px;
+    margin: 6px 0;
     font-size: 24px;
   }
 }
@@ -433,7 +433,7 @@ $p-council-gap: 14px;
     }
 
     .titleOf {
-      margin-bottom: 5px;
+      margin: 5px 0;
       font-size: 20px;
     }
   }
