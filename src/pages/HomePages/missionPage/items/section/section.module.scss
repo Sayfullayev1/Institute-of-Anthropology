@@ -36,6 +36,21 @@
   margin: 0;
 }
 
+// display: block — не inline-block, иначе ссылка прилипает к .heading
+// (он тоже inline-block) на одной строке, а не переносится под него.
+.pdfLink {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e90ff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .structureImg {
   width: 100%;
   height: auto;

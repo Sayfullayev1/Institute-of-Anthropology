@@ -3,6 +3,17 @@ import styles from './section.module.scss';
 import { LanguageContext } from '@/context/LanguageContext';
 import StructureChart from '../structureChart/StructureChart';
 
+// Institut nizomi (устав) — PDF, сконвертированный из
+// infoFolder/charterOfTheCenterPageDocuments/NIZOM_ANTROPOLOGIYA_INSTITUT_*.docx
+// и загруженный в R2 через /api/documents/InstituteCharterDocument (тот же
+// паттерн, что и Etika nizomi/siyosati на странице Etika Komissiyasi —
+// см. ethicsCommitteePage/items/section/Section.jsx). Старая страница
+// /charter с клиентским docx->html (mammoth) этим блоком заменяется.
+const CHARTER_PDF_UZ =
+  'https://pub-d3fea7e1325a4d3884872459c74a4426.r2.dev/documents/InstituteCharterDocument/1793030950362-464364649-NIZOM_ANTROPOLOGIYA_INSTITUT_UZ.pdf';
+const CHARTER_PDF_EN =
+  'https://pub-d3fea7e1325a4d3884872459c74a4426.r2.dev/documents/InstituteCharterDocument/1793030951276-704757830-NIZOM_ANTROPOLOGIYA_INSTITUT_EN.pdf';
+
 // Фото-версия схемы (structure-uz.png/en.png) временно отключена — ниже
 // теперь HTML/CSS-копия (StructureChart). Картинку не удаляли, просто
 // закомментировали импорт — чтобы вернуть, раскомментировать здесь и в
@@ -29,22 +40,22 @@ export default function Section() {
     <section className={styles.container}>
       <div className={styles.block}>
         <h2 className={styles.heading}>
-          {language === 'en' ? "Institute's Mission" : 'Institut missiyasi'}
+          {language === 'en' ? "Our Mission" : 'Missiyamiz'}
         </h2>
         <p className={styles.text}>{CONTENT.mission[language]}</p>
       </div>
 
       <div className={styles.block}>
         <h2 className={styles.heading}>
-          {language === 'en' ? "Institute's Strategic Goal" : 'Institut strategik maqsadi'}
+          {language === 'en' ? "Our Vision" : "Biz ko'zlagan kelajak"}
         </h2>
         <p className={styles.text}>{CONTENT.goal[language]}</p>
       </div>
 
       <div className={styles.block}>
         <h2 className={styles.heading}>
-          {language === 'en' ? "Structure" 
-          : 'Tuzilma'}
+          {language === 'en' ? "Organizational Structure" 
+          : 'Tashkilot tuzilmasi'}
         </h2>
         {/* Фото временно скрыто (не удалено) — пользователь тестирует
             HTML/CSS-версию ниже. Чтобы вернуть картинку: раскомментировать
@@ -56,6 +67,20 @@ export default function Section() {
         /> */}
 
         <StructureChart language={language} />
+      </div>
+
+      <div className={styles.block}>
+        <h2 className={styles.heading}>
+          {language === 'en' ? "Institute's Charter" : 'Institut nizomi'}
+        </h2>
+        <a
+          className={styles.pdfLink}
+          href={language === 'en' ? CHARTER_PDF_EN : CHARTER_PDF_UZ}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {language === 'en' ? "Institute's Charter (PDF)" : 'Institut nizomi (PDF)'}
+        </a>
       </div>
     </section>
   );
