@@ -33,8 +33,8 @@ import JournalIssueDetailPage from './pages/HomePages/journalIssueDetailPage/Jou
 import ContactsPage from './pages/HomePages/contactsPage/ContactsPage';
 
   /* News Pages*/
-  import NewsPage from './pages/HomePages/newsPage/NewsPage';
-  import NewsDetailPage from './pages/HomePages/newsDetailPage/NewsDetailPage';
+  import NewsPage from './pages/NewsPages/newsPage/NewsPage';
+  import NewsDetailPage from './pages/NewsPages/newsDetailPage/NewsDetailPage';
 
   /* Departments Pages*/
   // Все 5 реальных отделов теперь на общей дженерик-системе (DepartmentDetailPage) —
@@ -50,12 +50,14 @@ import ConferencesPage from './pages/ResearchPages/conferencesPage/ConferencesPa
 
 
 
-/* Councils Pages*/
-import InstituteScientificCouncilPage from './pages/CouncilsPages/instituteScientificCouncilPage/InstituteScientificCouncilPage';
-import CouncilForConferralOfAcademicDegreesPage from './pages/CouncilsPages/councilForConferralOfAcademicDegreesPage/CouncilForConferralOfAcademicDegreesPage';
-import EarlyCareerResearchersCouncilPage from './pages/CouncilsPages/earlyCareerResearchersCouncilPage/EarlyCareerResearchersCouncilPage';
-import InstituteTradeUnionCommitteePage from './pages/CouncilsPages/instituteTradeUnionCommitteePage/InstituteTradeUnionCommitteePage';
-import EthicsCommitteePage from './pages/CouncilsPages/ethicsCommitteePage/EthicsCommitteePage';
+/* Councils Pages — вложены в HomePages: по новой структуре меню Kengashlar
+   теперь дочерний пункт Negiz bet (Home), как и Missiya/Boshqaruv/Bo'limlar/
+   Jurnal/Bog'lanish — все они уже лежат в HomePages. */
+import InstituteScientificCouncilPage from './pages/HomePages/councilsPages/instituteScientificCouncilPage/InstituteScientificCouncilPage';
+import CouncilForConferralOfAcademicDegreesPage from './pages/HomePages/councilsPages/councilForConferralOfAcademicDegreesPage/CouncilForConferralOfAcademicDegreesPage';
+import EarlyCareerResearchersCouncilPage from './pages/HomePages/councilsPages/earlyCareerResearchersCouncilPage/EarlyCareerResearchersCouncilPage';
+import InstituteTradeUnionCommitteePage from './pages/HomePages/councilsPages/instituteTradeUnionCommitteePage/InstituteTradeUnionCommitteePage';
+import EthicsCommitteePage from './pages/HomePages/councilsPages/ethicsCommitteePage/EthicsCommitteePage';
 
 
 

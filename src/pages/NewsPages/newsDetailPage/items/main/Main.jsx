@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './main.scss';
 
 import Category from '@/components/category/Category';
-import Section from '@/pages/HomePages/newsDetailPage/items/section/Section';
+import Section from '@/pages/NewsPages/newsDetailPage/items/section/Section';
 
 import { LanguageContext } from '@/context/LanguageContext';
 import axios from 'axios';

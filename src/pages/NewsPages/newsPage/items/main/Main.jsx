@@ -1,7 +1,7 @@
 import React from 'react';
 import './main.scss';
 import Category from '@/components/category/Category';
-import Section from '@/pages/HomePages/newsPage/items/section/Section';
+import Section from '@/pages/NewsPages/newsPage/items/section/Section';
 import Container from '@/components/container/Container';
 
 export default function Main() {
