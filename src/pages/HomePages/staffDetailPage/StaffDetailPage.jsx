@@ -51,7 +51,7 @@ export default function StaffDetailPage() {
   const deptLink = language === 'en' ? `/${deptSlug}` : `/${language}/${deptSlug}`;
 
   const menuData = [
-    { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
+    { text: { uz: 'Negiz bet', en: 'Home' }, link: '/' },
     { text: deptName, link: deptLink },
     { text: { uz: item ? item.fullName.uz : '...', en: item ? item.fullName.en : '...' }, link: '#' },
   ];

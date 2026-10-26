@@ -1,7 +1,7 @@
 [
   {
     "Name": {
-      "uz": "Bosh sahifa",
+      "uz": "Negiz bet",
       "en": "Home"
     },
     "link": "/",
@@ -15,17 +15,10 @@
       },
       {
         "Name": {
-          "uz": "Rahbariyat",
-          "en": "Management"
+          "uz": "Boshqaruv",
+          "en": "Administration"
         },
-        "link": "/management"
-      },
-      {
-        "Name": {
-          "uz": "Institut nizomi",
-          "en": "Charter of the Institute"
-        },
-        "link": "/charter-of-the-center"
+        "link": "/administration"
       },
       {
         "Name": {
@@ -73,17 +66,54 @@
       },
       {
         "Name": {
+          "uz": "Kengashlar",
+          "en": "Councils"
+        },
+        "link": "",
+        "items": [
+          {
+            "Name": {
+              "uz": "Institut ilmiy kengashi",
+              "en": "Institute Scientific Council"
+            },
+            "link": "/institute-scientific-council"
+          },
+          {
+            "Name": {
+              "uz": "Yosh olimlar kengashi",
+              "en": "Early-Career Researchers Council"
+            },
+            "link": "/early-career-researchers-council"
+          },
+          {
+            "Name": {
+              "uz": "Institut Kasaba uyushmasi qo'mitasi",
+              "en": "Institute Trade Union Committee"
+            },
+            "link": "/institute-trade-union-committee"
+          },
+          {
+            "Name": {
+              "uz": "Ilmiy darajalar beruvchi Ilmiy Kengash",
+              "en": "Council for the Conferral of Academic Degrees"
+            },
+            "link": "/council-for-conferral-of-academic-degrees"
+          },
+          {
+            "Name": {
+              "uz": "Etika Komissiyasi",
+              "en": "Ethics Committee"
+            },
+            "link": "/ethics-committee"
+          }
+        ]
+      },
+      {
+        "Name": {
           "uz": "Jurnal",
           "en": "Journal"
         },
         "link": "/journal"
-      },
-      {
-        "Name": {
-          "uz": "Yangiliklar",
-          "en": "News"
-        },
-        "link": "/news"
       },
       {
         "Name": {
@@ -96,47 +126,11 @@
   },
   {
     "Name": {
-      "uz": "Kengashlar",
-      "en": "Councils"
+      "uz": "Yangiliklar",
+      "en": "News"
     },
-    "link": "",
-    "items": [
-      {
-        "Name": {
-          "uz": "Institut ilmiy kengashi",
-          "en": "Institute Scientific Council"
-        },
-        "link": "/institute-scientific-council"
-      },
-      {
-        "Name": {
-          "uz": "Yosh olimlar kengashi",
-          "en": "Early-Career Researchers Council"
-        },
-        "link": "/early-career-researchers-council"
-      },
-      {
-        "Name": {
-          "uz": "Institut Kasaba uyushmasi qo'mitasi",
-          "en": "Institute Trade Union Committee"
-        },
-        "link": "/institute-trade-union-committee"
-      },
-      {
-        "Name": {
-          "uz": "Ilmiy darajalar beruvchi Ilmiy Kengash",
-          "en": "Council for the Conferral of Academic Degrees"
-        },
-        "link": "/council-for-conferral-of-academic-degrees"
-      },
-      {
-        "Name": {
-          "uz": "Etika Komissiyasi",
-          "en": "Ethics Committee"
-        },
-        "link": "/ethics-committee"
-      }
-    ]
+    "link": "/news",
+    "items": []
   },
   {
     "Name": {

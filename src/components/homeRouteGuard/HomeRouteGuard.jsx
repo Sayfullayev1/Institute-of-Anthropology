@@ -8,7 +8,7 @@ import NotFoundPage from '../../pages/OtherPages/notFoundPage/NotFoundPage';
 // react-router примет его за lang. Проверяем: lang либо не задан
 // (en по умолчанию, без префикса), либо входит в список реально
 // поддерживаемых языков — иначе это битая ссылка, а не язык,
-// и нужно показать 404, а не Bosh sahifa/Home.
+// и нужно показать 404, а не Negiz bet/Home.
 const SUPPORTED_LANGS = ['uz', 'en'];
 
 export default function HomeRouteGuard() {

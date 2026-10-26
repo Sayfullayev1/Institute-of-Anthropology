@@ -27,7 +27,7 @@ export default function AdministrationDetailPage() {
   }, [slug]);
 
   const menuData = [
-    { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
+    { text: { uz: 'Negiz bet', en: 'Home' }, link: '/' },
     { text: { uz: 'Boshqaruv', en: 'Administration' }, link: '/administration' },
     { text: { uz: item ? item.name[language] : '...', en: item ? item.name[language] : '...' }, link: '#' },
   ];

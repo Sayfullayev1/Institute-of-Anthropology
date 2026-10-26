@@ -26,7 +26,7 @@ export default function Main() {
   }, [id]);
 
   const menuData = [
-    { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
+    { text: { uz: 'Negiz bet', en: 'Home' }, link: '/' },
     { text: JOURNAL_TITLE, link: '/journal' },
     { text: { uz: item ? item.title[language] : '...', en: item ? item.title[language] : '...' }, link: '#' },
   ];

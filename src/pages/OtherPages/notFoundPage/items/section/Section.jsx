@@ -21,7 +21,7 @@ export default function Section() {
       </p>
 
       <Link to="/" className={styles.button}>
-        {language === 'uz' ? 'Bosh sahifaga qaytish' : 'Return to homepage'}
+        {language === 'uz' ? 'Negiz betga qaytish' : 'Return to homepage'}
       </Link>
     </section>
   );

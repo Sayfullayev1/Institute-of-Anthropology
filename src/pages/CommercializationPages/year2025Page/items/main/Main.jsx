@@ -10,7 +10,7 @@ export default function Main() {
   const menuData = [
     {
       text: {
-        uz: "Bosh sahifa",
+        uz: "Negiz bet",
         en: "Home",
       },
       link: "/",

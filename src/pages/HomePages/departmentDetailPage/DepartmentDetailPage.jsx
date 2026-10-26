@@ -55,7 +55,7 @@ export default function DepartmentDetailPage({ deptSlug }) {
   const nameUz = info?.name?.uz || fallbackName.uz;
   const nameEn = info?.name?.en || fallbackName.en;
   const menuData = [
-    { text: { uz: 'Bosh sahifa', en: 'Home' }, link: '/' },
+    { text: { uz: 'Negiz bet', en: 'Home' }, link: '/' },
     { text: { uz: nameUz, en: nameEn }, link: `/${deptSlug}` },
   ];
 
