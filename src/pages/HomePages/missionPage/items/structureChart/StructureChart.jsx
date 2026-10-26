@@ -185,10 +185,17 @@ export default function StructureChart({ language }) {
 
   return (
     <div className={cx(styles.wrap, language === 'en' && styles.wrapEn)}>
+      {/* Крупное "TASHKILOT TUZILMASI"/"ORGANIZATIONAL STRUCTURE" сверху,
+          под ним — название организации помельче. Порядок одинаковый
+          для обоих языков (раньше в uz крупная строка была внизу, в en —
+          сверху, вразнобой). */}
       <p className={styles.title}>
-        {language === 'en' ? 'Academy of Sciences of the Republic of Uzbekistan' : 'O‘zbekiston Respublikasi Fanlar akademiyasi'}
+        <h2 className={styles.titleOf}>
+          {language === 'en' ? 'Organizational Structure' : 'Tashkilot tuzilmasi'}
+        </h2>
+        {language === 'en' ? 'Uzbekistan Academy of Sciences' : 'O‘zbekiston Respublikasi Fanlar akademiyasi'}
         <br />
-        {language === 'en' ? 'Structure of the Institute of Anthropology' : 'Antropologiya instituti tuzilmasi'}
+        {language === 'en' ? 'Institute of Anthropology' : 'Antropologiya instituti'}
       </p>
 
       {/* десктоп: копия PNG */}

@@ -301,6 +301,17 @@ $t-drop: 18px; // высота вертикалей к шине и от неё
   padding-top: 0;
 }
 
+// Крупная строка над названием организации. font-size в cqw — чтобы расти/
+// сжиматься вместе с остальной схемой (та же логика, что у .box/.title в
+// начале файла), а не оставаться куском фиксированного размера.
+.titleOf {
+  margin: 0 0 0.6cqw;
+  font-size: 2.9cqw;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .tHead {
   justify-content: center;
   text-align: center;
@@ -385,6 +396,11 @@ $p-council-gap: 14px;
     margin-bottom: 18px;
     font-size: 18px;
   }
+
+  .titleOf {
+    margin-bottom: 6px;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: #{$bp-tablet-uz}) {
@@ -414,6 +430,11 @@ $p-council-gap: 14px;
     .title {
       margin-bottom: 14px;
       font-size: 16px;
+    }
+
+    .titleOf {
+      margin-bottom: 5px;
+      font-size: 20px;
     }
   }
 }
