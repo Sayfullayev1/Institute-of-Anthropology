@@ -19,9 +19,7 @@ export default function AdministrationDetailPage() {
     setItem(null);
     setNotFound(false);
 
-    // Бэкенд-эндпоинт остался /api/management (см. комментарий в
-    // administrationPage/items/main/Main.jsx) — не трогаем.
-    axios.get(`${getApiUrl()}/api/management/by-slug/${slug}`)
+    axios.get(`${getApiUrl()}/api/administration/by-slug/${slug}`)
       .then((response) => setItem(response.data.data))
       .catch(() => setNotFound(true));
   }, [slug]);

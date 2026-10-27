@@ -28,11 +28,7 @@ export default function Main() {
   ];
 
   useEffect(() => {
-    // Бэкенд-эндпоинт остался /api/management (как и ключи в R2) — это
-    // внутреннее имя сущности в API, не связано с публичным URL страницы;
-    // переименовывать его не стали, чтобы не мигрировать уже сохранённые
-    // данные.
-    axios.get(`${getApiUrl()}/api/management`)
+    axios.get(`${getApiUrl()}/api/administration`)
       .then((response) => {
         setAdministrationData(response.data.data || []);
       })
