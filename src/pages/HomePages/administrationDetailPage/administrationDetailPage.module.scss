@@ -113,6 +113,21 @@
   margin: 0;
 }
 
+.staff__docLink {
+  display: block;
+  width: fit-content;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+
+  &:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
+}
+
 @media (min-width: 700px) {
   .staff {
     flex-direction: row;

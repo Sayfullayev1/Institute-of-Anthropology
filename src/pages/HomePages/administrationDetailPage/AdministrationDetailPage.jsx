@@ -90,6 +90,17 @@ export default function AdministrationDetailPage() {
                   {language === 'en' ? 'No additional information yet' : 'Hozircha qo‘shimcha ma’lumot yo‘q'}
                 </p>
               )}
+
+              {item.documentUrl && (
+                <a
+                  className={style.staff__docLink}
+                  href={item.documentUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.documentTitle?.[language] || (language === 'en' ? 'Document (PDF)' : 'Hujjat (PDF)')}
+                </a>
+              )}
             </div>
           </div>
         )}
