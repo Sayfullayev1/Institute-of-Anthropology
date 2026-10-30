@@ -21,8 +21,8 @@ const journals = [
     since: '2026',
     periodicity: { uz: 'Yiliga 2 marta', en: '2 issues per year' },
     description: {
-      uz: 'Jurnal fizik antropologiya, etnologiya va madaniy meros muammolari bilan shug‘ullanuvchi olimlar uchun mo‘ljallangan. Nashr 1998-yilda O‘zbekiston Respublikasi Fanlar akademiyasi qoshida ilmiy toʻplam sifatida tashkil etilgan boʻlib, keyinchalik davriy jurnalga aylantirilgan. Jurnalda O‘rta Osiyo xalqlarining antropologik tarkibi, demografik jarayonlar va etnogenez masalalariga bag‘ishlangan original tadqiqotlar, sharhlar va arxiv materiallari chop etiladi.',
-      en: 'The journal is intended for scholars working on physical anthropology, ethnology and cultural heritage. Founded in 1998 as a scientific compilation under the Academy of Sciences of the Republic of Uzbekistan, it later became a periodical publication. It features original research, reviews and archival material on the anthropological composition, demographic processes and ethnogenesis of the peoples of Central Asia.',
+      uz: 'Jurnal fizik antropologiya, etnologiya va madaniy meros muammolari bilan shug‘ullanuvchi olimlar uchun mo‘ljallangan. Nashr 2026-yilda O‘zbekiston Respublikasi Fanlar akademiyasi Antropologiya institutida tashkil etilgan. Jurnalda Markaziy Osiyo xalqlarining antropologik tarkibi, demografik jarayonlar va etnogenez masalalariga bag‘ishlangan original tadqiqotlar, sharhlar va arxiv materiallari chop etiladi.',
+      en: 'The journal is intended for scholars working on physical anthropology, ethnology and cultural heritage. It was established in 2026 at the Institute of Anthropology of the Academy of Sciences of the Republic of Uzbekistan. It publishes original research, reviews and archival materials devoted to the anthropological composition, demographic processes and issues of ethnogenesis of the peoples of Central Asia.',
     },
     indexes: {
       uz: ['OAK ilmiy nashrlar roʻyxati', 'Milliy iqtibos indeksi', 'CentralAsia Research Base'],
@@ -54,8 +54,8 @@ const journals = [
     since: '1959',
     periodicity: { uz: 'Yiliga 1 marta', en: '1 issue per year' },
     description: {
-      uz: 'Jurnal O‘zbekiston va butun Markaziy Osiyo hududidagi arxeologik qazishmalar, moddiy madaniyat topilmalari va tarixiy-madaniy meros obyektlarini ilmiy o‘rganishga bag‘ishlangan. 2005-yildan buyon nashr etilib kelinadi va mintaqadagi qadimiy va o‘rta asrlar davri yodgorliklariga oid dala tadqiqotlari natijalarini, shuningdek xalqaro ekspeditsiyalar hisobotlarini e’lon qiladi.',
-      en: 'The journal is dedicated to the scholarly study of archaeological excavations, material culture finds and historical-cultural heritage sites across Uzbekistan and wider Central Asia. Published since 2005, it presents field research results on ancient and medieval monuments in the region, as well as reports from international expeditions.',
+      uz: 'Jurnal O‘zbekiston va butun Markaziy Osiyo hududidagi arxeologik qazishmalar, moddiy madaniyat topilmalari va tarixiy-madaniy meros obyektlarini ilmiy o‘rganishga bag‘ishlangan. 1959-yildan buyon nashr etilib kelinadi va mintaqadagi qadimiy va o‘rta asrlar davri yodgorliklariga oid dala tadqiqotlari natijalarini, shuningdek xalqaro ekspeditsiyalar hisobotlarini e’lon qiladi.',
+      en: 'The journal is dedicated to the scholarly study of archaeological excavations, material culture finds and historical-cultural heritage sites across Uzbekistan and wider Central Asia. Published since 1959, it presents field research results on ancient and medieval monuments in the region, as well as reports from international expeditions.',
     },
     indexes: {
       uz: ['OAK ilmiy nashrlar roʻyxati', 'Milliy iqtibos indeksi', 'Eurasian Archaeology Index'],
