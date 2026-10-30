@@ -1,2 +1,91 @@
 .national-events-page__section {
+  padding: 30px 0 50px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// Текст по левому краю на узких экранах и justify от 700px — тот же приём,
+// что и в administrationDetailPage.module.scss (.staff__bio): на узких
+// экранах в строке умещается мало слов, и justify раскидывает "лишнюю"
+// ширину всего на 1-2 пробела вместо многих — получаются неровные "реки".
+.national-events-page__desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  text-align: left;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+.national-events-page__highlight {
+  color: #000000;
+  font-weight: 600;
+}
+
+.national-events-page__pdfLink {
+  display: inline-block;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
+}
+
+.national-events-page__about {
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.national-events-page__aboutTitle {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  font-size: 19px;
+  font-weight: 600;
+  color: #2b2b2b;
+  border-bottom: 2px solid #1e90ff;
+}
+
+.national-events-page__linkList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.national-events-page__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+
+  i {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 700px) {
+  .national-events-page__desc {
+    text-align: justify;
+  }
 }
