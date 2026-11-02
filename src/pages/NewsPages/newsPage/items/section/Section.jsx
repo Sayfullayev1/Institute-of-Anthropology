@@ -21,7 +21,7 @@ export default function Section() {
         setNewsListDataLength(response.data.total);
       })
       .catch((error) => {
-        console.error('Ошибка при получении данных:', error);
+        console.error("Ma'lumotlarni olishda xatolik:", error);
       });
   }, [api]);
 
@@ -36,11 +36,11 @@ export default function Section() {
             // console.log('Полученные элементы галереи:', response.data.data);
             setNewsListData(response.data.data);
           } else {
-            console.error('Ошибка при получении элементов галереи:', response.data.message);
+            console.error('Yangiliklarni olishda xatolik:', response.data.message);
           }
         })
         .catch(error => {
-          console.error('Ошибка при запросе элементов галереи:', error);
+          console.error("Yangiliklar so'rovida xatolik:", error);
       });
     };
 

@@ -30,8 +30,6 @@ export default function Main() {
                     {
                         language === "uz"
                             ? "Yangiliklar"
-                            : language === "ru"
-                            ? "Новости"
                             : "News"
                     }
                 </h1>

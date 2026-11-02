@@ -57,7 +57,6 @@ export default function Main() {
     {
       text: {
         uz: "Negiz bet",
-        ru: "Главная",
         en: "Main",
       },
       link: "/",
@@ -65,7 +64,6 @@ export default function Main() {
     {
       text: {
         uz: "Yangiliklar",
-        ru: "Новости",
         en: "News",
       },
       link: `/${language}/news`,
@@ -73,7 +71,6 @@ export default function Main() {
     {
       text: {
         uz: newsData?.title.uz || "Yangiliklar",
-        ru: newsData?.title.ru || "Новости",
         en: newsData?.title.en || "News",
       },
       link: currentPath,

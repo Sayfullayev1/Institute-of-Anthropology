@@ -16,14 +16,14 @@ export default function HomePage() {
         <title>
           {language === 'uz'
             ? "Antropologiya instituti — O'zbekiston Respublikasi Fanlar akademiyasi"
-            : "Institute of Anthropology — Academy of Sciences of the Republic of Uzbekistan | Институт антропологии Узбекистана"}
+            : "Institute of Anthropology — Academy of Sciences of the Republic of Uzbekistan"}
         </title>
         <meta
           name="description"
           content={
             language === 'uz'
               ? "Antropologiya instituti — O'zbekiston Respublikasi Fanlar akademiyasi huzuridagi ilmiy-tadqiqot muassasasi. Ilmiy yo'nalishlar, nashrlar, kengashlar, xodimlar va yangiliklar."
-              : "Institute of Anthropology (Институт антропологии Узбекистана) — a research institution of the Academy of Sciences of the Republic of Uzbekistan. Research, publications, councils, staff and news."
+              : "Institute of Anthropology — a research institution of the Academy of Sciences of the Republic of Uzbekistan. Research, publications, councils, staff and news."
           }
         />
         <meta property="og:title" content={language === 'uz' ? "Antropologiya instituti" : "Institute of Anthropology"} />

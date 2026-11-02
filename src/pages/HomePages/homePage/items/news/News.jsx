@@ -22,7 +22,7 @@ export default function News() {
     useEffect(() => {
         const api = getApiUrl();
 
-        const newsTitle = { uz: "Yangiliklar", ru: "Новости", en: "News" };
+        const newsTitle = { uz: "Yangiliklar", en: "News" };
 
         async function fetchNews() {
             try {
@@ -35,10 +35,10 @@ export default function News() {
                     }));
                     setNews(formattedData);
                 } else {
-                    console.error('Ошибка при получении элементов :', response.data.message);
+                    console.error('Yangiliklarni olishda xatolik:', response.data.message);
                 }
             } catch (error) {
-                console.error('Ошибка при запросе элементов :', error);
+                console.error("Yangiliklar so'rovida xatolik:", error);
             }
         }
         fetchNews();

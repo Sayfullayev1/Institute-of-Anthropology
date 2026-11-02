@@ -29,7 +29,7 @@ export default function Card() {
   useEffect(() => {
     const initMap = () => {
       if (!window.ymaps || !window.ymaps.Map) {
-        console.error('Yandex Maps API не загружен.');
+        console.error('Yandex Maps API yuklanmadi.');
         return;
       }
 
@@ -52,8 +52,8 @@ export default function Card() {
       const placemark = new window.ymaps.Placemark(
         [41.337893, 69.337639], // Координаты метки
         {
-          hintContent: language === 'ru' ? 'Национальный археологический центр' : 'Milliy arxeologiya markazi',
-          balloonContent: language === 'ru' ? 'Национальный археологический центр' : 'Milliy arxeologiya markazi',
+          hintContent: 'Milliy arxeologiya markazi',
+          balloonContent: 'Milliy arxeologiya markazi',
         },
         {
           iconColor: 'red',

@@ -157,8 +157,6 @@ export default function Section() {
                     {
                         language === "uz"
                             ? "Manzil"
-                            : language === "ru"
-                            ? "Наши контакты"
                             : "Our contacts"
                     }
                 </h2>
@@ -173,8 +171,6 @@ export default function Section() {
                     {
                         language === "uz"
                             ? "Telefonlar:"
-                            : language === "ru"
-                            ? "Телефоны:"
                             : "Phones:"
                     }
                     <br />

@@ -9,10 +9,9 @@
 
   <!-- Дефолт на случай, если конкретная страница не задаёт свой <Helmet> —
        см. src/index.js (HelmetProvider defaultTitle/titleTemplate) и
-       src/pages/**/*.jsx (react-helmet-async). Название продублировано на
-       трёх языках специально: у сайта нет русской версии интерфейса, но
-       люди ищут именно "институт антропологии узбекистана" по-русски —
-       без буквального совпадения текста Google эту фразу не свяжет с сайтом.
+       src/pages/**/*.jsx (react-helmet-async). Название на английском и
+       узбекском — русского в выводимом тексте сайта быть не должно
+       (требование института).
        Только <title> — meta description и canonical здесь намеренно НЕ
        заданы: react-helmet-async умеет подменять только <title> из статичного
        HTML "на лету", а meta/link просто добавляет новые теги рядом со
@@ -20,7 +19,7 @@
        и браузер/бот брал бы первый (статичный), игнорируя то, что реально
        задаёт DefaultSeo.jsx/страница. Их полностью держит Helmet (см.
        src/components/defaultSeo/DefaultSeo.jsx). -->
-  <title>Institute of Anthropology — Antropologiya instituti — Институт антропологии Узбекистана</title>
+  <title>Institute of Anthropology — Antropologiya instituti</title>
 
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -41,7 +40,7 @@
   <meta name="twitter:image" content="https://anthropology.uz/logo512.png" />
 
   <!-- Structured data — помогает Google связать разные варианты названия
-       (англ/узб/рус) с одной и той же организацией (Knowledge Graph). -->
+       (англ/узб) с одной и той же организацией (Knowledge Graph). -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,8 +49,6 @@
       "alternateName": [
         "Antropologiya instituti",
         "O'zbekiston Respublikasi Fanlar akademiyasi Antropologiya instituti",
-        "Институт антропологии Узбекистана",
-        "Институт антропологии Академии наук Республики Узбекистан",
         "IAASU"
       ],
       "url": "https://anthropology.uz",
@@ -83,7 +80,7 @@
   </script>
 </head>
 <body>
-  <noscript>Вам нужно включить JavaScript для работы этого приложения.</noscript>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 </body>
 </html>

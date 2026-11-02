@@ -7,7 +7,7 @@ import getApiUrl from '@/api/api';
 import Pagination from '@/components/pagination/Pagination';
 
 
-import journalCover from '@/public/images/journal/Uzbek_Anthropological_Journal_Cover_Vector-преобразовано-из-svg.png';
+import journalCover from '@/public/images/journal/Uzbek_Anthropological_Journal_Cover.png';
 import materialCultureCover from '@/public/images/journal/material-culture-cover.jpg';
 
 const ARCHIVE_PAGE_SIZE = 10;

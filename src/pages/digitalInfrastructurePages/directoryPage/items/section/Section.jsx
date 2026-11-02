@@ -18,7 +18,7 @@ export default function Section() {
                 const response = await axios.get(`${api}/api/directory`); 
                 setData(response.data);
             } catch (error) {
-                console.error("Ошибка при получении данных:", error);
+                console.error("Ma'lumotlarni olishda xatolik:", error);
             } finally {
                 setLoading(false);
             }

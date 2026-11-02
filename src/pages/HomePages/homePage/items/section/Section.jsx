@@ -28,7 +28,6 @@ export default function Section() {
             number: 70,
             label: {
                 uz: "UMUMIY XODIMLAR",
-                ru: "ВСЕГО СОТРУДНИКОВ",
                 en: "TOTAL STAFF",
             },
         },
@@ -37,7 +36,6 @@ export default function Section() {
             number: 40,
             label: {
                 uz: "ILMIY XODIMLAR",
-                ru: "НАУЧНЫЕ СОТРУДНИКИ",
                 en: "RESEARCHERS",
             },
         },
@@ -46,7 +44,6 @@ export default function Section() {
             number: 1,
             label: {
                 uz: "AKTIV LOYIHALAR",
-                ru: "АКТИВНЫЕ ПРОЕКТЫ",
                 en: "ACTIVE PROJECTS",
             },
         },
@@ -55,7 +52,6 @@ export default function Section() {
             number: 32,
             label: {
                 uz: "WoS/Scopus ",
-                ru: "WoS/Scopus ",
                 en: "WoS/Scopus ",
             },
             // Тот же канал, что и WoS/Scopus в меню Raqamlashtirish.
@@ -78,7 +74,7 @@ export default function Section() {
             {
                 icon: <img src="https://my.academy.uz/img/logo.png" alt="" />,
                 title:  {
-                            uz: "О‘zbekiston Respublikasi Fanlar akademiyasi",
+                            uz: "O‘zbekiston Respublikasi Fanlar akademiyasi",
                             en: "Academy of Sciences of the Republic of Uzbekistan",
                         },
                 link: "my.academy.uz",
@@ -196,13 +192,13 @@ export default function Section() {
                 <div className="home-page__section__cta">
                     <p className="home-page__section__cta-text">
                         {
-                            language === "uz" ? "Sizda savollar mavjudmi yoki Sizga yordam kerakmi?" : language === "ru" ? "У вас есть вопросы или вам нужна помощь?" : "Do you have any questions or need help?"
+                            language === "uz" ? "Sizda savollar mavjudmi yoki Sizga yordam kerakmi?" : "Do you have any questions or need help?"
                         }
                     </p>
                     <button className="home-page__section__cta-button">
                         <Link to={`contacts`}>
                             {
-                                language === "uz" ? "Biz bilan bog‘laning" : language === "ru" ? "Связаться с нами" : "Contact us"
+                                language === "uz" ? "Biz bilan bog‘laning" : "Contact us"
                             }
                         </Link>
                     </button>
