@@ -117,7 +117,7 @@ export default function HeaderComponent() {
                         letter-spacing до ширины заголовка — см. эффект выше.
                         Заголовок раньше был голым текстовым узлом внутри <h1> —
                         не за что было зацепить ref, поэтому обёрнут в свой <span>. */}
-                    <h1 className='header__title'>
+                    <h1 className={`header__title header__title--${language}`}>
                         <span ref={titleRef} className="header__title__text">{LogoTitle[language].title}</span>
                         <span ref={subtitleRef} className={`header__subtitle header__subtitle--${language}`}>{LogoTitle[language].subtitle}</span>
                     </h1>

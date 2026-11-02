@@ -1,6 +1,10 @@
 .header {
   width: 100%;
   font-family: "Roboto", sans-serif;
+  // iOS Safari при повороте в альбомный режим сам увеличивает шрифты —
+  // заголовок переносился бы, а подогнанная под него ширина подзаголовка ломалась.
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 
   &_wrapper {
     display: flex;
@@ -60,16 +64,24 @@
     // все буквы строки равномерно, пока её ширина не сравняется с шириной
     // заголовка. Значение ниже — просто дефолт до первого замера в useEffect.
     letter-spacing: 0.5px;
-    // Один размер на оба языка. Специально заметно МЕНЬШЕ той величины,
-    // при которой естественная ширина совпала бы с title сама по себе —
-    // иначе letter-spacing'у нечего было бы растягивать (JS посчитал бы
-    // прибавку ~0 и подзаголовок выглядел бы нерастянутым обычным текстом).
-    font-size: 6px;
+    font-size: 8px; // запасной; реальные размеры — у --uz/--en ниже
   }
+
+  // Размеры для телефона — по языкам, подобраны замером ширины Roboto
+  // (uppercase): заголовок занимает ≤94% свободного места на самой узкой
+  // ширине ступени (запас на рендер Safari, без переноса), подзаголовок без
+  // разрядки — ≤90% ширины заголовка (uz) и ≤0.65 его кегля (en); остаток
+  // добирает letter-spacing из JS. Узбекский подзаголовок почти вдвое длиннее
+  // заголовка (43 символа против 23), поэтому размеры у языков разные.
+  // Ступени ниже — под ширины iPhone: 360, 375, 390, 414, 428.
+  &__title--uz { font-size: 14.25px; }
+  &__title--en { font-size: 12.5px; }
+  &__subtitle--uz { font-size: 7.5px; }
+  &__subtitle--en { font-size: 8px; }
 
   // Скрыто на мобилках, показываем только в медиа-запросе 900px
   &__info-wrapper {
-    display: none; 
+    display: none;
   }
 }
 
@@ -124,6 +136,55 @@
 }
 
 // АДАПТИВ
+@media (min-width: 360px) {
+  .header {
+    &__title--uz { font-size: 17px; }
+    &__title--en { font-size: 15.25px; }
+    &__subtitle--uz { font-size: 8.75px; }
+    &__subtitle--en { font-size: 9.75px; }
+  }
+}
+
+// iPhone SE 2/3, 12/13 mini
+@media (min-width: 375px) {
+  .header {
+    &__title--uz { font-size: 18.25px; }
+    &__title--en { font-size: 16px; }
+    &__subtitle--uz { font-size: 9.5px; }
+    &__subtitle--en { font-size: 10.25px; }
+  }
+}
+
+// iPhone 12–16, 16 Pro
+@media (min-width: 390px) {
+  .header {
+    &__title--uz { font-size: 19.25px; }
+    &__title--en { font-size: 17px; }
+    &__subtitle--uz { font-size: 10px; }
+    &__subtitle--en { font-size: 11px; }
+  }
+}
+
+// iPhone XR/11, Plus
+@media (min-width: 414px) {
+  .header {
+    &__title--uz { font-size: 21px; }
+    &__title--en { font-size: 18.75px; }
+    &__subtitle--uz { font-size: 10.75px; }
+    &__subtitle--en { font-size: 12px; }
+  }
+}
+
+// iPhone Pro Max / Plus (428–440)
+@media (min-width: 428px) {
+  .header {
+    &__title--uz { font-size: 22px; }
+    &__title--en { font-size: 19.5px; }
+    &__subtitle--uz { font-size: 11.25px; }
+    &__subtitle--en { font-size: 12.5px; }
+  }
+}
+
 @media (min-width: 480px) {
   .header {
     &__topbar_wrapper { display: block; }
@@ -132,16 +193,30 @@
       margin: 8px 0 8px 15px;
       text-align: left;
       letter-spacing: 1px;
-      font-size: 20px; // тоже замерено — см. комментарий у __title выше
     }
-    &__subtitle {
-      // letter-spacing здесь не задаём — его при каждом ресайзе
-      // пересчитывает и подставляет JS (см. HeaderComponent.jsx).
-      font-size: 8px;
-    }
+    // Логотип здесь вырастает до 80px и съедает место — заголовок не растёт,
+    // только подзаголовок uz (с заголовком 22px помещается 11.5px).
+    &__subtitle--uz { font-size: 11.5px; }
   }
 }
 
+@media (min-width: 530px) {
+  .header {
+    &__title--uz { font-size: 24px; }
+    &__title--en { font-size: 22.25px; }
+    &__subtitle--uz { font-size: 12.75px; }
+    &__subtitle--en { font-size: 13px; }
+  }
+}
+
+@media (min-width: 580px) {
+  .header {
+    &__title--en { font-size: 24px; }
+  }
+}
+
+// Десктоп/планшет — прежние размеры для обоих языков. Стоят ниже ступеней
+// с той же специфичностью, поэтому перекрывают --uz/--en по порядку.
 @media (min-width: 700px) {
   .header {
     &__title {
