@@ -115,6 +115,11 @@ import DirectoryPage from './pages/digitalInfrastructurePages/directoryPage/Dire
 
 
 
+// Статичные title/description из public/index.html нужны только ботам превью
+// ссылок, которые не запускают JS. В браузере их задаёт Helmet, а сам он
+// статичные теги не убирает, так что без этого были бы дубли.
+document.querySelectorAll('head [data-static-seo]').forEach((el) => el.remove());
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode>

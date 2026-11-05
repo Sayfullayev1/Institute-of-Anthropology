@@ -7,34 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#180d8f" />
 
-  <!-- Дефолт на случай, если конкретная страница не задаёт свой <Helmet> —
-       см. src/index.js (HelmetProvider defaultTitle/titleTemplate) и
-       src/pages/**/*.jsx (react-helmet-async). Название на английском и
-       узбекском — русского в выводимом тексте сайта быть не должно
-       (требование института).
-       Только <title> — meta description и canonical здесь намеренно НЕ
-       заданы: react-helmet-async умеет подменять только <title> из статичного
-       HTML "на лету", а meta/link просто добавляет новые теги рядом со
-       старыми (не убирая их) — получались бы дубли description/canonical,
-       и браузер/бот брал бы первый (статичный), игнорируя то, что реально
-       задаёт DefaultSeo.jsx/страница. Их полностью держит Helmet (см.
-       src/components/defaultSeo/DefaultSeo.jsx). -->
-  <title>Institute of Anthropology — Antropologiya instituti</title>
+  <!-- Эти title/description видят боты превью ссылок (Telegram и т.п.):
+       JavaScript они не запускают и читают только этот HTML. Превью — только
+       на английском для любой ссылки, включая /uz (требование института;
+       русского быть не должно вообще).
+       Теги с data-static-seo src/index.js удаляет при запуске в браузере:
+       React 19 + react-helmet-async не заменяют статичные теги, а добавляют
+       свои рядом, и без удаления были бы дубли title/description. В
+       браузере их задают DefaultSeo.jsx и Helmet конкретной страницы. -->
+  <title data-static-seo>Institute of Anthropology — Academy of Sciences of the Republic of Uzbekistan</title>
+  <meta data-static-seo name="description" content="Official website: research, publications, academic councils, staff and news." />
 
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <!-- Open Graph / соцсети — здесь только то, что одинаково для ЛЮБОЙ
-       страницы (картинка, имя сайта, тип, локали). og:title/og:description/
-       og:url — по той же причине, что и <meta description> выше — задаются
-       по месту через Helmet конкретной страницей (см. HomePage.jsx), чтобы
-       не плодить дубли; страницы без своего Helmet останутся без og:title,
-       это лучше, чем показывать в превью чужой (главной) заголовок. -->
+  <!-- Open Graph / соцсети. og:url не задаём: он свой у каждой страницы. -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Institute of Anthropology" />
+  <meta data-static-seo property="og:title" content="Institute of Anthropology — Academy of Sciences of the Republic of Uzbekistan" />
+  <meta data-static-seo property="og:description" content="Official website: research, publications, academic councils, staff and news." />
   <meta property="og:image" content="https://anthropology.uz/logo512.png" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="uz_UZ" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="https://anthropology.uz/logo512.png" />
