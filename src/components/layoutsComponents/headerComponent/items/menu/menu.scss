@@ -209,6 +209,14 @@
     }
   }
 
+  // Раздел-ссылка без подпунктов (Yangiliklar) — та же строка, что у
+  // аккордеонов, но без подчёркивания и без стрелки раскрытия.
+  &__title--link {
+    text-decoration: none;
+
+    &:hover { color: #1e90ff; }
+  }
+
   &__sublist-wrapper {
     max-height: 0;
     overflow: hidden;

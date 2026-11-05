@@ -181,7 +181,25 @@ function Menu({ Bedeutung, closeMenu }) {
 
       <div className="menu-item__content">
         <ul className="menu-item__list">
-          {menuData.map((section, idx) => (
+          {menuData.map((section, idx) => {
+            // Раздел без подпунктов, но со своей ссылкой (Yangiliklar → /news) —
+            // это переход на страницу, а не аккордеон: раньше он раскрывал пустую панель.
+            if (!section.items?.length && section.link) {
+              return (
+                <li key={idx} className="menu-item__section">
+                  <SmartLink
+                    to={section.link}
+                    language={language}
+                    className="menu-item__title menu-item__title--link"
+                    onClick={closeMenu}
+                  >
+                    <span>{section.Name[language]}</span>
+                  </SmartLink>
+                </li>
+              );
+            }
+
+            return (
             <li key={idx} className="menu-item__section">
               <div
                 className={`menu-item__title ${openIndex === idx ? 'is-open' : ''}`}
@@ -232,7 +250,8 @@ function Menu({ Bedeutung, closeMenu }) {
                 </ul>
               </div>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </nav>
