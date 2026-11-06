@@ -57,7 +57,7 @@ export default function Main() {
     {
       text: {
         uz: "Negiz bet",
-        en: "Main",
+        en: "Home",
       },
       link: "/",
     },

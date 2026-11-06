@@ -37,7 +37,7 @@ export default function FooterComponent() {
           <p> 
             {
             language === "uz" ? "O‘zbekiston Respublikasi Fanlar akademiyasi Antropologiya instituti" 
-            : "Institute of Anthropology of the Academy of Sciences of the Republic of Uzbekistan"
+            : "Institute of Anthropology, Uzbekistan Academy of Sciences"
             } 
           </p>
           <p>
@@ -51,7 +51,11 @@ export default function FooterComponent() {
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__title">HAVOLALAR</h4>
+          <h4 className="footer__title">
+            {
+              language === "uz" ? "HAVOLALAR" : "LINKS"
+            }
+          </h4>
           <ul className="footer__links">
             {FOOTER_LINKS.map((item) => (
               <li key={item.link}>
@@ -68,9 +72,16 @@ export default function FooterComponent() {
         </div>
 
         <div className="footer__section">
-          <h4 className="footer__title">MANZIL</h4>
-          <p>100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81</p>
-          <p>Telefonlar: +998 71 262-64-62</p>
+          <h4 className="footer__title">
+            {language === "uz" ? "MANZIL" : "ADDRESS"}
+          </h4>
+          <p>
+            {language === "uz" ? "100170, Toshkent shahar, Mirzo Ulug`bek ko`chasi, 81" 
+            : "100170, Tashkent city, Mirzo Ulugbek street, 81"}
+            </p>
+          <p>
+            {language === "uz" ? "Telefon " : "Phone "}
+             +998 71 262-64-62</p>
           <p>E-mail:  anthropology@academy.uz,  antropologiya-instituti@exat.uz</p>
 
           <StatCounterWidget />

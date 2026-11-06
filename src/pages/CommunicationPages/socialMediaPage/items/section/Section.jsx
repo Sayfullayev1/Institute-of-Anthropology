@@ -25,6 +25,16 @@ export default function Section() {
             </a>
 
             <a
+                className="social-media-page__section__telegram"
+                href="https://t.me/anthropubhub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa-brands fa-telegram" />
+                <span>Anthropubhub</span>
+            </a>
+
+            <a
                 className="social-media-page__section__facebook"
                 href="https://www.facebook.com/people/Institute-of-Anthropology-Uzbekistan-Academy-of-Sciences/61595516908701/"
                 target="_blank"

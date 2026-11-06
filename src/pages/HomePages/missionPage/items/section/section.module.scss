@@ -41,12 +41,13 @@
 .pdfLink {
   display: block;
   margin-top: 4px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
-  color: #1e90ff;
+  color: #000000;
   text-decoration: none;
 
   &:hover {
+    color: #1e90ff;
     text-decoration: underline;
   }
 }

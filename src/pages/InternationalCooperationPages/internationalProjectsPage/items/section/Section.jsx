@@ -8,7 +8,7 @@ export default function Section() {
     return (
         <section className="international-projects-page__section">
             <p className="international-projects-page__section__link-row">
-                {language === 'en' ? 'Farhod Maksudov — profile at the University of Bologna: ' : 'Farhod Maksudov — Boloniya universiteti profili: '}
+                {language === 'en' ? 'Farhod Maksud — profile at the University of Bologna: ' : 'Farhod Maksud — Boloniya universiteti profili: '}
                 <a
                     href="https://site.unibo.it/kalam/en/pi/farhod-maksudov"
                     target="_blank"

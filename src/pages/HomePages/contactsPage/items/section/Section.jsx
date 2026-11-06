@@ -182,7 +182,8 @@ export default function Section() {
                     E-mail: anthropology@academy.uz  
                 </p>
                 <p className="contacts-page__section____info__contact__email">
-                    E-xat: antropologiya-instituti@exat.uz 
+                    {language === "uz" ? "E-xat: " : "E-mail (Internal): "}
+                    antropologiya-instituti@exat.uz 
                 </p>
             </div>
 
