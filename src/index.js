@@ -35,6 +35,7 @@ import ContactsPage from './pages/HomePages/contactsPage/ContactsPage';
   /* News Pages*/
   import NewsPage from './pages/NewsPages/newsPage/NewsPage';
   import NewsDetailPage from './pages/NewsPages/newsDetailPage/NewsDetailPage';
+  import { POST_SECTIONS } from './pages/NewsPages/postSections';
 
   /* Departments Pages*/
   // Все 5 реальных отделов теперь на общей дженерик-системе (DepartmentDetailPage) —
@@ -66,7 +67,6 @@ import ResearchersPage from './pages/StaffPages/researchersPage/ResearchersPage'
 import EarlyCareerResearchersPage from './pages/StaffPages/early-CareerResearchersPage/EarlyCareerResearchersPage'
 import ResearchAdvisorsPage from './pages/StaffPages/researchAdvisorsPage/ResearchAdvisorsPage'
 import NewStaffPage from './pages/StaffPages/newStaffPage/NewStaffPage'
-import AchievementsPage from './pages/StaffPages/achievementsPage/AchievementsPage'
 import MembershipsPage from './pages/StaffPages/membershipsPage/MembershipsPage'
 
 
@@ -147,8 +147,10 @@ root.render(
               <Route path="/:lang?/contacts" element={<ContactsPage />} />
 
                 {/* News Page */}
-                <Route path="/:lang?/news" element={<NewsPage />} />
-                <Route path="/:lang?/news/:id" element={<NewsDetailPage />} />
+                {/* key: без него при переходе "Yangiliklar" <-> "Yutuqlar" React
+                    оставил бы тот же экземпляр страницы со списком другого раздела. */}
+                <Route path="/:lang?/news" element={<NewsPage key="news" section={POST_SECTIONS.news} />} />
+                <Route path="/:lang?/news/:id" element={<NewsDetailPage key="news" section={POST_SECTIONS.news} />} />
 
               <Route path='/:lang?/journal/:id' element={<JournalIssueDetailPage />} />
 
@@ -185,7 +187,9 @@ root.render(
               <Route path="/:lang?/early-career-researchers" element={<EarlyCareerResearchersPage />} />
               <Route path="/:lang?/research-advisors" element={<ResearchAdvisorsPage />} />
               <Route path="/:lang?/new-staff" element={<NewStaffPage />} />
-              <Route path="/:lang?/achievements" element={<AchievementsPage />} />
+              {/* Yutuqlar — тот же формат, что и новости (ведутся в админке, там же копирование между разделами) */}
+              <Route path="/:lang?/achievements" element={<NewsPage key="achievements" section={POST_SECTIONS.achievements} />} />
+              <Route path="/:lang?/achievements/:id" element={<NewsDetailPage key="achievements" section={POST_SECTIONS.achievements} />} />
               <Route path="/:lang?/memberships" element={<MembershipsPage />} />
 
 

@@ -4,7 +4,7 @@ import Category from '@/components/category/Category';
 import Section from '@/pages/NewsPages/newsPage/items/section/Section';
 import Container from '@/components/container/Container';
 
-export default function Main() {
+export default function Main({ section }) {
 
   const menuData = [
     {
@@ -15,11 +15,8 @@ export default function Main() {
       link: "/",
     },
     {
-      text: {
-        uz: "Yangiliklar",
-        en: "News",
-      },
-      link: "/news",
+      text: section.title,
+      link: section.path,
     },
   ];
 
@@ -27,7 +24,7 @@ export default function Main() {
     <main className="contacts-page__main">
       <Category data={menuData} />
       <Container>
-        <Section />
+        <Section section={section} />
       </Container>
     </main>
   );

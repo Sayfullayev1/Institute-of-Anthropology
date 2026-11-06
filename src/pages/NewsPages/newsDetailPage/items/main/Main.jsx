@@ -1,18 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './main.scss';
 
 import Category from '@/components/category/Category';
 import Section from '@/pages/NewsPages/newsDetailPage/items/section/Section';
 
-import { LanguageContext } from '@/context/LanguageContext';
 import axios from 'axios';
 import getApiUrl from '@/api/api';
 import { useLocation, useParams } from 'react-router-dom';
 import Container from '@/components/container/Container';
 
-export default function Main() {
+export default function Main({ section }) {
 
- const { language } = useContext(LanguageContext);
+  const sectionApi = section.api;
   // Получаем параметры из URL
   const { id } = useParams();
   const location = useLocation();
@@ -28,7 +27,7 @@ export default function Main() {
 
     // id из URL — это уже стабильный slug записи (не позиция в списке),
     // так что просто передаём его как есть.
-    axios.get(`${api}/api/news/get-item/${id}`)
+    axios.get(`${api}/api/${sectionApi}/get-item/${id}`)
       .then(res => {
         if (res.data && res.data.success && res.data.data) {
           setNewsData(res.data.data);
@@ -41,14 +40,14 @@ export default function Main() {
       });
 
     // Передаём excludeSlug, чтобы исключить текущую новость из списка похожих
-    axios.post(`${api}/api/news/get-item-list`, { excludeSlug: id })
+    axios.post(`${api}/api/${sectionApi}/get-item-list`, { excludeSlug: id })
       .then(res => {
         setNewsDataList(res.data.data);
       })
       .catch(err => {
         console.error("Error fetching news list data:", err);
       });
-  }, [id, location]);
+  }, [id, location, sectionApi]);
 
 
 
@@ -62,16 +61,13 @@ export default function Main() {
       link: "/",
     },
     {
-      text: {
-        uz: "Yangiliklar",
-        en: "News",
-      },
-      link: `/${language}/news`,
+      text: section.title,
+      link: section.path,
     },
     {
       text: {
-        uz: newsData?.title.uz || "Yangiliklar",
-        en: newsData?.title.en || "News",
+        uz: newsData?.title.uz || section.title.uz,
+        en: newsData?.title.en || section.title.en,
       },
       link: currentPath,
     },
@@ -82,7 +78,7 @@ export default function Main() {
     <main className="contacts-page__main">
       <Category data={menuData} />
       <Container>
-        <Section newsData={newsData} newsDataList={newsDataList} />
+        <Section section={section} newsData={newsData} newsDataList={newsDataList} />
       </Container>
     </main>
   );

@@ -7,30 +7,31 @@ import axios from 'axios';
 
 import getApiUrl from '@/api/api'; // Предполагается, что getApiUrl возвращает базовый URL API
 
-export default function Section() {
+export default function Section({ section }) {
   const { language } = useContext(LanguageContext);
   const [newsListDataLength, setNewsListDataLength] = useState();
   const [newsListData, setNewsListData] = useState([]);
   const [numOfTheData, setNumOfTheData] = useState(1);
 
   const api = getApiUrl()
+  const sectionApi = section.api;
 
   useEffect(() => {
-    axios.get(`${api}/api/news/get-published-count`)
+    axios.get(`${api}/api/${sectionApi}/get-published-count`)
       .then((response) => {
         setNewsListDataLength(response.data.total);
       })
       .catch((error) => {
         console.error("Ma'lumotlarni olishda xatolik:", error);
       });
-  }, [api]);
+  }, [api, sectionApi]);
 
 
 
   useEffect(() => {
 
     const fetchGalleryItems = async () => {
-      axios.post(`${api}/api/news/get-item`, { page: numOfTheData })
+      axios.post(`${api}/api/${sectionApi}/get-item`, { page: numOfTheData })
         .then(response => {
           if (response.data.success) {
             // console.log('Полученные элементы галереи:', response.data.data);
@@ -45,7 +46,7 @@ export default function Section() {
     };
 
     fetchGalleryItems();
-  }, [newsListDataLength, numOfTheData, api]);
+  }, [newsListDataLength, numOfTheData, api, sectionApi]);
 
 
   function formatDate(dateStr) {
@@ -67,6 +68,10 @@ export default function Section() {
   return (
     <section className={styles.container}>
 
+      {/* Только когда сервер уже ответил "0" — пока счётчик грузится, не мигаем этим текстом. */}
+      {newsListDataLength === 0 && (
+        <p className={styles.emptyHint}>{section.empty[language]}</p>
+      )}
 
       <div className={styles.cardContainer}>
         {newsListData?.map((item, index) => {

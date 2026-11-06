@@ -3,10 +3,20 @@
   font-family: 'Roboto', sans-serif;
 }
 
+// auto-fill, а не auto-fit: при auto-fit пустые колонки схлопываются, и
+// если записей меньше, чем помещается в ряд (у достижений поначалу одна-две),
+// карточка растягивалась на всю ширину страницы.
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+}
+
+.emptyHint {
+  margin: 20px 0 40px;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #888;
 }
 
 .newsCard {
