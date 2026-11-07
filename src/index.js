@@ -66,7 +66,6 @@ import EthicsCommitteePage from './pages/HomePages/councilsPages/ethicsCommittee
 import ResearchersPage from './pages/StaffPages/researchersPage/ResearchersPage'
 import EarlyCareerResearchersPage from './pages/StaffPages/early-CareerResearchersPage/EarlyCareerResearchersPage'
 import ResearchAdvisorsPage from './pages/StaffPages/researchAdvisorsPage/ResearchAdvisorsPage'
-import NewStaffPage from './pages/StaffPages/newStaffPage/NewStaffPage'
 import MembershipsPage from './pages/StaffPages/membershipsPage/MembershipsPage'
 
 
@@ -186,7 +185,9 @@ root.render(
               <Route path="/:lang?/researchers" element={<ResearchersPage />} />
               <Route path="/:lang?/early-career-researchers" element={<EarlyCareerResearchersPage />} />
               <Route path="/:lang?/research-advisors" element={<ResearchAdvisorsPage />} />
-              <Route path="/:lang?/new-staff" element={<NewStaffPage />} />
+              {/* Yangi xodimlar — объявления о вакансиях, тот же формат, что и новости (ведутся в админке) */}
+              <Route path="/:lang?/new-staff" element={<NewsPage key="vacancies" section={POST_SECTIONS.vacancies} />} />
+              <Route path="/:lang?/new-staff/:id" element={<NewsDetailPage key="vacancies" section={POST_SECTIONS.vacancies} />} />
               {/* Yutuqlar — тот же формат, что и новости (ведутся в админке, там же копирование между разделами) */}
               <Route path="/:lang?/achievements" element={<NewsPage key="achievements" section={POST_SECTIONS.achievements} />} />
               <Route path="/:lang?/achievements/:id" element={<NewsDetailPage key="achievements" section={POST_SECTIONS.achievements} />} />

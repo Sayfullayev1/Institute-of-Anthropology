@@ -15,6 +15,13 @@ export const POST_SECTIONS = {
     title: { uz: 'Yutuqlar', en: 'Achievements' },
     empty: { uz: 'Hozircha yutuqlar yo‘q', en: 'No achievements yet' },
   },
+  // Объявления о конкурсах на вакантные должности.
+  vacancies: {
+    api: 'vacancies',
+    path: '/new-staff',
+    title: { uz: 'Yangi xodimlar', en: 'New Staff' },
+    empty: { uz: 'Hozircha e’lonlar yo‘q', en: 'No announcements yet' },
+  },
 };
 
 // Английская версия сайта — без префикса, узбекская — с /uz.
